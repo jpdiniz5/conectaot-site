@@ -10,40 +10,42 @@
 <meta property="og:description" content="Programação de CLP, supervisórios web, coleta de dados de máquinas, visão computacional e aplicativos.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta name="theme-color" content="#14181E">
+<meta name="theme-color" content="#0A192F">
 <link rel="canonical" href="https://www.conectaot.com.br/">
 <meta property="og:url" content="https://www.conectaot.com.br/">
 <meta name="robots" content="index,follow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2314181E'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23E8590C'/%3E%3C/svg%3E">
-<script>try{var t=localStorage.getItem('cot-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='16' fill='%230A192F'/%3E%3Ccircle cx='32' cy='32' r='20' stroke='%231E293B' stroke-width='5'/%3E%3Cpath d='M18 44 L32 30 L40 38 L50 20' stroke='%2300E5FF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 20 H50 V28' stroke='%2300E5FF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>var t='dark';try{t=localStorage.getItem('cot-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ConectaOT","url":"https://www.conectaot.com.br/","email":"contato@conectaot.com.br","telephone":"+55-49-99120-8836","areaServed":[{"@type":"City","name":"Caçador"},{"@type":"State","name":"Santa Catarina"},{"@type":"Country","name":"Brasil"}],"address":{"@type":"PostalAddress","addressLocality":"Caçador","addressRegion":"SC","addressCountry":"BR"},"description":"Automação industrial, programação de CLP, supervisórios web, coleta de dados de máquinas, visão computacional e aplicativos.","knowsAbout":["Siemens TIA Portal","Beckhoff TwinCAT 3","Rockwell Studio 5000","CODESYS","Supervisório","IIoT","Visão computacional"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
 <style>
 /* Layout: página como um "dashboard" de vidro — pílula de navegação, KPIs no topo, grade bento de cards fosco sobre fundo desfocado. */
 :root{
-  --bg:#ECEEF1; --blob1:#D3D9E0; --blob2:#C4CDD6; --blob3:#F2E3D6;
-  --glass:rgba(255,255,255,.55); --glass-2:rgba(255,255,255,.75); --glass-line:rgba(255,255,255,.9); --glass-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 18px 40px -22px rgba(20,26,34,.28);
-  --ink:#14181E; --muted:#4F5864; --faint:#737C88; --hair:rgba(20,24,30,.11);
-  --solid:#14181E; --on-solid:#F1F3F5; --solid-muted:#98A1AC; --solid-line:rgba(255,255,255,.10); --solid-accent:#FF8A4C; --solid-neg:#FF8A7E;
-  --accent:#E8590C; --on-accent:#FFFFFF; --accent-soft:#F6D5C2; --data:#E8590C; --ok:#1E8A55; --warn:#B9700F; --neg:#C2362B; --info:#2F6FA8;
-  --f:"Geist", "Segoe UI", system-ui, sans-serif; --mono:"Geist Mono", ui-monospace, Consolas, monospace;
+  --bg:#F8FAFC; --blob1:#DCEBF5; --blob2:#E2E8F0; --blob3:#D5F5FA;
+  --glass:rgba(255,255,255,.62); --glass-2:rgba(255,255,255,.82); --glass-line:rgba(10,25,47,.08); --glass-shadow:0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px -24px rgba(10,25,47,.25);
+  --ink:#0A192F; --muted:#475569; --faint:#64748B; --hair:rgba(10,25,47,.10);
+  --solid:#0A192F; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(255,255,255,.08); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
+  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#CCF7FD; --accent-ink:#0891B2; --data:#0891B2; --oee:#00C766; --ok:#059669; --warn:#B9700F; --neg:#C2362B; --info:#0891B2;
+  --bar:rgba(248,250,252,.84); --bar-pill:rgba(255,255,255,.97);
+  --f:"Inter", "Segoe UI", system-ui, sans-serif; --display:"Plus Jakarta Sans", "Inter", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
   --r:20px; --r-sm:14px; --max:1240px;
-  --bar:rgba(236,238,241,.82); --bar-pill:rgba(255,255,255,.96);
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0B0D10; --blob1:#1C222A; --blob2:#151A20; --blob3:#2A1E16;
-  --glass:rgba(255,255,255,.05); --glass-2:rgba(255,255,255,.085); --glass-line:rgba(255,255,255,.10); --glass-shadow:0 1px 0 rgba(255,255,255,.05) inset, 0 20px 50px -24px rgba(0,0,0,.85);
-  --ink:#ECEFF2; --muted:#A1A9B4; --faint:#747D89; --hair:rgba(255,255,255,.09);
-  --solid:#ECEFF2; --on-solid:#0B0D10; --solid-muted:#5E6672; --solid-line:rgba(0,0,0,.10); --solid-accent:#C2470A; --solid-neg:#B3392F;
-  --accent:#FF7A33; --on-accent:#140A04; --accent-soft:#3A2418; --data:#FF8A4C; --ok:#5BCB8F; --warn:#F0AE4B; --neg:#FF7E72; --info:#7FB2E5; --bar:rgba(11,13,16,.82); --bar-pill:rgba(28,33,40,.97); color-scheme:dark }}
+  --bg:#0A192F; --blob1:#12305A; --blob2:#0E2440; --blob3:#0B3B44;
+  --glass:rgba(30,41,59,.55); --glass-2:rgba(30,41,59,.85); --glass-line:rgba(148,163,184,.14); --glass-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.7);
+  --ink:#F8FAFC; --muted:#94A3B8; --faint:#64748B; --hair:rgba(148,163,184,.14);
+  --solid:#1E293B; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(148,163,184,.14); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
+  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#123A4A; --accent-ink:#00E5FF; --data:#00E5FF; --oee:#00E676; --ok:#00E676; --warn:#F0AE4B; --neg:#FF7E72; --info:#00E5FF;
+  --bar:rgba(10,25,47,.84); --bar-pill:rgba(30,41,59,.97); color-scheme:dark }}
 :root[data-theme="dark"]{
-  --bg:#0B0D10; --blob1:#1C222A; --blob2:#151A20; --blob3:#2A1E16;
-  --glass:rgba(255,255,255,.05); --glass-2:rgba(255,255,255,.085); --glass-line:rgba(255,255,255,.10); --glass-shadow:0 1px 0 rgba(255,255,255,.05) inset, 0 20px 50px -24px rgba(0,0,0,.85);
-  --ink:#ECEFF2; --muted:#A1A9B4; --faint:#747D89; --hair:rgba(255,255,255,.09);
-  --solid:#ECEFF2; --on-solid:#0B0D10; --solid-muted:#5E6672; --solid-line:rgba(0,0,0,.10); --solid-accent:#C2470A; --solid-neg:#B3392F;
-  --accent:#FF7A33; --on-accent:#140A04; --accent-soft:#3A2418; --data:#FF8A4C; --ok:#5BCB8F; --warn:#F0AE4B; --neg:#FF7E72; --info:#7FB2E5; --bar:rgba(11,13,16,.82); --bar-pill:rgba(28,33,40,.97); color-scheme:dark }
+  --bg:#0A192F; --blob1:#12305A; --blob2:#0E2440; --blob3:#0B3B44;
+  --glass:rgba(30,41,59,.55); --glass-2:rgba(30,41,59,.85); --glass-line:rgba(148,163,184,.14); --glass-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.7);
+  --ink:#F8FAFC; --muted:#94A3B8; --faint:#64748B; --hair:rgba(148,163,184,.14);
+  --solid:#1E293B; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(148,163,184,.14); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
+  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#123A4A; --accent-ink:#00E5FF; --data:#00E5FF; --oee:#00E676; --ok:#00E676; --warn:#F0AE4B; --neg:#FF7E72; --info:#00E5FF;
+  --bar:rgba(10,25,47,.84); --bar-pill:rgba(30,41,59,.97); color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
@@ -58,7 +60,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f);
 
 a{color:inherit}
 h1,h2,h3,p{margin:0}
-h1,h2,h3{font-weight:500;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.06;text-wrap:balance}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
 .wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .glass{background:var(--glass);border:1px solid var(--glass-line);border-radius:var(--r);box-shadow:var(--glass-shadow);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
@@ -82,6 +84,7 @@ section{padding-block:clamp(44px,6vw,80px)}
 .pill-solid{background:var(--solid);color:var(--on-solid)}
 .pill-accent{background:var(--accent);color:var(--on-accent)}
 .pill-glass{background:var(--glass-2);border-color:var(--glass-line)}
+.btn-accent{font-weight:600;box-shadow:0 8px 24px -10px color-mix(in srgb,var(--accent) 70%,transparent)}
 .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font:500 15px/1 var(--f);padding:14px 20px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease, filter .2s ease}
 .btn:hover{transform:translateY(-2px)}
 .btn svg{width:16px;height:16px}
@@ -97,7 +100,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-block:12px;background:var(--bar);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--hair)}
 .top .glass{background:var(--bar-pill)}
 .top .wrap{display:flex;align-items:center;gap:12px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:15px;padding:7px 14px 7px 8px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:16px;padding:5px 14px 5px 5px}
 .brand-mark{width:26px;height:26px;border-radius:50%;background:var(--solid);display:grid;place-items:center}
 .brand-mark span{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
 .nav{display:flex;gap:2px;padding:5px;margin-inline:auto}
@@ -118,19 +121,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .nav a{font-size:16px;padding:12px 14px}
   .menu-btn{display:grid}
   .tools{margin-left:auto}
-  .tools .pill-solid{display:none}
+  .tools .pill-accent{display:none}
 }
 
 /* hero */
 .hero{padding-block:clamp(20px,4vw,48px) 24px}
 .hero-head{display:grid;grid-template-columns:1.2fr auto;gap:28px;align-items:end}
-.hero h1{font-size:clamp(38px,6vw,76px);font-weight:400;letter-spacing:-.045em}
-.hero h1 b{font-weight:600}
+.hero h1{font-size:clamp(38px,6vw,74px);font-weight:600;letter-spacing:-.04em}
+.hero h1 b{font-weight:800;color:var(--accent-ink)}
 .hero-sub{color:var(--muted);font-size:clamp(16px,1.5vw,18px);max-width:58ch;margin-top:18px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .kpis{display:flex;gap:28px;flex-wrap:wrap}
 .kpi{display:grid;gap:4px}
-.kpi strong{font-size:clamp(34px,4vw,50px);font-weight:400;letter-spacing:-.04em;line-height:1}
+.kpi strong{font-family:var(--mono);font-size:clamp(32px,3.8vw,46px);font-weight:500;letter-spacing:-.03em;line-height:1}
+.kpi strong sup{color:var(--oee)!important}
 .kpi strong sup{font-size:.45em;color:var(--muted);margin-right:4px;vertical-align:.9em}
 .kpi span{font-size:12.5px;color:var(--muted)}
 @media (max-width:860px){.hero-head{grid-template-columns:1fr}}
@@ -150,26 +154,30 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .card{padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .25s ease}
 .card:hover{transform:translateY(-4px)}
 .card-h{display:flex;align-items:start;justify-content:space-between;gap:10px}
-.card-h h3{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.card-h h3{font-size:15px;font-weight:600;letter-spacing:-.01em}
 .card-h p{font-size:12.5px;color:var(--muted);margin-top:3px}
-.big{font-size:34px;letter-spacing:-.04em;line-height:1}
+.big{font-family:var(--mono);font-weight:500;font-size:32px;letter-spacing:-.03em;line-height:1}
+.big .lbl{font-family:var(--f)}
 .c4{grid-column:span 4}.c3{grid-column:span 3}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
 @media (max-width:1060px){.c3,.c4,.c5{grid-column:span 6}.c7,.c8,.c6{grid-column:span 12}}
 @media (max-width:640px){.bento>*{grid-column:span 12!important}}
 .badge{font:500 11px/1 var(--mono);padding:5px 8px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);color:var(--muted);white-space:nowrap}
 .badge.ok{color:var(--ok)}
+.metric{border-color:color-mix(in srgb,var(--oee) 40%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--oee) 14%,transparent),0 0 28px -10px color-mix(in srgb,var(--oee) 55%,transparent),var(--glass-shadow)}
+.brand-name b{color:var(--accent-ink);font-weight:800}
+.logo-ico{width:30px;height:30px;flex:none;display:block}
 .badge.acc{background:var(--accent);border-color:transparent;color:var(--on-accent)}
 
 .bars{display:flex;align-items:end;gap:10px;height:120px;padding-top:6px}
 .bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}
-.bars span{width:12px;border-radius:999px;background:var(--solid);height:calc(var(--h) * .9px);transition:height .4s ease}
+.bars span{width:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 32%,transparent);height:calc(var(--h) * .9px);transition:height .4s ease}
 .bars span.hi{background:var(--accent)}
 .bars small{font:500 10px/1 var(--mono);color:var(--faint)}
 .chip-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;font-size:12.5px;color:var(--muted)}
 .ring{display:grid;place-items:center;margin:auto;position:relative;width:150px;height:150px}
 .ring svg{width:150px;height:150px;transform:rotate(-90deg)}
 .ring .val{position:absolute;text-align:center}
-.ring .val b{display:block;font-size:30px;font-weight:400;letter-spacing:-.03em}
+.ring .val b{display:block;font-family:var(--mono);font-size:28px;font-weight:500;letter-spacing:-.02em;color:var(--oee)}
 .ring .val small{font-size:11px;color:var(--muted)}
 .spark svg{width:100%;height:110px;display:block}
 .tasks{padding:20px;gap:12px}
@@ -196,7 +204,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .proj:hover{transform:translateY(-4px)}
 .proj-top{display:flex;align-items:center;gap:12px}
 .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:600 13px/1 var(--f);background:var(--glass-2);border:1px solid var(--glass-line);flex:none}
-.proj-top h3{font-size:15.5px;font-weight:500;letter-spacing:-.01em}
+.proj-top h3{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
 .proj-top p{font-size:12px;color:var(--muted)}
 .proj-top .badge{margin-left:auto}
 .tagline{display:inline-flex;width:max-content;font:500 11px/1 var(--mono);background:var(--accent);color:var(--on-accent);padding:5px 9px;border-radius:999px}
@@ -278,7 +286,7 @@ footer .sp{margin-left:auto}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand glass" href="#inicio" style="border-radius:999px" aria-label="ConectaOT, início"><span class="brand-mark"><span></span></span>ConectaOT</a>
+    <a class="brand glass" href="#inicio" style="border-radius:999px" aria-label="ConectaOT, início"><svg class="logo-ico" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0A192F"/><circle cx="32" cy="32" r="20" stroke="#1E293B" stroke-width="5"/><path d="M18 44 L32 30 L40 38 L50 20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20 H50 V28" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">Conecta<b>OT</b></span></a>
     <nav class="nav glass" id="nav" style="border-radius:999px" aria-label="Principal">
       <a href="#inicio" class="on">Início</a>
       <a href="#solucoes">Soluções</a>
@@ -294,7 +302,7 @@ footer .sp{margin-left:auto}
       <button class="icon-btn glass menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
       </button>
-      <a class="pill pill-solid" href="#contato" style="padding:12px 16px"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent)"></span>Novo projeto</a>
+      <a class="pill pill-accent" href="#contato" style="padding:12px 16px;font-weight:600">Novo projeto</a>
     </div>
   </div>
 </header>
@@ -304,11 +312,11 @@ footer .sp{margin-left:auto}
   <div class="wrap">
     <div class="hero-head">
       <div>
-        <span class="pill pill-glass" style="backdrop-filter:blur(16px)"><span style="width:7px;height:7px;border-radius:50%;background:var(--ok)"></span>Caçador · SC — atendimento no Brasil e no exterior</span>
+        <span class="pill pill-glass" style="backdrop-filter:blur(16px)"><span style="width:7px;height:7px;border-radius:50%;background:var(--ok)"></span>Industrial IoT &amp; Data · Caçador/SC</span>
         <h1 style="margin-top:18px">Automação, dados e software <b>para a sua indústria.</b></h1>
         <p class="hero-sub">Programamos CLPs, construímos supervisórios na web, tiramos dados de máquinas antigas e desenvolvemos aplicativos. Tudo feito por quem já comissionou linha de produção em campo.</p>
         <div class="hero-ctas">
-          <a class="btn btn-solid" href="#contato">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn-accent" href="#contato">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
           <a class="btn btn-glass" href="#projetos">Ver projetos</a>
         </div>
       </div>
@@ -336,7 +344,7 @@ footer .sp{margin-left:auto}
       <span class="badge">valores ilustrativos</span>
     </div>
     <div class="bento">
-      <article class="card glass c4">
+      <article class="card glass metric c4">
         <div class="card-h"><div><h3>Supervisórios web</h3><p>Produção por etapa, por turno</p></div><a class="arrow-btn" href="#projetos" aria-label="Ver projetos de supervisório"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
         <div class="big num">12.480 <span class="lbl">peças/dia</span></div>
         <div class="bars" aria-hidden="true">
@@ -349,7 +357,7 @@ footer .sp{margin-left:auto}
         </div>
       </article>
 
-      <article class="card glass c4 spark">
+      <article class="card glass metric c4 spark">
         <div class="card-h"><div><h3>Coleta de dados de CLP</h3><p>Máquinas antigas, sem trocar o CLP</p></div><span class="badge ok">● online</span></div>
         <div class="big num" id="kRate">1.284 <span class="lbl">lâminas/h</span></div>
         <svg viewBox="0 0 320 110" preserveAspectRatio="none" aria-hidden="true">
@@ -361,12 +369,12 @@ footer .sp{margin-left:auto}
         <div class="chip-foot"><span class="mono">DB10.Speed · DB12.Rejects</span><span class="badge">somente leitura</span></div>
       </article>
 
-      <article class="card glass c4">
+      <article class="card glass metric c4">
         <div class="card-h"><div><h3>Disponibilidade</h3><p>Paradas e alarmes em tempo real</p></div><span class="badge">últimas 8 h</span></div>
         <div class="ring" aria-label="94 por cento de disponibilidade, exemplo">
           <svg viewBox="0 0 150 150" aria-hidden="true">
             <circle cx="75" cy="75" r="62" fill="none" stroke="var(--hair)" stroke-width="9"/>
-            <circle cx="75" cy="75" r="62" fill="none" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="23.4"/>
+            <circle cx="75" cy="75" r="62" fill="none" stroke="var(--oee)" stroke-width="9" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="23.4"/>
           </svg>
           <div class="val"><b class="num">94,1%</b><small>OEE disponível</small></div>
         </div>
@@ -543,7 +551,7 @@ footer .sp{margin-left:auto}
       <div class="field full"><label for="fMsg">Conte um pouco</label><textarea id="fMsg" name="mensagem" placeholder="Ex.: temos uma prensa com CLP S7-300 e queremos ver a produção por turno no celular."></textarea></div>
       <div class="f-foot">
         <p id="hint">Seus dados vão só para a nossa conversa no WhatsApp.</p>
-        <a class="btn btn-solid" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Enviar pelo WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="btn btn-accent" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Enviar pelo WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </div>
     </form>
   </div>
@@ -552,7 +560,7 @@ footer .sp{margin-left:auto}
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600"><span class="brand-mark"><span></span></span>ConectaOT</span>
+    <span style="display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600"><svg class="logo-ico" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0A192F"/><circle cx="32" cy="32" r="20" stroke="#1E293B" stroke-width="5"/><path d="M18 44 L32 30 L40 38 L50 20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20 H50 V28" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">Conecta<b>OT</b></span></span>
     <span>Automação, dados e software para a indústria</span>
     <span class="sp">© <span id="yr">2026</span> ConectaOT · Caçador/SC</span>
   </div>
