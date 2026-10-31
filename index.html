@@ -10,7 +10,7 @@
 <meta property="og:description" content="Mais OEE e menos paradas, sem trocar a máquina. Diagnóstico técnico gratuito.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta name="theme-color" content="#0A192F">
+<meta name="theme-color" content="#0B132B">
 <link rel="canonical" href="https://www.conectaot.com.br/">
 <meta property="og:url" content="https://www.conectaot.com.br/">
 <meta name="robots" content="index,follow">
@@ -23,29 +23,29 @@
 <style>
 /* Layout: página como um "dashboard" de vidro — pílula de navegação, KPIs no topo, grade bento de cards fosco sobre fundo desfocado. */
 :root{
-  --bg:#F8FAFC; --blob1:#DCEBF5; --blob2:#E2E8F0; --blob3:#D5F5FA;
-  --glass:rgba(255,255,255,.62); --glass-2:rgba(255,255,255,.82); --glass-line:rgba(10,25,47,.08); --glass-shadow:0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px -24px rgba(10,25,47,.25);
-  --ink:#0A192F; --muted:#475569; --faint:#64748B; --hair:rgba(10,25,47,.10);
-  --solid:#0A192F; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(255,255,255,.08); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
-  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#CCF7FD; --accent-ink:#0891B2; --data:#0891B2; --oee:#00C766; --ok:#059669; --warn:#B9700F; --neg:#C2362B; --info:#0891B2;
-  --bar:rgba(248,250,252,.84); --bar-pill:rgba(255,255,255,.97);
+  --bg:#FBF7F1; --blob1:#F4D6B0; --blob2:#D6E9F2; --blob3:#F8E6CF;
+  --card:#FFFFFF; --glass:#FFFFFF; --glass-2:#F6F1EA; --glass-line:rgba(11,19,43,.08); --glass-shadow:0 1px 2px rgba(11,19,43,.05), 0 14px 32px -22px rgba(11,19,43,.25);
+  --ink:#0B132B; --muted:#3A506B; --faint:#5F7189; --hair:rgba(11,19,43,.10);
+  --solid:#0B132B; --on-solid:#F4F6FA; --solid-muted:#9FB0C6; --solid-line:rgba(255,255,255,.08); --solid-accent:#5BC0DE; --solid-neg:#FF8A7E;
+  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#F4D6B0; --accent-ink:#1E7696; --data:#1E7696; --oee:#D97706; --ok:#B45F06; --warn:#B45F06; --neg:#C2362B; --info:#1E7696;
+  --bar:rgba(251,247,241,.62); --bar-pill:rgba(255,255,255,.55); --btn-glass:rgba(255,255,255,.55);
   --f:"Inter", "Segoe UI", system-ui, sans-serif; --display:"Plus Jakarta Sans", "Inter", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
   --r:20px; --r-sm:14px; --max:1240px;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0A192F; --blob1:#12305A; --blob2:#0E2440; --blob3:#0B3B44;
-  --glass:rgba(30,41,59,.55); --glass-2:rgba(30,41,59,.85); --glass-line:rgba(148,163,184,.14); --glass-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.7);
-  --ink:#F8FAFC; --muted:#94A3B8; --faint:#64748B; --hair:rgba(148,163,184,.14);
-  --solid:#1E293B; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(148,163,184,.14); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
-  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#123A4A; --accent-ink:#00E5FF; --data:#00E5FF; --oee:#00E676; --ok:#00E676; --warn:#F0AE4B; --neg:#FF7E72; --info:#00E5FF;
-  --bar:rgba(10,25,47,.84); --bar-pill:rgba(30,41,59,.97); color-scheme:dark }}
+  --bg:#0B132B; --blob1:#1C2541; --blob2:#3A506B; --blob3:#6B3A0A;
+  --card:#1C2541; --glass:#1C2541; --glass-2:#243052; --glass-line:rgba(91,192,222,.12); --glass-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -24px rgba(0,0,0,.75);
+  --ink:#F4F6FA; --muted:#A9B8CC; --faint:#7487A0; --hair:rgba(169,184,204,.14);
+  --solid:#3A506B; --on-solid:#F4F6FA; --solid-muted:#C8D3E0; --solid-line:rgba(255,255,255,.12); --solid-accent:#F4D6B0; --solid-neg:#FFB0A6;
+  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#2A3A5C; --accent-ink:#5BC0DE; --data:#5BC0DE; --oee:#F59E0B; --ok:#F4D6B0; --warn:#F59E0B; --neg:#FF7E72; --info:#5BC0DE;
+  --bar:rgba(11,19,43,.55); --bar-pill:rgba(28,37,65,.55); --btn-glass:rgba(255,255,255,.08); color-scheme:dark }}
 :root[data-theme="dark"]{
-  --bg:#0A192F; --blob1:#12305A; --blob2:#0E2440; --blob3:#0B3B44;
-  --glass:rgba(30,41,59,.55); --glass-2:rgba(30,41,59,.85); --glass-line:rgba(148,163,184,.14); --glass-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 50px -24px rgba(0,0,0,.7);
-  --ink:#F8FAFC; --muted:#94A3B8; --faint:#64748B; --hair:rgba(148,163,184,.14);
-  --solid:#1E293B; --on-solid:#F8FAFC; --solid-muted:#94A3B8; --solid-line:rgba(148,163,184,.14); --solid-accent:#00E5FF; --solid-neg:#FF8A7E;
-  --accent:#00E5FF; --on-accent:#0A192F; --accent-soft:#123A4A; --accent-ink:#00E5FF; --data:#00E5FF; --oee:#00E676; --ok:#00E676; --warn:#F0AE4B; --neg:#FF7E72; --info:#00E5FF;
-  --bar:rgba(10,25,47,.84); --bar-pill:rgba(30,41,59,.97); color-scheme:dark }
+  --bg:#0B132B; --blob1:#1C2541; --blob2:#3A506B; --blob3:#6B3A0A;
+  --card:#1C2541; --glass:#1C2541; --glass-2:#243052; --glass-line:rgba(91,192,222,.12); --glass-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -24px rgba(0,0,0,.75);
+  --ink:#F4F6FA; --muted:#A9B8CC; --faint:#7487A0; --hair:rgba(169,184,204,.14);
+  --solid:#3A506B; --on-solid:#F4F6FA; --solid-muted:#C8D3E0; --solid-line:rgba(255,255,255,.12); --solid-accent:#F4D6B0; --solid-neg:#FFB0A6;
+  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#2A3A5C; --accent-ink:#5BC0DE; --data:#5BC0DE; --oee:#F59E0B; --ok:#F4D6B0; --warn:#F59E0B; --neg:#FF7E72; --info:#5BC0DE;
+  --bar:rgba(11,19,43,.55); --bar-pill:rgba(28,37,65,.55); --btn-glass:rgba(255,255,255,.08); color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
@@ -356,6 +356,15 @@ footer .sp{margin-left:auto}
 @media (max-width:900px){.final .cta-wrap{grid-template-columns:1fr}}
 .micro{font-size:13px;color:var(--muted)}
 #problema,#solucao,#beneficios,#como-funciona,#cases,#diferenciais,#oferta,#faq,#contato{content-visibility:auto;contain-intrinsic-size:auto 800px}
+
+/* ===== vidro só em barras e botões; cards sólidos ===== */
+.glass{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.top{background:var(--bar)!important;backdrop-filter:blur(22px) saturate(1.6)!important;-webkit-backdrop-filter:blur(22px) saturate(1.6)!important}
+.top .glass,.nav.glass{background:var(--bar-pill)!important;backdrop-filter:blur(20px) saturate(1.6)!important;-webkit-backdrop-filter:blur(20px) saturate(1.6)!important;border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px -14px rgba(0,0,0,.45)}
+.btn-glass,.pill-glass{background:var(--btn-glass)!important;backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.btn-accent,.pill-accent{background:color-mix(in srgb,var(--accent) 82%,transparent)!important;backdrop-filter:blur(16px) saturate(1.8);-webkit-backdrop-filter:blur(16px) saturate(1.8);border:1px solid rgba(255,255,255,.35)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 26px -12px color-mix(in srgb,var(--accent) 80%,transparent)!important}
+.wa-fab{background:rgba(37,211,102,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px -8px rgba(0,0,0,.45)}
+@media (max-width:980px){.nav.open{background:var(--card)!important}}
 </style>
 </head>
 <body>
