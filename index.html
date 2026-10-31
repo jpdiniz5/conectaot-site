@@ -355,7 +355,7 @@ footer .sp{margin-left:auto}
 .final .cta-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}
 @media (max-width:900px){.final .cta-wrap{grid-template-columns:1fr}}
 .micro{font-size:13px;color:var(--muted)}
-#problema,#solucao,#beneficios,#como-funciona,#cases,#diferenciais,#oferta,#faq,#contato{content-visibility:auto;contain-intrinsic-size:auto 800px}
+#problema,#solucao,#beneficios,#como-funciona,#cases,#diferenciais,#oferta,#faq,#contato,#projetos{content-visibility:auto;contain-intrinsic-size:auto 800px}
 
 /* ===== vidro só em barras e botões; cards sólidos ===== */
 .glass{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
@@ -378,6 +378,7 @@ footer .sp{margin-left:auto}
       <a href="#inicio" class="on">Início</a>
       <a href="#solucao">Solução</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#projetos">Projetos</a>
       <a href="#cases">Cases</a>
       <a href="#faq">Dúvidas</a>
     </nav>
@@ -408,7 +409,7 @@ footer .sp{margin-left:auto}
           <li>Coleta somente leitura: não altera o programa da máquina</li>
           <li>Engenharia com 60+ comissionamentos no Brasil e no exterior</li>
         </ul>
-        <div class="hero-ctas"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="txt-link" href="#cases">Ver resultados ↓</a></div>
+        <div class="hero-ctas"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="txt-link" href="#projetos">Ver projetos entregues ↓</a></div>
       </div>
     </div>
     <div class="bento" style="margin-top:34px" aria-label="Exemplo de painel ConectaOT, valores ilustrativos">
@@ -518,6 +519,79 @@ footer .sp{margin-left:auto}
   </div>
 </section>
 
+<section id="projetos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Portfólio</span><h2>Projetos entregues</h2><p>Indústria de compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo.</p></div>
+    </div>
+
+    <div class="projects collapsed" id="projects">
+      <article class="proj glass" data-cat="soft">
+        <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
+        <span class="tagline">Projeto 01 · app próprio</span>
+        <p class="quote">Talhões no mapa, medições offline e alertas de poda e desbaste, com marketplace de viveiros.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>PWA · mapas · offline</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>manejo.conectaot.com.br</span><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
+      </article>
+
+      <article class="proj glass" data-cat="sup">
+        <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">S7-1214C</span></div>
+        <span class="tagline">CLP + dashboard web</span>
+        <p class="quote">Temperatura, ciclos e histórico do cozimento acompanhados pelo navegador, com banco de dados próprio.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>Siemens · PHP · MySQL</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Em operação</span></div>
+      </article>
+
+      <article class="proj solid dark" data-cat="sup soft">
+        <div class="proj-top"><span class="av">CL</span><div><h3>Classificadora de lâminas</h3><p>Coleta de dados · laminação</p></div><span class="badge">MVP</span></div>
+        <span class="tagline">Plataforma ConectaOT</span>
+        <p class="quote">Gateway lendo o CLP da máquina em tempo real. Produção por turno e paradas sem mexer no programa original.</p>
+        <div class="meter"><div class="meter-h"><span>Modo de acesso</span><span>somente leitura</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Em operação</span></div>
+      </article>
+
+      <article class="proj glass" data-cat="auto">
+        <div class="proj-top"><span class="av">SC</span><div><h3>Secador de lâminas</h3><p>Automação · retrofit</p></div><span class="badge">TwinCAT 3</span></div>
+        <span class="tagline">TIA Portal → TwinCAT 3</span>
+        <p class="quote">Conversão da lógica do secador para Beckhoff, com inversores Altivar em rede EtherCAT.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>ST / SCL · EtherCAT</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Laminação</span></div>
+      </article>
+
+      <article class="proj glass" data-cat="auto">
+        <div class="proj-top"><span class="av">TL</span><div><h3>Torno laminador</h3><p>Automação · programa e IHM</p></div><span class="badge">Campo</span></div>
+        <span class="tagline">Máquinas de laminação</span>
+        <p class="quote">Programação, posicionamento e comissionamento de tornos e linhas de laminação, inclusive no exterior.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>Siemens · Beckhoff</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Brasil e exterior</span></div>
+      </article>
+
+      <article class="proj glass" data-cat="auto sup">
+        <div class="proj-top"><span class="av">PC</span><div><h3>Picador industrial</h3><p>Automação · CODESYS</p></div><span class="badge">M810</span></div>
+        <span class="tagline">Alarmes, histórico e usuários</span>
+        <p class="quote">Programa em CODESYS com gestão de alarmes, histórico de eventos, níveis de usuário e teclas de função.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>CODESYS · IHM</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Concluído</span></div>
+      </article>
+
+      <article class="proj glass" data-cat="sup">
+        <div class="proj-top"><span class="av">BH</span><div><h3>Bancada de testes hidráulicos</h3><p>Supervisório · ensaios</p></div><span class="badge">Testes</span></div>
+        <span class="tagline">Registro de ensaios</span>
+        <p class="quote">Sistema para executar e registrar testes hidráulicos, com acompanhamento das grandezas durante o ensaio.</p>
+        <div class="meter"><div class="meter-h"><span>Entrega</span><span>software de teste</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-foot"><span>Equipamentos</span></div>
+      </article>
+
+      <article class="proj glass" data-cat="vis">
+        <div class="proj-top"><span class="av">VC</span><div><h3>Visão na guilhotina</h3><p>Visão computacional · laminação</p></div><span class="badge">P&amp;D</span></div>
+        <span class="tagline">Contagem de lâminas</span>
+        <p class="quote">Câmera sobre o tapete para contar lâminas e apontar defeitos, reduzindo a conferência manual.</p>
+        <div class="meter"><div class="meter-h"><span>Status</span><span>em desenvolvimento</span></div><div class="tr"><i style="width:45%"></i></div></div>
+        <div class="proj-foot"><span>Piloto</span></div>
+      </article>
+    </div>
+<button class="btn btn-glass more" id="moreBtn" type="button" aria-controls="projects" aria-expanded="false">Ver todos os projetos</button>
+</div></section>
 <section id="cases">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Resultados</span><h2>Resultados na prática</h2><p class="lead">Cases ilustrativos do tipo de resultado buscado. Os números abaixo são exemplos.</p></div>
@@ -650,6 +724,8 @@ footer .sp{margin-left:auto}
     if('IntersectionObserver' in window){new IntersectionObserver(function(e){vis=e[0].isIntersecting;}).observe(sv);}
     setInterval(function(){if(document.hidden||!vis)return;var n=Math.round(Math.min(max-20,Math.max(min+40,d[d.length-1]+(Math.random()-.5)*70)));d.push(n);d.shift();draw();},3000);
   }
+  var more=document.getElementById('moreBtn'),pj=document.getElementById('projects');
+  if(more&&pj)more.addEventListener('click',function(){var c=pj.classList.toggle('collapsed');more.setAttribute('aria-expanded',!c);more.textContent=c?'Ver todos os projetos':'Mostrar menos';});
   // FAQ: um aberto por vez
   var dts=[].slice.call(document.querySelectorAll('.faq details'));
   dts.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)dts.forEach(function(o){if(o!==x)o.open=false;});});});
