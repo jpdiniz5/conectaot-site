@@ -417,6 +417,28 @@ footer .sp{margin-left:auto}
 @media (max-width:860px){.calc{grid-template-columns:1fr}.calc .r{min-height:280px}}
 .prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:90}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.js .bars span{transform:none}.js .ring circle:last-child{stroke-dashoffset:23.4}.bump{animation:none}}
+
+.svc-h{font-size:clamp(22px,2.2vw,28px);margin-bottom:14px}
+.tabs{position:relative;display:flex;gap:4px;padding:5px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{position:relative;z-index:1;flex:none;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:600 15px/1 var(--f);cursor:pointer;transition:color .2s ease,transform .16s var(--ease-out)}
+.tabs button:active{transform:scale(.97)}
+.tabs button[aria-selected="true"]{color:var(--on-accent)}
+.tab-ind{position:absolute;z-index:0;top:5px;bottom:5px;left:0;border-radius:999px;background:var(--accent);transition:transform .3s var(--ease-out),width .3s var(--ease-out)}
+.tpanel{margin-top:14px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+.tpanel[hidden]{display:none}
+.tpanel.enter{animation:tp .32s var(--ease-out)}
+@keyframes tp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tp-main h3{font-size:clamp(24px,2.6vw,34px);margin-bottom:12px}
+.tp-main p{color:var(--muted);font-size:17px;max-width:56ch}
+.tp-main ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.tp-main li{display:flex;gap:10px;align-items:baseline;font-size:16px}
+.tp-main li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--oee);flex:none;transform:translateY(-1px)}
+.tp-side{margin:0;display:grid;gap:14px;align-content:start;padding:20px;border-radius:var(--r-sm);background:var(--glass-2)}
+.tp-side dt{font-size:13px;color:var(--muted)}
+.tp-side dd{margin:2px 0 0;font-weight:600;font-size:15px}
+@media (max-width:860px){.tabs{width:100%;border-radius:16px}.tpanel{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.tab-ind{transition:none}.tpanel.enter{animation:none}}
 </style>
 </head>
 <body>
@@ -597,7 +619,7 @@ footer .sp{margin-left:auto}
     
   </div>
   <div style="height:56px"></div>
-  <div class="wrap split">
+  <div class="wrap">
     <div>
       <div class="sec-title"><span class="eyebrow">Como resolvemos</span><h2>Automação e dados de máquina, do CLP ao celular do gestor.</h2><p class="lead">A ConectaOT une engenharia de automação e software. Programamos e modernizamos a máquina quando é preciso e tiramos os dados dela quando o objetivo é enxergar a produção.</p></div>
       <div class="three">
@@ -607,14 +629,29 @@ footer .sp{margin-left:auto}
       </div>
       <p class="result"><b>Resultado esperado:</b> causa de parada registrada automaticamente, OEE medido em vez de estimado, decisões de manutenção baseadas em histórico e base pronta para manutenção preditiva.</p>
     </div>
-    <ul class="deliver">
-      <li><b>Coleta de dados de CLP (IIoT):</b> gateway industrial que lê as variáveis da máquina em tempo real, somente leitura.</li>
-      <li><b>Supervisórios e dashboards web:</b> produção, paradas, alarmes e tendências por turno, no navegador e no celular.</li>
-      <li><b>Programação de CLP e IHM:</b> máquinas novas, melhorias e lógica de segurança.</li>
-      <li><b>Retrofit de máquinas:</b> substituição de controladores obsoletos, incluindo migração Siemens TIA Portal → Beckhoff TwinCAT 3.</li>
-      <li><b>Visão computacional:</b> contagem e detecção de defeitos com câmera.</li>
-      <li><b>Comissionamento em campo:</b> partida assistida no Brasil e no exterior.</li>
-    </ul>
+    
+  </div>
+  <div class="wrap" style="margin-top:40px">
+    <h3 class="svc-h">Escolha o serviço</h3>
+    <div class="svc"><div class="tabs" role="tablist" aria-label="Serviços"><button role="tab" id="t-coleta" aria-controls="p-coleta" aria-selected="true" tabindex="0">Coleta de dados</button><button role="tab" id="t-sup" aria-controls="p-sup" aria-selected="false" tabindex="-1">Supervisório</button><button role="tab" id="t-clp" aria-controls="p-clp" aria-selected="false" tabindex="-1">CLP e IHM</button><button role="tab" id="t-retro" aria-controls="p-retro" aria-selected="false" tabindex="-1">Retrofit</button><button role="tab" id="t-visao" aria-controls="p-visao" aria-selected="false" tabindex="-1">Visão</button><button role="tab" id="t-campo" aria-controls="p-campo" aria-selected="false" tabindex="-1">Comissionamento</button><span class="tab-ind" aria-hidden="true"></span></div><div class="tpanel glass" role="tabpanel" id="p-coleta" aria-labelledby="t-coleta">
+  <div class="tp-main"><h3>Coleta de dados de CLP (IIoT)</h3><p>Um gateway industrial instalado no painel lê as variáveis da sua máquina em tempo real, somente leitura. O programa do CLP não é alterado.</p><ul><li>Produção, paradas e alarmes registrados automaticamente</li><li>Histórico guardado com data e hora</li><li>Base pronta para medir OEE e manutenção preditiva</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>Siemens S7 · Beckhoff ADS · Rockwell EtherNet/IP · gateway Linux</dd></div><div><dt>Projeto entregue</dt><dd>Classificadora de lâminas</dd></div><div><dt>Na prática</dt><dd>Normalmente instalado sem parar a linha.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div><div class="tpanel glass" role="tabpanel" id="p-sup" aria-labelledby="t-sup" hidden>
+  <div class="tp-main"><h3>Supervisórios e dashboards web</h3><p>Telas no navegador e no celular com o que acontece na linha: produção por turno, paradas, alarmes e tendências, para quem decide.</p><ul><li>Painel em tempo real acessível de qualquer lugar</li><li>Relatórios por turno e por máquina</li><li>Usuários com níveis de acesso</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>Web (PC e celular) · banco de dados · integração com o CLP existente</dd></div><div><dt>Projeto entregue</dt><dd>Tanque de cozimento de toras</dd></div><div><dt>Na prática</dt><dd>Prazo definido no projeto, conforme número de telas.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div><div class="tpanel glass" role="tabpanel" id="p-clp" aria-labelledby="t-clp" hidden>
+  <div class="tp-main"><h3>Programação de CLP e IHM</h3><p>Programa novo ou melhoria de programa existente, com lógica de segurança, sequenciadores documentados e telas de operação claras.</p><ul><li>Sequenciadores numerados de 10 em 10, fáceis de manter</li><li>Gestão de alarmes, histórico e usuários na IHM</li><li>Documentação e backup entregues</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>Siemens TIA Portal · Beckhoff TwinCAT 3 · Rockwell Studio 5000 · CODESYS</dd></div><div><dt>Projeto entregue</dt><dd>Picador industrial e torno laminador</dd></div><div><dt>Na prática</dt><dd>Testes em vazio antes da produção assistida.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div><div class="tpanel glass" role="tabpanel" id="p-retro" aria-labelledby="t-retro" hidden>
+  <div class="tp-main"><h3>Retrofit de máquinas</h3><p>Troca de controladores obsoletos, sem peça de reposição, mantendo a mecânica da máquina. Inclui migração de TIA Portal para TwinCAT 3.</p><ul><li>Máquina volta a ter peça e suporte</li><li>Inversores em rede (EtherCAT, Profinet)</li><li>Lógica migrada e documentada</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>Siemens → Beckhoff · EtherCAT · inversores Altivar</dd></div><div><dt>Projeto entregue</dt><dd>Secador de lâminas</dd></div><div><dt>Na prática</dt><dd>Feito em janela combinada com a produção.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div><div class="tpanel glass" role="tabpanel" id="p-visao" aria-labelledby="t-visao" hidden>
+  <div class="tp-main"><h3>Visão computacional</h3><p>Câmera sobre o processo para contar peças e apontar defeitos, reduzindo a conferência manual.</p><ul><li>Contagem automática no ponto do processo</li><li>Registro de defeitos com imagem</li><li>Integração com o painel de produção</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>Câmera industrial ou smartphone · processamento local</dd></div><div><dt>Projeto entregue</dt><dd>Visão na guilhotina (piloto)</dd></div><div><dt>Na prática</dt><dd>Começa com um piloto curto na sua linha.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div><div class="tpanel glass" role="tabpanel" id="p-campo" aria-labelledby="t-campo" hidden>
+  <div class="tp-main"><h3>Comissionamento em campo</h3><p>Partida de máquina no seu chão de fábrica, no Brasil ou no exterior, com teste de I/O, parametrização e treinamento da equipe.</p><ul><li>Teste de I/O e intertravamentos</li><li>Produção assistida até a máquina estabilizar</li><li>Treinamento de operadores e manutenção</li></ul></div>
+  <dl class="tp-side"><div><dt>Plataformas</dt><dd>60+ comissionamentos em 9 países</dd></div><div><dt>Projeto entregue</dt><dd>Linhas de laminação no exterior</dd></div><div><dt>Na prática</dt><dd>Agenda combinada com o fabricante e a planta.</dd></div><a class="txt-link" href="#contato">Quero isso na minha máquina →</a></dl>
+</div></div>
   </div>
 </section>
 
@@ -843,6 +880,15 @@ footer .sp{margin-left:auto}
     $('cPieces').textContent=fmt(pcs)+' peças deixam de sair da máquina por mês. Saber a causa de cada parada é o primeiro passo para recuperar parte disso.';
     window.__custo='R$ '+fmt(rs)}
   ['cMin','cPh','cVal','cDays'].forEach(function(i){var el=$(i);if(el)el.addEventListener('input',calc)});calc();
+})();
+
+// abas de serviços
+(function(){var tl=document.querySelector('.tabs');if(!tl)return;var tabs=[].slice.call(tl.querySelectorAll('[role=tab]')),ind=tl.querySelector('.tab-ind');
+  function move(b){ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft)+'px)'}
+  function sel(b,focus){tabs.forEach(function(t){var on=t===b;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;var p=document.getElementById(t.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('enter');void p.offsetWidth;p.classList.add('enter')}});move(b);if(focus)b.focus();b.scrollIntoView({block:'nearest',inline:'nearest'})}
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k={ArrowRight:1,ArrowLeft:-1}[e.key];if(e.key==='Home')k=-i;if(e.key==='End')k=tabs.length-1-i;if(k!==undefined){e.preventDefault();sel(tabs[(i+k+tabs.length)%tabs.length],true)}})});
+  move(tabs[0]);addEventListener('resize',function(){move(tl.querySelector('[aria-selected=true]'))});
+  if(document.fonts)document.fonts.ready.then(function(){move(tl.querySelector('[aria-selected=true]'))});
 })();
 </script>
 </body>
