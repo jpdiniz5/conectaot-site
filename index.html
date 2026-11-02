@@ -10,6 +10,10 @@
 <meta property="og:description" content="Mais OEE e menos paradas, sem trocar a máquina. Diagnóstico técnico gratuito.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.conectaot.com.br/brand/og-conectaot.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B132B">
 <link rel="canonical" href="https://www.conectaot.com.br/">
 <meta property="og:url" content="https://www.conectaot.com.br/">
@@ -355,7 +359,7 @@ footer .sp{margin-left:auto}
 .final .cta-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}
 @media (max-width:900px){.final .cta-wrap{grid-template-columns:1fr}}
 .micro{font-size:13px;color:var(--muted)}
-#problema,#solucao,#beneficios,#como-funciona,#cases,#diferenciais,#oferta,#faq,#contato,#projetos{content-visibility:auto;contain-intrinsic-size:auto 800px}
+#solucao,#como-funciona,#cases,#diferenciais,#faq,#contato,#projetos{content-visibility:auto;contain-intrinsic-size:auto 800px}
 
 /* ===== vidro só em barras e botões; cards sólidos ===== */
 .glass{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
@@ -365,10 +369,11 @@ footer .sp{margin-left:auto}
 .btn-accent,.pill-accent{background:color-mix(in srgb,var(--accent) 82%,transparent)!important;backdrop-filter:blur(16px) saturate(1.8);-webkit-backdrop-filter:blur(16px) saturate(1.8);border:1px solid rgba(255,255,255,.35)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 26px -12px color-mix(in srgb,var(--accent) 80%,transparent)!important}
 .wa-fab{background:rgba(37,211,102,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px -8px rgba(0,0,0,.45)}
 @media (max-width:980px){.nav.glass{border-radius:20px!important}.nav.open{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:8px;gap:2px;box-shadow:0 24px 48px -16px rgba(0,0,0,.45)!important}.nav.open a{border-radius:12px;padding:14px 16px}}
+.offer-list{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--ink);font-size:15px}
 </style>
 </head>
 <body>
-<a class="skip" href="#problema">Pular para o conteúdo</a>
+<a class="skip" href="#projetos">Pular para o conteúdo</a>
 <div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
 
 <header class="top">
@@ -401,7 +406,7 @@ footer .sp{margin-left:auto}
   <div class="wrap">
     <div class="hero-head">
       <div>
-        <span class="pill pill-glass"><span style="width:7px;height:7px;border-radius:50%;background:var(--oee)"></span>Automação industrial · Indústria 4.0 · Caçador/SC</span>
+        <span class="pill pill-glass"><span style="width:7px;height:7px;border-radius:50%;background:var(--oee)"></span>Automação · Dados de máquina · Caçador/SC</span>
         <h1 style="margin-top:18px">Saiba por que sua máquina parou <b>antes que a parada vire prejuízo.</b></h1>
         <p class="hero-sub">Conectamos CLPs novos e antigos a painéis em tempo real, automatizamos e modernizamos máquinas. Você enxerga produção, paradas e OEE por turno, sem trocar o equipamento.</p>
         <ul class="hero-points">
@@ -454,75 +459,10 @@ footer .sp{margin-left:auto}
   </div>
 </div>
 
-<section id="problema">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">O problema</span><h2>A máquina parou. De novo. E ninguém sabe dizer quanto tempo nem por quê.</h2><p class="lead">Na maioria das fábricas, o dado existe dentro do CLP, mas não chega a quem decide. O resultado aparece no fim do mês como meta não batida.</p></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>Paradas sem registro</h3><p>O apontamento é manual, chega atrasado e raramente traz a causa real.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>OEE estimado no achismo</h3><p>Sem dado de máquina, disponibilidade e performance viram planilha preenchida depois do turno.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><h3>Equipamento obsoleto</h3><p>CLP descontinuado, sem peça de reposição e sem quem conheça o programa.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-2a2 2 0 0 0-4 0"/></svg></span><h3>Processos manuais</h3><p>Contagem, conferência e ajustes que dependem da atenção do operador.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></span><h3>Integração difícil</h3><p>Máquinas de fabricantes diferentes que não conversam entre si nem com o ERP.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="solucao">
-  <div class="wrap split">
-    <div>
-      <div class="sec-title"><span class="eyebrow">A solução</span><h2>Automação e dados de máquina, do CLP ao celular do gestor.</h2><p class="lead">A ConectaOT une engenharia de automação e software. Programamos e modernizamos a máquina quando é preciso e tiramos os dados dela quando o objetivo é enxergar a produção.</p></div>
-      <div class="three">
-        <div><code>1</code><span>Lemos as variáveis que já existem no seu CLP.</span></div>
-        <div><code>2</code><span>Tratamos os dados em um gateway industrial instalado no painel.</span></div>
-        <div><code>3</code><span>Você acompanha produção, paradas e OEE em um painel web.</span></div>
-      </div>
-      <p class="result"><b>Resultado esperado:</b> causa de parada registrada automaticamente, OEE medido em vez de estimado, decisões de manutenção baseadas em histórico e base pronta para manutenção preditiva.</p>
-    </div>
-    <ul class="deliver">
-      <li><b>Coleta de dados de CLP (IIoT):</b> gateway industrial que lê as variáveis da máquina em tempo real, somente leitura.</li>
-      <li><b>Supervisórios e dashboards web:</b> produção, paradas, alarmes e tendências por turno, no navegador e no celular.</li>
-      <li><b>Programação de CLP e IHM:</b> máquinas novas, melhorias e lógica de segurança.</li>
-      <li><b>Retrofit de máquinas:</b> substituição de controladores obsoletos, incluindo migração Siemens TIA Portal → Beckhoff TwinCAT 3.</li>
-      <li><b>Visão computacional:</b> contagem e detecção de defeitos com câmera.</li>
-      <li><b>Comissionamento em campo:</b> partida assistida no Brasil e no exterior.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="beneficios">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Peças por hora e por turno, comparadas com a meta.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><h3>Segurança preservada</h3><p>A coleta não envia comandos para a máquina.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span><h3>Menos retrabalho</h3><p>Defeitos detectados antes de seguir no processo.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Rastreabilidade</h3><p>Histórico de produção, alarmes e parâmetros por lote.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina.</p></div>
-    </div>
-    <div class="chips" aria-label="Aplicações típicas">
-      <span>Laminação, secagem, prensagem e classificação</span><span>Máquinas operatrizes e células</span><span>Tanques e processos térmicos</span><span>Bancadas de teste e ensaio</span><span>CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS</span>
-    </div>
-  </div>
-</section>
-
-<section id="como-funciona">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Como funciona</span><h2>Do diagnóstico ao painel funcionando</h2><p class="lead">Numeramos as etapas como num sequenciador de CLP: de 10 em 10, para sobrar espaço para o passo que o seu projeto precisar.</p></div>
-    <div class="timeline">
-      <div class="st glass"><code>PASSO 10</code><h3>Diagnóstico</h3><p>Conversa técnica e visita (ou vídeo) para entender a máquina, o CLP e o objetivo.</p></div>
-      <div class="st glass"><code>PASSO 20</code><h3>Projeto e engenharia</h3><p>Escopo, arquitetura, prazo e valor por escrito, com o que entra e o que fica de fora.</p></div>
-      <div class="st glass"><code>PASSO 30</code><h3>Implantação</h3><p>Programação, gateway ou retrofit, sempre em janela combinada com a produção.</p></div>
-      <div class="st glass"><code>PASSO 40</code><h3>Integração e testes</h3><p>Validação dos dados com a equipe, testes de I/O e partida assistida.</p></div>
-      <div class="st glass"><code>PASSO 50</code><h3>Suporte</h3><p>Treinamento, ajustes pós-partida e acompanhamento contínuo.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="projetos">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="eyebrow">Portfólio</span><h2>Projetos entregues</h2><p>Indústria de compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo.</p></div>
+      <div><span class="eyebrow">Portfólio</span><h2>Projetos já entregues</h2><p>Indústria de compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo.</p></div>
     </div>
 
     <div class="projects collapsed" id="projects">
@@ -592,6 +532,60 @@ footer .sp{margin-left:auto}
     </div>
 <button class="btn btn-glass more" id="moreBtn" type="button" aria-controls="projects" aria-expanded="false">Ver todos os projetos</button>
 </div></section>
+
+<section id="solucao">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">O problema e a solução</span><h2>O dado já existe no CLP. Só não chega até você.</h2><p class="lead">A parada é anotada à mão, atrasada e sem causa. Estas são as dores que mais ouvimos:</p></div>
+    <div class="grid3">
+      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>Paradas sem registro</h3><p>O apontamento é manual, chega atrasado e raramente traz a causa real.</p></div>
+      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>OEE estimado no achismo</h3><p>Sem dado de máquina, disponibilidade e performance viram planilha preenchida depois do turno.</p></div>
+      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><h3>Equipamento obsoleto</h3><p>CLP descontinuado, sem peça de reposição e sem quem conheça o programa.</p></div>
+      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-2a2 2 0 0 0-4 0"/></svg></span><h3>Processos manuais</h3><p>Contagem, conferência e ajustes que dependem da atenção do operador.</p></div>
+      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></span><h3>Integração difícil</h3><p>Máquinas de fabricantes diferentes que não conversam entre si nem com o ERP.</p></div>
+    
+  </div>
+  <div style="height:56px"></div>
+  <div class="wrap split">
+    <div>
+      <div class="sec-title"><span class="eyebrow">Como resolvemos</span><h2>Automação e dados de máquina, do CLP ao celular do gestor.</h2><p class="lead">A ConectaOT une engenharia de automação e software. Programamos e modernizamos a máquina quando é preciso e tiramos os dados dela quando o objetivo é enxergar a produção.</p></div>
+      <div class="three">
+        <div><code>1</code><span>Lemos as variáveis que já existem no seu CLP.</span></div>
+        <div><code>2</code><span>Tratamos os dados em um gateway industrial instalado no painel.</span></div>
+        <div><code>3</code><span>Você acompanha produção, paradas e OEE em um painel web.</span></div>
+      </div>
+      <p class="result"><b>Resultado esperado:</b> causa de parada registrada automaticamente, OEE medido em vez de estimado, decisões de manutenção baseadas em histórico e base pronta para manutenção preditiva.</p>
+    </div>
+    <ul class="deliver">
+      <li><b>Coleta de dados de CLP (IIoT):</b> gateway industrial que lê as variáveis da máquina em tempo real, somente leitura.</li>
+      <li><b>Supervisórios e dashboards web:</b> produção, paradas, alarmes e tendências por turno, no navegador e no celular.</li>
+      <li><b>Programação de CLP e IHM:</b> máquinas novas, melhorias e lógica de segurança.</li>
+      <li><b>Retrofit de máquinas:</b> substituição de controladores obsoletos, incluindo migração Siemens TIA Portal → Beckhoff TwinCAT 3.</li>
+      <li><b>Visão computacional:</b> contagem e detecção de defeitos com câmera.</li>
+      <li><b>Comissionamento em campo:</b> partida assistida no Brasil e no exterior.</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">Como funciona</span><h2>Do diagnóstico ao painel funcionando</h2><p class="lead">Numeramos as etapas como num sequenciador de CLP: de 10 em 10, para sobrar espaço para o passo que o seu projeto precisar.</p></div>
+    <div class="timeline">
+      <div class="st glass"><code>PASSO 10</code><h3>Diagnóstico</h3><p>Conversa técnica e visita (ou vídeo) para entender a máquina, o CLP e o objetivo.</p></div>
+      <div class="st glass"><code>PASSO 20</code><h3>Projeto e engenharia</h3><p>Escopo, arquitetura, prazo e valor por escrito, com o que entra e o que fica de fora.</p></div>
+      <div class="st glass"><code>PASSO 30</code><h3>Implantação</h3><p>Programação, gateway ou retrofit, sempre em janela combinada com a produção.</p></div>
+      <div class="st glass"><code>PASSO 40</code><h3>Integração e testes</h3><p>Validação dos dados com a equipe, testes de I/O e partida assistida.</p></div>
+      <div class="st glass"><code>PASSO 50</code><h3>Suporte</h3><p>Treinamento, ajustes pós-partida e acompanhamento contínuo.</p></div>
+    </div>
+  </div>
+</section>
+
+
 <section id="cases">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Resultados</span><h2>Resultados na prática</h2><p class="lead">Cases ilustrativos do tipo de resultado buscado. Os números abaixo são exemplos.</p></div>
@@ -616,7 +610,7 @@ footer .sp{margin-left:auto}
 
 <section id="diferenciais">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2></div>
+    <div class="sec-title"><span class="eyebrow">Benefícios e diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Mais disponibilidade, produtividade visível, rastreabilidade e economia, com estes cuidados de engenharia:</p></div>
     <div class="diff">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Engenharia de ponta a ponta</h3><p>Quem programa o CLP é quem constrói o painel. Sem repasse entre empresas.</p></div>
       <div class="tile glass hl"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Somente leitura por padrão</h3><p>A coleta de dados não escreve no CLP. A segurança da máquina continua no programa e no operador.</p></div>
@@ -624,23 +618,14 @@ footer .sp{margin-left:auto}
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg></span><h3>Integração com o que já existe</h3><p>Não exige trocar a máquina nem o CLP.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Experiência de campo internacional</h3><p>60+ comissionamentos em 9 países.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Escopo fechado</h3><p>Prazo e valor por escrito antes de começar.</p></div>
+    
+    <div class="chips" aria-label="Aplicações típicas">
+      <span>Laminação, secagem, prensagem e classificação</span><span>Máquinas operatrizes e células</span><span>Tanques e processos térmicos</span><span>Bancadas de teste e ensaio</span><span>CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS</span>
     </div>
   </div>
 </section>
 
-<section id="oferta">
-  <div class="wrap">
-    <div class="offer">
-      <div>
-        <span class="badge acc">Oferta</span>
-        <h2 style="margin-top:14px">Diagnóstico técnico gratuito da sua máquina</h2>
-        <p style="margin-top:12px">Em uma conversa de 30 minutos, um engenheiro avalia o seu CLP e o seu objetivo e indica o caminho: coleta de dados, retrofit ou automação. Sem custo e sem compromisso.</p>
-        <ul><li>Avaliação de compatibilidade do CLP e da rede</li><li>Indicação das variáveis que geram mais resultado</li><li>Estimativa de prazo e faixa de investimento</li></ul>
-      </div>
-      <div class="side"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><small>Leva menos de 1 minuto · Resposta em até 1 dia útil</small></div>
-    </div>
-  </div>
-</section>
+
 
 <section id="faq">
   <div class="wrap">
@@ -661,7 +646,8 @@ footer .sp{margin-left:auto}
     <div class="c-info glass">
       <span class="eyebrow">Diagnóstico gratuito</span>
       <h2>Pare de estimar. Comece a medir.</h2>
-      <p style="color:var(--muted)">Descubra em 30 minutos quanto a sua máquina pode render a mais, sem trocar o equipamento.</p>
+      <p style="color:var(--muted)">Diagnóstico técnico gratuito: em 30 minutos um engenheiro avalia o seu CLP e o seu objetivo e indica o caminho. Sem custo e sem compromisso.</p>
+      <ul class="offer-list"><li>Avaliação de compatibilidade do CLP e da rede</li><li>Indicação das variáveis que geram mais resultado</li><li>Estimativa de prazo e faixa de investimento</li></ul>
       <div class="c-line"><div><small>WhatsApp</small><b class="num">(49) 99120-8836</b></div><button type="button" data-copy="(49) 99120-8836">copiar</button></div>
       <div class="c-line"><div><small>E-mail</small><b>contato@conectaot.com.br</b></div><button type="button" data-copy="contato@conectaot.com.br">copiar</button></div>
       <div class="c-line"><div><small>Base</small><b>Caçador · Santa Catarina</b></div></div>
@@ -675,7 +661,7 @@ footer .sp{margin-left:auto}
       <div class="field"><label for="fPlc">Modelo do CLP <span class="micro">(opcional)</span></label><input id="fPlc" name="clp" placeholder="Não sabe? Deixe em branco"></div>
       <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com S7-300, queremos ver paradas e produção por turno."></textarea></div>
       <div class="f-foot">
-        <p id="hint">Sem custo e sem compromisso. Seus dados são usados apenas para responder ao seu pedido.</p>
+        <p id="hint">Sem custo e sem compromisso. Seus dados são usados apenas para responder ao seu pedido (<a href="privacidade.html">privacidade</a>).</p>
         <a class="btn btn-accent" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </div>
     </form>
@@ -687,6 +673,7 @@ footer .sp{margin-left:auto}
   <div class="wrap">
     <span style="display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600"><svg class="logo-ico" viewBox="0 0 88 88" fill="none" aria-hidden="true"><rect width="88" height="88" rx="20" fill="#0B132B"/><path d="M14 44H30M30 30V58M40 30V58M40 44H50" stroke="#F4F6FA" stroke-width="6" stroke-linecap="round"/><path d="M58 30A16 16 0 0 0 58 58M66 30A16 16 0 0 1 66 58" stroke="#5BC0DE" stroke-width="6" stroke-linecap="round"/><circle cx="62" cy="44" r="5" fill="#F59E0B"/></svg><span class="brand-name">Conecta<b>OT</b></span></span>
     <span>Automação industrial e dados de máquina · Indústria 4.0</span>
+    <a href="privacidade.html" style="color:var(--muted)">Privacidade</a>
     <span class="sp">© <span id="yr">2026</span> ConectaOT · Caçador/SC</span>
   </div>
 </footer>
