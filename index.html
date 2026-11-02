@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://www.conectaot.com.br/">
 <meta name="robots" content="index,follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 88' fill='none'%3E%3Crect width='88' height='88' rx='20' fill='%230B132B'/%3E%3Cpath d='M14 44H30M30 30V58M40 30V58M40 44H50' stroke='%23F4F6FA' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M58 30A16 16 0 0 0 58 58M66 30A16 16 0 0 1 66 58' stroke='%235BC0DE' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='62' cy='44' r='5' fill='%23F59E0B'/%3E%3C/svg%3E">
-<script>var t='dark';try{t=localStorage.getItem('cot-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
+<script>document.documentElement.classList.add("js");var t='dark';try{t=localStorage.getItem('cot-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ConectaOT","url":"https://www.conectaot.com.br/","email":"contato@conectaot.com.br","telephone":"+55-49-99120-8836","areaServed":[{"@type":"City","name":"Caçador"},{"@type":"State","name":"Santa Catarina"},{"@type":"Country","name":"Brasil"}],"address":{"@type":"PostalAddress","addressLocality":"Caçador","addressRegion":"SC","addressCountry":"BR"},"description":"Automação industrial, programação de CLP, supervisórios web, coleta de dados de máquinas, visão computacional e aplicativos.","knowsAbout":["Siemens TIA Portal","Beckhoff TwinCAT 3","Rockwell Studio 5000","CODESYS","Supervisório","IIoT","Visão computacional"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -370,9 +370,57 @@ footer .sp{margin-left:auto}
 .wa-fab{background:rgba(37,211,102,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px -8px rgba(0,0,0,.45)}
 @media (max-width:980px){.nav.glass{border-radius:20px!important}.nav.open{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:8px;gap:2px;box-shadow:0 24px 48px -16px rgba(0,0,0,.45)!important}.nav.open a{border-radius:12px;padding:14px 16px}}
 .offer-list{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--ink);font-size:15px}
+
+/* ===== movimento e interação ===== */
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-io:cubic-bezier(.77,0,.175,1)}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.js .rv.in{opacity:1;transform:none}
+.btn,.pill,.filters button,.c-line button{transition:transform .16s var(--ease-out),background-color .2s ease,filter .2s ease}
+.btn:active,.pill:active,.filters button:active,.c-line button:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .tile{transition:transform .25s var(--ease-out),border-color .25s ease}
+  .tile:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 40%,var(--glass-line))}
+  .tile:hover .ico{transform:scale(1.08) rotate(-4deg)}
+  .proj:hover .av{background:var(--accent);color:var(--on-accent)}
+}
+.ico,.av{transition:transform .25s var(--ease-out),background-color .2s ease,color .2s ease}
+.js .bars span{transform:scaleY(0);transform-origin:bottom;transition:transform .9s var(--ease-out)}
+.js .bars.in span{transform:scaleY(1)}
+.bars div:nth-child(2) span{transition-delay:.06s}.bars div:nth-child(3) span{transition-delay:.12s}.bars div:nth-child(4) span{transition-delay:.18s}.bars div:nth-child(5) span{transition-delay:.24s}.bars div:nth-child(6) span{transition-delay:.3s}
+.js .ring circle:last-child{stroke-dashoffset:389.6;transition:stroke-dashoffset 1.4s var(--ease-io)}
+.js .ring.in circle:last-child{stroke-dashoffset:23.4}
+.timeline{position:relative}
+.timeline .st{transition:border-color .3s ease,background-color .3s ease,transform .3s var(--ease-out);cursor:pointer}
+.timeline .st.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--glass))}
+.timeline .st.on code{color:var(--accent-ink)}
+.tl-bar{height:4px;border-radius:2px;background:var(--hair);margin-top:16px;overflow:hidden}
+.tl-bar i{display:block;height:100%;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out)}
+/* filtro de projetos */
+.pfilter{display:flex;flex-wrap:wrap;gap:6px;margin:-6px 0 18px}
+.pfilter button{font:500 14px/1 var(--f);min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-2);color:var(--muted);cursor:pointer}
+.pfilter button[aria-pressed="true"]{background:var(--solid);color:var(--on-solid);border-color:transparent}
+.proj{transition:opacity .3s ease,transform .3s var(--ease-out)}
+.proj.hide{display:none}
+/* calculadora */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc .q{padding:clamp(20px,3vw,32px);display:grid;gap:20px;align-content:start}
+.calc .r{padding:clamp(20px,3vw,32px);border-radius:var(--r);background:var(--oee);color:#0B132B;display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:380px}
+.calc .r .total{font:500 clamp(44px,6vw,88px)/1 var(--mono);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.calc .r p{font-size:17px;font-weight:500;max-width:44ch}
+.calc .r .btn{background:#0B132B;color:#F4F6FA;align-self:flex-start}
+.fld{display:grid;gap:6px}
+.fld label{display:flex;justify-content:space-between;font-size:15px;font-weight:600}
+.fld output{font-family:var(--mono);color:var(--accent-ink)}
+.fld input[type=range]{width:100%;accent-color:var(--accent);height:30px}
+.bump{animation:bump .35s var(--ease-out)}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.04)}100%{transform:scale(1)}}
+@media (max-width:860px){.calc{grid-template-columns:1fr}.calc .r{min-height:280px}}
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:90}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.js .bars span{transform:none}.js .ring circle:last-child{stroke-dashoffset:23.4}.bump{animation:none}}
 </style>
 </head>
 <body>
+<div class="prog" id="prog" aria-hidden="true"></div>
 <a class="skip" href="#projetos">Pular para o conteúdo</a>
 <div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
 
@@ -381,9 +429,10 @@ footer .sp{margin-left:auto}
     <a class="brand glass" href="#inicio" style="border-radius:999px" aria-label="ConectaOT, início"><svg class="logo-ico" viewBox="0 0 88 88" fill="none" aria-hidden="true"><rect width="88" height="88" rx="20" fill="#0B132B"/><path d="M14 44H30M30 30V58M40 30V58M40 44H50" stroke="#F4F6FA" stroke-width="6" stroke-linecap="round"/><path d="M58 30A16 16 0 0 0 58 58M66 30A16 16 0 0 1 66 58" stroke="#5BC0DE" stroke-width="6" stroke-linecap="round"/><circle cx="62" cy="44" r="5" fill="#F59E0B"/></svg><span class="brand-name">Conecta<b>OT</b></span></a>
     <nav class="nav glass" id="nav" style="border-radius:999px" aria-label="Principal">
       <a href="#inicio" class="on">Início</a>
-      <a href="#solucao">Solução</a>
-      <a href="#como-funciona">Como funciona</a>
       <a href="#projetos">Projetos</a>
+      <a href="#solucao">Solução</a>
+      <a href="#custo">Custo da parada</a>
+      <a href="#como-funciona">Como funciona</a>
       <a href="#cases">Cases</a>
       <a href="#faq">Dúvidas</a>
     </nav>
@@ -465,6 +514,9 @@ footer .sp{margin-left:auto}
       <div><span class="eyebrow">Portfólio</span><h2>Projetos já entregues</h2><p>Indústria de compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo.</p></div>
     </div>
 
+    <div class="pfilter" role="group" aria-label="Filtrar projetos">
+      <button type="button" aria-pressed="true" data-f="all">Todos</button><button type="button" aria-pressed="false" data-f="auto">Automação</button><button type="button" aria-pressed="false" data-f="sup">Supervisório</button><button type="button" aria-pressed="false" data-f="soft">Software</button><button type="button" aria-pressed="false" data-f="vis">Visão</button>
+    </div>
     <div class="projects collapsed" id="projects">
       <article class="proj glass" data-cat="soft">
         <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
@@ -572,6 +624,26 @@ footer .sp{margin-left:auto}
 
 
 
+<section id="custo">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">Faça a conta</span><h2>Quanto custa a sua parada?</h2><p class="lead">Arraste com os números da sua linha. A conta roda aqui no seu navegador e nada é enviado.</p></div>
+    <div class="calc">
+      <div class="q glass">
+        <div class="fld"><label for="cMin">Minutos parados por dia <output id="oMin" for="cMin">40</output></label><input id="cMin" type="range" min="5" max="240" step="5" value="40"></div>
+        <div class="fld"><label for="cPh">Peças por hora <output id="oPh" for="cPh">600</output></label><input id="cPh" type="range" min="50" max="3000" step="50" value="600"></div>
+        <div class="fld"><label for="cVal">Margem por peça (R$) <output id="oVal" for="cVal">0,80</output></label><input id="cVal" type="range" min="0.1" max="20" step="0.1" value="0.8"></div>
+        <div class="fld"><label for="cDays">Dias de produção no mês <output id="oDays" for="cDays">22</output></label><input id="cDays" type="range" min="10" max="30" step="1" value="22"></div>
+      </div>
+      <div class="r" aria-live="polite">
+        <p>Produção perdida por mês</p>
+        <span class="total" id="cTotal">R$ 7.040</span>
+        <p id="cPieces">8.800 peças deixam de sair da máquina por mês. Saber a causa de cada parada é o primeiro passo para recuperar parte disso.</p>
+        <a class="btn" href="#contato">Solicitar diagnóstico gratuito</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="como-funciona">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Como funciona</span><h2>Do diagnóstico ao painel funcionando</h2><p class="lead">Numeramos as etapas como num sequenciador de CLP: de 10 em 10, para sobrar espaço para o passo que o seu projeto precisar.</p></div>
@@ -582,6 +654,7 @@ footer .sp{margin-left:auto}
       <div class="st glass"><code>PASSO 40</code><h3>Integração e testes</h3><p>Validação dos dados com a equipe, testes de I/O e partida assistida.</p></div>
       <div class="st glass"><code>PASSO 50</code><h3>Suporte</h3><p>Treinamento, ajustes pós-partida e acompanhamento contínuo.</p></div>
     </div>
+    <div class="tl-bar" aria-hidden="true"><i id="tlBar"></i></div>
   </div>
 </section>
 
@@ -695,7 +768,7 @@ footer .sp{margin-left:auto}
   var links=[].slice.call(nav.querySelectorAll('a'));
   links.forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false);});});
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
-  function spy(){var y=scrollY+140,i=0;secs.forEach(function(s,k){if(s&&s.getBoundingClientRect().top+scrollY<=y)i=k;});links.forEach(function(a,k){a.classList.toggle('on',k===i);});}
+  function spy(){var y=scrollY+140,i=0,best=-1;secs.forEach(function(s,k){if(!s)return;var t=s.getBoundingClientRect().top+scrollY;if(t<=y&&t>best){best=t;i=k}});links.forEach(function(a,k){a.classList.toggle('on',k===i);});}
   var tk=0;addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){spy();tk=0;});}},{passive:true});spy();
   document.getElementById('yr').textContent=new Date().getFullYear();
   // sparkline ilustrativa
@@ -727,11 +800,49 @@ footer .sp{margin-left:auto}
   // formulário → WhatsApp
   var f=document.getElementById('leadForm'),send=document.getElementById('sendBtn'),hint=document.getElementById('hint');
   function build(){var n=f.nome.value.trim(),c=f.empresa.value.trim(),k=f.clp.value.trim(),m=f.mensagem.value.trim();
-    var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'');
+    var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'')+(window.__custo?'\nPela calculadora do site, minha parada custa cerca de '+window.__custo+' por mês.':'');
     send.href='https://wa.me/5549991208836?text='+encodeURIComponent(txt);}
   f.addEventListener('input',build);f.addEventListener('change',build);build();
   send.addEventListener('click',function(){build();hint.textContent='Abrindo o WhatsApp com o pedido pronto. Um engenheiro vai responder por lá.';});
   f.addEventListener('submit',function(e){e.preventDefault();});
+})();
+
+// ===== movimento e interação =====
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sel='.sec-title,.tile,.proj,.case,.st,.deliver li,.three>div,.trust .n,.faq details,.c-info,#leadForm,.calc .q,.calc .r,.chips span';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){el.classList.add('rv')});
+  document.querySelectorAll('.bars,.ring').forEach(function(el){els.push(el)});
+  function stagger(el){var p=el.parentNode,sib=[].filter.call(p.children,function(x){return x.classList.contains('rv')});var k=sib.indexOf(el);if(k>0)el.style.transitionDelay=Math.min(k,8)*60+'ms'}
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){stagger(e.target);e.target.classList.add('in');io.unobserve(e.target);if(e.target.classList.contains('n'))count(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+  // contadores da faixa de números
+  function count(n){var st=n.querySelector('strong');if(!st)return;var m=st.textContent.match(/(\d+)(\+?)/);if(!m)return;var to=+m[1],suf=m[2],t0=null;
+    function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/900),e=1-Math.pow(1-k,3);st.textContent=Math.round(to*e)+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  // barra de progresso de leitura
+  var pr=document.getElementById('prog'),tk=0;
+  addEventListener('scroll',function(){if(tk)return;tk=1;requestAnimationFrame(function(){var h=document.documentElement;pr.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-innerHeight||1))+')';tk=0})},{passive:true});
+  // linha do tempo: passos acendem em sequência; clique fixa
+  var steps=[].slice.call(document.querySelectorAll('.timeline .st')),bar=document.getElementById('tlBar'),cur=0,auto=null;
+  function show(i){cur=i;steps.forEach(function(s,k){s.classList.toggle('on',k===i)});if(bar)bar.style.transform='scaleX('+((i+1)/steps.length)+')'}
+  steps.forEach(function(s,k){s.setAttribute('tabindex','0');s.addEventListener('click',function(){clearInterval(auto);show(k)});s.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();clearInterval(auto);show(k)}})});
+  if(steps.length){show(0);var tl=document.querySelector('.timeline');if('IntersectionObserver' in window&&!reduce){new IntersectionObserver(function(es){if(es[0].isIntersecting&&!auto){auto=setInterval(function(){show((cur+1)%steps.length)},1800)}else if(!es[0].isIntersecting){clearInterval(auto);auto=null}}).observe(tl)}}
+  // filtro de projetos
+  var fb=[].slice.call(document.querySelectorAll('.pfilter button')),cards=[].slice.call(document.querySelectorAll('#projects .proj')),pj=document.getElementById('projects'),more=document.getElementById('moreBtn');
+  fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var f=b.getAttribute('data-f');if(pj)pj.classList.remove('collapsed');if(more)more.hidden=true;
+    cards.forEach(function(c){var ok=f==='all'||(c.getAttribute('data-cat')||'').split(' ').indexOf(f)>-1;c.classList.toggle('hide',!ok);if(ok&&!reduce){c.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:280,easing:'cubic-bezier(.23,1,.32,1)'})}})})});
+  // calculadora
+  var $=function(i){return document.getElementById(i)},fmt=function(v){return v.toLocaleString('pt-BR',{maximumFractionDigits:0})},shown=0,anim=null;
+  function calc(){if(!$('cMin'))return;var m=+$('cMin').value,ph=+$('cPh').value,v=+$('cVal').value,d=+$('cDays').value;
+    $('oMin').textContent=m;$('oPh').textContent=fmt(ph);$('oVal').textContent=v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});$('oDays').textContent=d;
+    var pcs=m/60*ph*d,rs=pcs*v,from=shown,t0=null;cancelAnimationFrame(anim);
+    function f(t){if(!t0)t0=t;var k=reduce?1:Math.min(1,(t-t0)/300);shown=from+(rs-from)*(1-Math.pow(1-k,3));$('cTotal').textContent='R$ '+fmt(shown);if(k<1)anim=requestAnimationFrame(f)}anim=requestAnimationFrame(f);
+    $('cPieces').textContent=fmt(pcs)+' peças deixam de sair da máquina por mês. Saber a causa de cada parada é o primeiro passo para recuperar parte disso.';
+    window.__custo='R$ '+fmt(rs)}
+  ['cMin','cPh','cVal','cDays'].forEach(function(i){var el=$(i);if(el)el.addEventListener('input',calc)});calc();
 })();
 </script>
 </body>
