@@ -10,741 +10,536 @@
 <meta property="og:description" content="Mais OEE e menos paradas, sem trocar a máquina. Diagnóstico técnico gratuito.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://www.conectaot.com.br/img/lamina.jpg">
 <meta name="theme-color" content="#0B132B">
 <link rel="canonical" href="https://www.conectaot.com.br/">
 <meta property="og:url" content="https://www.conectaot.com.br/">
 <meta name="robots" content="index,follow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='16' fill='%230A192F'/%3E%3Ccircle cx='32' cy='32' r='20' stroke='%231E293B' stroke-width='5'/%3E%3Cpath d='M18 44 L32 30 L40 38 L50 20' stroke='%2300E5FF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 20 H50 V28' stroke='%2300E5FF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<script>var t='dark';try{t=localStorage.getItem('cot-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ConectaOT","url":"https://www.conectaot.com.br/","email":"contato@conectaot.com.br","telephone":"+55-49-99120-8836","areaServed":[{"@type":"City","name":"Caçador"},{"@type":"State","name":"Santa Catarina"},{"@type":"Country","name":"Brasil"}],"address":{"@type":"PostalAddress","addressLocality":"Caçador","addressRegion":"SC","addressCountry":"BR"},"description":"Automação industrial, programação de CLP, supervisórios web, coleta de dados de máquinas, visão computacional e aplicativos.","knowsAbout":["Siemens TIA Portal","Beckhoff TwinCAT 3","Rockwell Studio 5000","CODESYS","Supervisório","IIoT","Visão computacional"]}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='16' fill='%230B132B'/%3E%3Ccircle cx='32' cy='32' r='20' stroke='%231C2541' stroke-width='5'/%3E%3Cpath d='M18 44 L32 30 L40 38 L50 20' stroke='%235BC0DE' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 20 H50 V28' stroke='%235BC0DE' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');var t='dark';try{t=localStorage.getItem('cot-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ConectaOT","url":"https://www.conectaot.com.br/","email":"contato@conectaot.com.br","telephone":"+55-49-99120-8836","areaServed":["Caçador","Santa Catarina","Brasil"],"address":{"@type":"PostalAddress","addressLocality":"Caçador","addressRegion":"SC","addressCountry":"BR"},"description":"Automação industrial, programação de CLP, supervisórios web, coleta de dados de máquinas, retrofit e visão computacional.","knowsAbout":["Siemens TIA Portal","Beckhoff TwinCAT 3","Rockwell Studio 5000","CODESYS","Supervisório","IIoT","OEE"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
 <style>
-/* Layout: página como um "dashboard" de vidro — pílula de navegação, KPIs no topo, grade bento de cards fosco sobre fundo desfocado. */
+/* Direção: "o quadro bem arrumado". A página é um quadro de placas encaixadas com 8px de folga,
+   como a tela de um supervisório: cada placa é uma leitura, uma foto, uma frase ou uma ação. */
 :root{
-  --bg:#FBF7F1; --blob1:#F4D6B0; --blob2:#D6E9F2; --blob3:#F8E6CF;
-  --card:#FFFFFF; --glass:#FFFFFF; --glass-2:#F6F1EA; --glass-line:rgba(11,19,43,.08); --glass-shadow:0 1px 2px rgba(11,19,43,.05), 0 14px 32px -22px rgba(11,19,43,.25);
-  --ink:#0B132B; --muted:#3A506B; --faint:#5F7189; --hair:rgba(11,19,43,.10);
-  --solid:#0B132B; --on-solid:#F4F6FA; --solid-muted:#9FB0C6; --solid-line:rgba(255,255,255,.08); --solid-accent:#5BC0DE; --solid-neg:#FF8A7E;
-  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#F4D6B0; --accent-ink:#1E7696; --data:#1E7696; --oee:#D97706; --ok:#B45F06; --warn:#B45F06; --neg:#C2362B; --info:#1E7696;
-  --bar:rgba(251,247,241,.62); --bar-pill:rgba(255,255,255,.55); --btn-glass:rgba(255,255,255,.55);
-  --f:"Inter", "Segoe UI", system-ui, sans-serif; --display:"Plus Jakarta Sans", "Inter", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
-  --r:20px; --r-sm:14px; --max:1240px;
+  --bg:#0B132B; --tile:#1C2541; --tile-2:#243052; --steel:#3A506B;
+  --ink:#F4F6FA; --soft:#B4C2D4; --sand:#F4D6B0; --sand-ink:#0B132B;
+  --accent:#5BC0DE; --on-accent:#0B132B; --metric:#F59E0B; --field:#D97706; --on-field:#0B132B;
+  --bar:rgba(11,19,43,.62); --glass-btn:rgba(255,255,255,.10); --glass-line:rgba(255,255,255,.18);
+  --f:"Inter","Segoe UI",system-ui,sans-serif; --d:"Plus Jakarta Sans","Inter",system-ui,sans-serif; --m:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --g:8px; --edge:20px; --r:10px;
+  --s-xl:clamp(56px,8.6vw,148px); --s-l:clamp(34px,4.2vw,64px); --s-m:clamp(22px,2.2vw,32px); --s-b:17px; --s-s:14px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0B132B; --blob1:#1C2541; --blob2:#3A506B; --blob3:#6B3A0A;
-  --card:#1C2541; --glass:#1C2541; --glass-2:#243052; --glass-line:rgba(91,192,222,.12); --glass-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -24px rgba(0,0,0,.75);
-  --ink:#F4F6FA; --muted:#A9B8CC; --faint:#7487A0; --hair:rgba(169,184,204,.14);
-  --solid:#3A506B; --on-solid:#F4F6FA; --solid-muted:#C8D3E0; --solid-line:rgba(255,255,255,.12); --solid-accent:#F4D6B0; --solid-neg:#FFB0A6;
-  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#2A3A5C; --accent-ink:#5BC0DE; --data:#5BC0DE; --oee:#F59E0B; --ok:#F4D6B0; --warn:#F59E0B; --neg:#FF7E72; --info:#5BC0DE;
-  --bar:rgba(11,19,43,.55); --bar-pill:rgba(28,37,65,.55); --btn-glass:rgba(255,255,255,.08); color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#0B132B; --blob1:#1C2541; --blob2:#3A506B; --blob3:#6B3A0A;
-  --card:#1C2541; --glass:#1C2541; --glass-2:#243052; --glass-line:rgba(91,192,222,.12); --glass-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px -24px rgba(0,0,0,.75);
-  --ink:#F4F6FA; --muted:#A9B8CC; --faint:#7487A0; --hair:rgba(169,184,204,.14);
-  --solid:#3A506B; --on-solid:#F4F6FA; --solid-muted:#C8D3E0; --solid-line:rgba(255,255,255,.12); --solid-accent:#F4D6B0; --solid-neg:#FFB0A6;
-  --accent:#5BC0DE; --on-accent:#0B132B; --accent-soft:#2A3A5C; --accent-ink:#5BC0DE; --data:#5BC0DE; --oee:#F59E0B; --ok:#F4D6B0; --warn:#F59E0B; --neg:#FF7E72; --info:#5BC0DE;
-  --bar:rgba(11,19,43,.55); --bar-pill:rgba(28,37,65,.55); --btn-glass:rgba(255,255,255,.08); color-scheme:dark }
-
+:root[data-theme="light"]{
+  --bg:#FBF7F1; --tile:#FFFFFF; --tile-2:#F3ECE2; --steel:#3A506B;
+  --ink:#0B132B; --soft:#3A506B; --sand:#F4D6B0; --sand-ink:#0B132B;
+  --accent:#5BC0DE; --on-accent:#0B132B; --metric:#B45F06; --field:#D97706; --on-field:#0B132B;
+  --bar:rgba(251,247,241,.66); --glass-btn:rgba(255,255,255,.55); --glass-line:rgba(11,19,43,.10);
+  color-scheme:light;
+}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f);-webkit-font-smoothing:antialiased;min-height:100vh}
-/* fundo desfocado, como a foto atrás do vidro nas referências */
-.backdrop{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--bg)}
-.backdrop i{position:absolute;border-radius:50%;filter:blur(80px);opacity:.9}
-.backdrop i:nth-child(1){width:55vw;height:55vw;left:-10vw;top:-12vw;background:var(--blob1)}
-.backdrop i:nth-child(2){width:50vw;height:50vw;right:-14vw;top:18vh;background:var(--blob2)}
-.backdrop i:nth-child(3){width:46vw;height:46vw;left:22vw;bottom:-22vw;background:var(--blob3)}
-.backdrop::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--hair) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);opacity:.6}
-
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--s-b)/1.55 var(--f);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3,p{margin:0}
-h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.06;text-wrap:balance}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
-.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.glass{background:var(--glass);border:1px solid var(--glass-line);border-radius:var(--r);box-shadow:var(--glass-shadow);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
-@media (max-width:700px),(prefers-reduced-transparency:reduce){.glass,.track,.btn-glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--glass-2)}}
-.backdrop{contain:strict}
-#solucoes,#projetos,#processo,#contato{content-visibility:auto;contain-intrinsic-size:auto 900px}
-.skip{position:absolute;left:-999px;top:8px;z-index:99;background:var(--solid);color:var(--on-solid);padding:10px 14px;border-radius:999px}
+h1,h2,h3,p,blockquote{margin:0}
+h1,h2,h3{font-family:var(--d);font-weight:700;letter-spacing:-.03em;line-height:1;text-wrap:balance}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.num{font-family:var(--m);font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.skip{position:absolute;left:-999px;top:8px;z-index:99;background:var(--accent);color:var(--on-accent);padding:12px 16px}
 .skip:focus{left:16px}
-.badge-row{width:max-content}
-.solid{background:var(--solid);color:var(--on-solid);border-radius:var(--r)}
-.lbl{font-size:13px;color:var(--muted);font-weight:500}
-.mono{font-family:var(--mono)}
-.num{font-variant-numeric:tabular-nums}
-section{padding-block:clamp(44px,6vw,80px)}
-.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}
-.sec-head h2{font-size:clamp(28px,3.6vw,42px)}
-.sec-head p{color:var(--muted);max-width:52ch;margin-top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{padding-left:max(var(--edge),env(safe-area-inset-left,0px));padding-right:max(var(--edge),env(safe-area-inset-right,0px))}
+.soft{color:var(--soft)}
 
-/* pílulas e botões */
-.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;font:500 13px/1 var(--f);padding:12px 16px;min-height:40px;border:1px solid transparent;text-decoration:none;white-space:nowrap}
-.pill-solid{background:var(--solid);color:var(--on-solid)}
-.pill-accent{background:var(--accent);color:var(--on-accent)}
-.pill-glass{background:var(--glass-2);border-color:var(--glass-line)}
-.btn-accent{font-weight:600;box-shadow:0 8px 24px -10px color-mix(in srgb,var(--accent) 70%,transparent)}
-.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font:500 15px/1 var(--f);padding:14px 20px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease, filter .2s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn svg{width:16px;height:16px}
-.btn-solid{background:var(--solid);color:var(--on-solid)}
-.btn-accent{background:var(--accent);color:var(--on-accent)}
-.btn-glass{background:var(--glass-2);border-color:var(--glass-line);color:var(--ink);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
-
-.arrow-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--glass-2);border:1px solid var(--glass-line);flex:none}
-.arrow-btn svg{width:14px;height:14px}
-
-/* topo */
+/* barra de vidro (pedido do cliente: vidro só em barras e botões) */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-block:12px;background:var(--bar);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--hair)}
-.top .glass{background:var(--bar-pill)}
-.top .wrap{display:flex;align-items:center;gap:12px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:16px;padding:5px 14px 5px 5px}
-.brand-mark{width:26px;height:26px;border-radius:50%;background:var(--solid);display:grid;place-items:center}
-.brand-mark span{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
-.nav{display:flex;gap:2px;padding:5px;margin-inline:auto}
-.nav a{text-decoration:none;font-size:13.5px;font-weight:500;color:var(--muted);padding:8px 14px;border-radius:999px;transition:color .2s, background .2s}
-.nav a:hover{color:var(--ink)}
-.nav a.on{background:var(--solid);color:var(--on-solid)}
-.tools{display:flex;gap:8px;align-items:center}
-.icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
-.icon-btn svg{width:17px;height:17px}
-.menu-btn{display:none}
-.moon,.sun{display:block}
-:root .sun{display:none}
-:root[data-theme="dark"] .sun{display:block} :root[data-theme="dark"] .moon{display:none}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .sun{display:block} :root:not([data-theme="light"]) .moon{display:none} }
-@media (max-width:980px){
-  .nav{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));top:calc(72px + env(safe-area-inset-top,0px));flex-direction:column;padding:8px;border-radius:20px;display:none}
-  .nav.open{display:flex}
-  .nav a{font-size:16px;padding:12px 14px}
-  .menu-btn{display:grid}
-  .tools{margin-left:auto}
-  .tools .pill-accent{display:none}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bar);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6)}
+.bar .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 18px/1 var(--d);letter-spacing:-.02em}
+.brand b{color:var(--accent);font-weight:800}
+.brand svg{width:30px;height:30px}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--soft);padding:10px 12px;border-radius:var(--r);transition:color .2s ease,background-color .2s ease}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:var(--r);font:600 16px/1 var(--f);text-decoration:none;cursor:pointer;border:1px solid var(--glass-line);transition:transform .16s var(--ease),background-color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-go{background:var(--accent);color:var(--on-accent)}
+.btn-glass{background:var(--glass-btn);color:var(--ink);backdrop-filter:blur(14px) saturate(1.6);-webkit-backdrop-filter:blur(14px) saturate(1.6)}
+@media (hover:hover) and (pointer:fine){.btn-go:hover{background:#7FD0E8}.btn-glass:hover{background:color-mix(in srgb,var(--ink) 16%,transparent)}}
+.icon{width:48px;height:48px;padding:0}
+.icon svg{width:18px;height:18px}
+.menu{display:none}
+@media (max-width:900px){
+  .links{position:fixed;left:var(--edge);right:var(--edge);top:calc(70px + env(safe-area-inset-top,0px));flex-direction:column;background:var(--tile);padding:8px;border-radius:var(--r);display:none}
+  .links.open{display:flex}
+  .links a{font-size:18px;padding:14px}
+  .menu{display:inline-flex}
+  #theme{margin-left:auto}
+  .bar .btn-go{display:none}
 }
+.sun{display:none} :root[data-theme="light"] .sun{display:block} :root[data-theme="light"] .moon{display:none}
 
-/* hero */
-.hero{padding-block:clamp(20px,4vw,48px) 24px}
-.hero-head{display:grid;grid-template-columns:1.2fr auto;gap:28px;align-items:end}
-.hero h1{font-size:clamp(38px,6vw,74px);font-weight:600;letter-spacing:-.04em}
-.hero h1 b{font-weight:800;color:var(--accent-ink)}
-.hero-sub{color:var(--muted);font-size:clamp(16px,1.5vw,18px);max-width:58ch;margin-top:18px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.kpis{display:flex;gap:28px;flex-wrap:wrap}
-.kpi{display:grid;gap:4px}
-.kpi strong{font-family:var(--mono);font-size:clamp(32px,3.8vw,46px);font-weight:500;letter-spacing:-.03em;line-height:1}
-.kpi strong sup{color:var(--oee)!important}
-.kpi strong sup{font-size:.45em;color:var(--muted);margin-right:4px;vertical-align:.9em}
-.kpi span{font-size:12.5px;color:var(--muted)}
-@media (max-width:860px){.hero-head{grid-template-columns:1fr}}
-/* barras de pílula (como "Inbound leads 18% / Deals won 22%") */
-.capbars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:34px}
-.capbar{display:grid;gap:7px;min-width:0}
-.capbar small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.track{height:30px;border-radius:999px;background:var(--glass);border:1px solid var(--glass-line);overflow:hidden;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.track i{display:flex;align-items:center;height:100%;border-radius:999px;padding-left:12px;font:500 11.5px/1 var(--mono);font-style:normal}
-.t-solid{background:var(--solid);color:var(--on-solid)}
-.t-accent{background:var(--accent);color:var(--on-accent)}
-.t-glass{background:var(--accent-soft);color:var(--ink)}
-@media (max-width:760px){.capbars{grid-template-columns:repeat(2,minmax(0,1fr))}.capbar:last-child{grid-column:span 2}}
+/* ===== o quadro (hero) ===== */
+.board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:92px;gap:var(--g);padding-top:var(--g);padding-bottom:var(--g)}
+.t{border-radius:var(--r);background:var(--tile);padding:22px;min-width:0;overflow:hidden;position:relative;display:flex;flex-direction:column;margin:0}
+.t.pic{padding:0}
+.t.pic img{width:100%;height:100%;object-fit:cover}
+.t.pic figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 16px;font-size:var(--s-s);background:rgba(11,19,43,.72);color:#F4F6FA}
+.name{grid-column:1/8;grid-row:1/5;justify-content:space-between}
+.name h1{font-size:var(--s-xl);line-height:.88;letter-spacing:-.05em}
+.name h1 b{color:var(--accent);font-weight:800}
+.name p{font-size:var(--s-m);line-height:1.2;max-width:24ch;font-weight:500}
+.p-hero{grid-column:8/13;grid-row:1/7}
+.state{grid-column:1/5;grid-row:5/7;background:var(--sand);color:var(--sand-ink)}
+.state p{font:600 clamp(18px,1.6vw,24px)/1.2 var(--d);letter-spacing:-.01em}
+.act{grid-column:5/8;grid-row:8/10;background:var(--field);color:var(--on-field);justify-content:space-between}
+.act p{font-size:16px;font-weight:500}
+.act .btn{background:#0B132B;color:#F4F6FA;border-color:#0B132B;align-self:flex-start}
+.live{grid-column:1/5;grid-row:7/10;justify-content:space-between}
+.live .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:var(--s-s)}
+.live .big{font-size:var(--s-l);line-height:1;color:var(--ink)}
+.live svg{width:100%;height:80px}
+.oee{grid-column:5/8;grid-row:5/8;background:var(--tile-2);justify-content:space-between}
+.oee .big{font-size:var(--s-l);color:var(--metric);line-height:1}
+.meter{height:10px;border-radius:5px;background:var(--steel);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--metric);border-radius:5px;transform-origin:left}
+.p-a{grid-column:8/11;grid-row:7/10}
+.p-b{grid-column:11/13;grid-row:7/10}
+.nums{grid-column:1/13;grid-row:10/11;flex-direction:row;align-items:center;gap:28px;flex-wrap:wrap;font-size:var(--s-s);color:var(--soft)}
+.nums b{font-family:var(--m);font-weight:500;color:var(--ink);font-size:20px;margin-right:6px}
+@media (max-width:900px){
+  .board{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto}
+  .name,.p-hero,.state,.act,.live,.oee,.p-a,.p-b,.nums{grid-column:span 2;grid-row:auto}
+  .name{min-height:34svh;gap:28px}
+  .p-hero{aspect-ratio:4/3}
+  .live,.oee{grid-column:span 1;min-height:220px}
+  .p-a,.p-b{grid-column:span 1;aspect-ratio:3/4}
+  .state,.act{min-height:150px;gap:16px}
+}
+@media (max-width:520px){.live,.oee{grid-column:span 2}.oee{order:-1}.name{order:-3}.p-hero{order:-2}}
 
-/* bento */
-.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
-.card{padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .25s ease}
-.card:hover{transform:translateY(-4px)}
-.card-h{display:flex;align-items:start;justify-content:space-between;gap:10px}
-.card-h h3{font-size:15px;font-weight:600;letter-spacing:-.01em}
-.card-h p{font-size:12.5px;color:var(--muted);margin-top:3px}
-.big{font-family:var(--mono);font-weight:500;font-size:32px;letter-spacing:-.03em;line-height:1}
-.big .lbl{font-family:var(--f)}
-.c4{grid-column:span 4}.c3{grid-column:span 3}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
-@media (max-width:1060px){.c3,.c4,.c5{grid-column:span 6}.c7,.c8,.c6{grid-column:span 12}}
-@media (max-width:640px){.bento>*{grid-column:span 12!important}}
-.badge{font:500 11px/1 var(--mono);padding:5px 8px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);color:var(--muted);white-space:nowrap}
-.badge.ok{color:var(--ok)}
-.metric{border-color:color-mix(in srgb,var(--oee) 40%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--oee) 14%,transparent),0 0 28px -10px color-mix(in srgb,var(--oee) 55%,transparent),var(--glass-shadow)}
-.brand-name b{color:var(--accent-ink);font-weight:800}
-.logo-ico{width:30px;height:30px;flex:none;display:block}
-.badge.acc{background:var(--accent);border-color:transparent;color:var(--on-accent)}
+/* ===== seções ===== */
+section{padding-block:clamp(96px,11vw,180px)}
+.h2{font-size:var(--s-l)}
+.intro .lead{font-size:var(--s-m);line-height:1.25;max-width:44ch;font-weight:500;letter-spacing:-.01em}
+.cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:72px}
+.cols p{font-size:16px;line-height:1.5;color:var(--soft)}
+.cols b{color:var(--ink);font-weight:600}
+@media (max-width:900px){.cols{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
+@media (max-width:520px){.cols{grid-template-columns:1fr}}
 
-.bars{display:flex;align-items:end;gap:10px;height:120px;padding-top:6px}
-.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}
-.bars span{width:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 32%,transparent);height:calc(var(--h) * .9px);transition:height .4s ease}
-.bars span.hi{background:var(--accent)}
-.bars small{font:500 10px/1 var(--mono);color:var(--faint)}
-.chip-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;font-size:12.5px;color:var(--muted)}
-.ring{display:grid;place-items:center;margin:auto;position:relative;width:150px;height:150px}
-.ring svg{width:150px;height:150px;transform:rotate(-90deg)}
-.ring .val{position:absolute;text-align:center}
-.ring .val b{display:block;font-family:var(--mono);font-size:28px;font-weight:500;letter-spacing:-.02em;color:var(--oee)}
-.ring .val small{font-size:11px;color:var(--muted)}
-.spark svg{width:100%;height:110px;display:block}
-.tasks{padding:20px;gap:12px}
-.tasks .card-h p{color:var(--solid-muted)}
-.task{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--solid-line)}
-.task:first-of-type{border-top:0}
-.task .ck{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--solid-muted);display:grid;place-items:center;flex:none}
-.task .ck.done{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
-.task .ck svg{width:12px;height:12px}
-.task b{font-weight:500;font-size:13.5px;display:block}
-.task small{font:400 11px/1.2 var(--mono);color:var(--solid-muted)}
-.task code{margin-left:auto;font:500 11px/1 var(--mono);color:var(--solid-accent)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:var(--g);padding-block:0}
+.split .light{background:var(--sand);color:var(--sand-ink);border-radius:var(--r);padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:72svh}
+.split .light h2{font-size:var(--s-l);line-height:1.02}
+.split .light h2 span{display:block}
+.split .light h2 span:nth-child(2){text-align:right}
+.split .light .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.split .light .foot p{max-width:34ch;font-size:17px}
+.split .light .btn-glass{color:var(--sand-ink);background:rgba(255,255,255,.45);border-color:rgba(11,19,43,.15)}
+.rows{display:grid;gap:var(--g)}
+.rows article{border-radius:var(--r);padding:28px;display:grid;grid-template-columns:5fr 4fr 3fr;gap:20px;align-items:start;background:var(--tile)}
+.rows article:nth-child(even){background:var(--tile-2)}
+.rows h3{font-size:clamp(22px,2vw,28px);line-height:1.1}
+.rows p{font-size:16px;color:var(--soft)}
+.rows ul{list-style:none;margin:0;padding:0;font-size:15px;color:var(--ink);display:grid;gap:4px}
+@media (max-width:1000px){.split{grid-template-columns:1fr}.split .light{min-height:60svh}.rows article{grid-template-columns:1fr}.rows ul{display:block}.rows ul li{display:inline}.rows ul li+li::before{content:", "}}
 
-.platforms{display:flex;flex-wrap:wrap;gap:8px}
+.how .top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.how .top>div{grid-column:1/6;display:grid;gap:18px;align-content:start}
+.how .top p{font-size:17px;color:var(--soft);max-width:44ch}
+.how .top aside{grid-column:8/13;display:grid;gap:10px}
+.step{display:flex;gap:14px;font-size:16px;color:var(--soft)}
+.step b{font-family:var(--m);font-weight:500;color:var(--metric);min-width:28px}
+.step strong{color:var(--ink);font-weight:600}
+.diagram{width:100%;height:auto;margin-top:56px}
+.diagram-v{display:none}
+.thirds{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+.thirds h3{font-size:22px;margin-bottom:8px}
+.thirds p{font-size:16px;color:var(--soft)}
+@media (max-width:900px){.how .top>div,.how .top aside{grid-column:1/-1}.diagram{display:none}.diagram-v{display:block;width:100%;height:auto}.how .vis{display:grid;grid-template-columns:45% 1fr;gap:16px;margin-top:40px;align-items:stretch}.thirds{grid-template-columns:1fr;margin:0;align-content:space-around}}
 
-/* portfólio */
-.filters{display:flex;flex-wrap:wrap;gap:6px;padding:5px;border-radius:999px;width:max-content;max-width:100%}
-.filters button{font:500 13px/1 var(--f);border:0;background:transparent;color:var(--muted);padding:13px 16px;border-radius:999px;cursor:pointer;min-height:40px}
-.filters button[aria-pressed="true"]{background:var(--solid);color:var(--on-solid)}
-.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-@media (max-width:1000px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.projects{grid-template-columns:1fr}}
-.proj{padding:18px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease}
-.proj:hover{transform:translateY(-4px)}
-.proj-top{display:flex;align-items:center;gap:12px}
-.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:600 13px/1 var(--f);background:var(--glass-2);border:1px solid var(--glass-line);flex:none}
-.proj-top h3{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
-.proj-top p{font-size:12px;color:var(--muted)}
-.proj-top .badge{margin-left:auto}
-.tagline{display:inline-flex;width:max-content;font:500 11px/1 var(--mono);background:var(--accent);color:var(--on-accent);padding:5px 9px;border-radius:999px}
-.quote{background:var(--glass-2);border:1px solid var(--glass-line);border-radius:var(--r-sm);padding:12px 14px;font-size:13.5px;color:var(--ink);font-style:italic}
-.meter{display:grid;gap:6px}
-.meter-h{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
-.meter .tr{height:4px;border-radius:999px;background:var(--hair);overflow:hidden}
-.meter .tr i{display:block;height:100%;background:var(--solid);border-radius:999px}
-.proj-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:4px;font-size:12px;color:var(--muted)}
-.proj.dark{background:var(--solid);color:var(--on-solid);border-color:transparent}
-.proj.dark .proj-top p,.proj.dark .proj-foot,.proj.dark .meter-h{color:var(--solid-muted)}
-.proj.dark .quote{background:rgba(127,127,127,.14);border-color:var(--solid-line);color:var(--on-solid)}
-.proj.dark .av,.proj.dark .badge{background:rgba(127,127,127,.18);border-color:var(--solid-line);color:var(--on-solid)}
-.proj.dark .meter .tr{background:rgba(127,127,127,.25)} .proj.dark .meter .tr i{background:var(--accent)}
-.more{display:none;margin:16px auto 0}
-@media (max-width:640px){.projects.collapsed .proj:nth-child(n+5){display:none}.more{display:flex}}
-.proj.dark .pill-glass{background:var(--accent);color:var(--on-accent);border-color:transparent}
+/* a calculadora (a coisa viva) */
+.calc{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g)}
+.calc .q{grid-column:1/6;background:var(--tile);border-radius:var(--r);padding:clamp(24px,3vw,40px);display:grid;gap:24px;align-content:start}
+.calc .q h2{font-size:clamp(30px,3.2vw,52px)}
+.calc .q p{color:var(--soft);font-size:17px}
+.field{display:grid;gap:8px}
+.field label{font-size:16px;font-weight:600;display:flex;justify-content:space-between}
+.field output{font-family:var(--m);color:var(--metric)}
+input[type=range]{width:100%;accent-color:var(--accent);height:32px}
+.calc .r{grid-column:6/13;background:var(--field);color:var(--on-field);border-radius:var(--r);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:440px}
+.calc .r .total{font-family:var(--m);font-weight:500;font-size:clamp(48px,7vw,112px);line-height:.95;letter-spacing:-.04em}
+.calc .r p{font-size:17px;max-width:46ch;font-weight:500}
+.calc .r .btn{background:#0B132B;color:#F4F6FA;border-color:#0B132B;align-self:flex-start}
+@media (max-width:900px){.calc .q,.calc .r{grid-column:1/-1}.calc .r{min-height:300px}}
 
-/* funil do processo */
-.funnel{padding:22px;display:grid;gap:16px}
-.f-row{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(120px,190px);gap:14px;align-items:center}
-.f-row .n{font:500 12px/1 var(--mono);width:40px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--glass-2);border:1px solid var(--glass-line)}
-.f-row h3{font-size:15px;font-weight:500;margin-bottom:6px}
-.f-row .bar{height:16px;border-radius:999px;background:var(--hair);overflow:hidden}
-.f-row .bar i{display:flex;align-items:center;justify-content:end;padding-right:8px;height:100%;border-radius:999px;font:500 10px/1 var(--mono);font-style:normal}
-.f-row p{font-size:12.5px;color:var(--muted)}
-@media (max-width:640px){.f-row{grid-template-columns:40px minmax(0,1fr)}.f-row p{grid-column:2}}
+/* projetos: parede irregular */
+.work{background:var(--tile)}
+.work .head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.work h2{font-size:clamp(64px,9vw,136px);line-height:.9;letter-spacing:-.05em}
+.work .head p{max-width:44ch;color:var(--soft);font-size:16px}
+.wall{display:flex;flex-wrap:wrap;gap:var(--g);margin-bottom:var(--g)}
+.wall figure{margin:0;flex-grow:1;display:flex;flex-direction:column;gap:8px;min-width:0}
+.wall .frame{border-radius:var(--r);overflow:hidden;background:var(--tile-2);flex:1;display:flex;min-height:0}
+.wall img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.wall .txt{padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;width:100%}
+.wall .txt p{font-size:16px}
+.wall .txt .tt{font-size:22px;line-height:1.1}
+.wall figcaption{display:flex;justify-content:space-between;gap:12px;font-size:var(--s-s)}
+.wall figcaption span{color:var(--soft)}
+.wall figcaption a{color:var(--accent);font-weight:600;text-decoration:none;padding:4px 0}
+.r1 figure{height:380px}.r2 figure{height:260px}.r3 figure{height:320px}
+@media (hover:hover) and (pointer:fine){.wall figure:hover img{transform:scale(1.04)}}
+@media (max-width:760px){.wall figure{flex-basis:100%!important;height:auto!important}.wall .frame{aspect-ratio:4/3;flex:none}.wall .frame.txtf{aspect-ratio:auto}}
 
-/* somente leitura */
-.ro{padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-.ro h2{font-size:clamp(26px,3.2vw,38px)}
-.ro p{color:var(--solid-muted);margin-top:12px;max-width:52ch}
-.flow{display:grid;gap:8px;font-size:13.5px}
-.node{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;border:1px solid var(--solid-line);background:rgba(127,127,127,.10)}
-.node span{margin-left:auto;font:400 11.5px/1 var(--mono);color:var(--solid-muted)}
-.link{padding-left:18px;font:400 11.5px/1 var(--mono);color:var(--solid-muted);display:flex;gap:8px;align-items:center}
-.link.no{color:var(--solid-neg)}
-@media (max-width:860px){.ro{grid-template-columns:1fr}}
+/* princípio somente leitura */
+.ro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+.ro .say{grid-column:1/7}
+.ro .say h2{font-size:var(--s-l)}
+.ro .say p{color:var(--soft);font-size:17px;max-width:46ch;margin-top:20px}
+.ro .flow{grid-column:7/13;display:grid;gap:var(--g)}
+.node{border-radius:var(--r);background:var(--tile);padding:20px 22px;display:flex;justify-content:space-between;gap:16px;font-size:17px;font-weight:600}
+.node span{font-weight:400;color:var(--soft);font-size:15px}
+.node.ok{background:var(--steel);color:#F4F6FA}
+.node.no{background:var(--field);color:var(--on-field)}
+@media (max-width:900px){.ro .say,.ro .flow{grid-column:1/-1}}
+
+/* dúvidas */
+.faq{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.faq h2{grid-column:1/5;font-size:var(--s-l);position:sticky;top:96px;align-self:start}
+.faq .list{grid-column:5/13;display:grid;gap:var(--g)}
+.faq details{background:var(--tile);border-radius:var(--r);transition:background-color .2s ease}
+.faq details[open]{background:var(--accent);color:var(--on-accent)}
+.faq summary{list-style:none;cursor:pointer;min-height:72px;padding:22px 64px 22px 24px;font-size:20px;font-weight:500;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before,.faq summary::after{content:"";position:absolute;right:28px;top:50%;width:16px;height:3px;background:currentColor;border-radius:2px;transition:transform .2s var(--ease)}
+.faq summary::after{transform:rotate(90deg)}
+.faq details[open] summary::after{transform:rotate(0deg)}
+.faq details p{padding:0 24px 24px;font-size:17px;max-width:56ch}
+@media (max-width:900px){.faq h2,.faq .list{grid-column:1/-1}.faq h2{position:static}.faq summary{font-size:18px}}
 
 /* contato */
-.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
-@media (max-width:900px){.contact{grid-template-columns:1fr}}
-.contact>*{min-width:0}
-.c-line b{overflow-wrap:anywhere}
-@media (max-width:420px){.c-info,form{padding:18px}}
-.c-info{padding:26px;display:flex;flex-direction:column;gap:16px}
-.c-info h2{font-size:clamp(28px,3.6vw,42px)}
-.c-line{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--glass-2);border:1px solid var(--glass-line)}
-.c-line small{display:block;font-size:11.5px;color:var(--muted)}
-.c-line b{font-weight:500;user-select:all}
-.c-line button{margin-left:auto;font:500 11.5px/1 var(--mono);padding:10px 14px;min-height:40px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass);color:var(--ink);cursor:pointer}
-form{padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.field{display:grid;gap:6px;min-width:0}
-.field.full{grid-column:1/-1}
-label{font-size:13px;font-weight:500}
-input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--glass-2);border:1px solid var(--glass-line);border-radius:14px;padding:12px 14px;width:100%;transition:border-color .2s, box-shadow .2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
-textarea{min-height:110px;resize:vertical}
-.f-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
-.f-foot p{flex:1;min-width:200px;font-size:13px;color:var(--muted)}
-.f-foot p.err{color:var(--neg)}
-@media (max-width:560px){form{grid-template-columns:1fr}}
+.contact{background:var(--steel);overflow:hidden;padding-top:48px;padding-bottom:0}
+.strip{display:flex;gap:var(--g);width:max-content;animation:drift 60s linear infinite}
+.strip img{height:150px;width:auto;border-radius:var(--r);object-fit:cover}
+.strip img.s{aspect-ratio:1}.strip img.w{aspect-ratio:3/2}.strip img.p{aspect-ratio:3/4}
+@keyframes drift{to{transform:translateX(-50%)}}
+.contact h2{font-size:var(--s-l);margin-top:72px;color:#F4F6FA}
+.contact .sub{color:#E3EAF3;font-size:17px;max-width:52ch;margin-top:16px}
+.form{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--g);margin-top:40px}
+.form input{width:100%;height:96px;border:0;border-radius:var(--r);background:rgba(11,19,43,.38);color:#F4F6FA;font:500 18px/1 var(--f);padding:0 22px;transition:background-color .2s ease}
+.form input::placeholder{color:#D3DCE7}
+.form input:focus{background:rgba(11,19,43,.62);outline:3px solid var(--accent)}
+.form .btn{height:96px;font-size:18px}
+.small{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--g);margin-top:12px;font-size:var(--s-s);color:#E3EAF3}
 
-footer{padding-block:28px 40px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;font-size:13px;color:var(--muted)}
-footer .sp{margin-left:auto}
+.lines{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;margin-top:40px;padding-bottom:clamp(64px,8vw,120px);font-size:16px;color:#F4F6FA}
+.lines button{background:transparent;border:0;color:#BFE9F5;font:600 15px var(--f);cursor:pointer;padding:12px 8px;min-height:44px}
+@media (max-width:760px){.form{grid-template-columns:1fr}.form input,.form .btn{height:60px}.strip img{height:110px}}
 
-.wa-fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#0B2E17;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .15s}
-.wa-fab:hover{transform:scale(1.06)}
-.wa-fab svg{width:28px;height:28px}
-.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);padding:11px 18px;border-radius:999px;background:var(--solid);color:var(--on-solid);font-size:14px;font-weight:500;opacity:0;pointer-events:none;transition:.25s;z-index:80}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* rodapé: a marca construída */
+footer{background:var(--bg);padding-block:64px 40px}
+.mark{display:block;width:100%;height:34svh;min-height:180px}
+.mark span{flex:1;display:flex;align-items:center;justify-content:center;border-radius:var(--r);font:800 clamp(28px,6vw,96px)/1 var(--d);color:#0B132B}
+.mark span.dk{color:#F4F6FA}
+.foot-cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:56px;font-size:15px}
+.foot-cols nav{grid-column:1/9;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.foot-cols nav a{text-decoration:none;color:var(--soft);padding:10px 0}
+.foot-cols nav a:hover{color:var(--ink)}
+.foot-cols address{grid-column:9/13;font-style:normal;color:var(--soft);display:grid;gap:6px}
+.last{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:40px;font-size:var(--s-s);color:var(--soft);flex-wrap:wrap}
+@media (max-width:760px){.mark{height:22svh}.foot-cols nav{grid-column:1/-1;grid-template-columns:1fr 1fr}.foot-cols address{grid-column:1/-1}}
 
-/* ===== seções da copy ===== */
-.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
-.lead{color:var(--muted);font-size:clamp(16px,1.5vw,18px);max-width:60ch}
-.sec-title{display:grid;gap:12px;margin-bottom:26px;max-width:760px}
-.sec-title h2{font-size:clamp(28px,3.8vw,44px)}
-.hero-points{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:8px}
-.hero-points li{display:flex;gap:10px;align-items:center;color:var(--ink);font-size:15px}
-.hero-points li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--oee);flex:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--oee) 20%,transparent)}
-.txt-link{color:var(--accent-ink);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:12px 4px}
-.txt-link:hover{text-decoration:underline}
-.trust{padding-block:22px;border-block:1px solid var(--hair);background:var(--glass)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) 1.6fr;gap:18px 28px;align-items:center}
-.trust .n strong{display:block;font:500 clamp(26px,3vw,36px)/1 var(--mono);color:var(--ink)}
-.trust .n span{font-size:13px;color:var(--muted)}
-.trust .plat{display:grid;gap:8px;font-size:13px;color:var(--muted)}
-.trust .plat b{color:var(--ink);font-weight:600}
-.seal{display:inline-flex;align-items:center;gap:8px;font:500 12px/1.3 var(--mono);color:var(--ok)}
-@media (max-width:980px){.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.trust .plat{grid-column:1/-1}}
-.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-@media (max-width:900px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.grid3,.grid2{grid-template-columns:1fr}}
-.tile{padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
-.tile h3{font-size:17px}
-.tile p{color:var(--muted);font-size:15px}
-.ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
-.ico svg{width:20px;height:20px}
-.ico.warn{background:color-mix(in srgb,var(--neg) 14%,transparent);color:var(--neg)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
-@media (max-width:900px){.split{grid-template-columns:1fr}}
-.deliver{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.deliver li{padding:14px 16px;border-radius:var(--r-sm);background:var(--glass-2);border:1px solid var(--glass-line);font-size:15px;color:var(--muted)}
-.deliver b{color:var(--ink);font-weight:600}
-.three{display:grid;gap:10px;margin-top:6px}
-.three div{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:center;font-size:15px}
-.three code{font:500 12px/1 var(--mono);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
-.result{margin-top:14px;padding:16px;border-radius:var(--r-sm);border:1px solid color-mix(in srgb,var(--oee) 35%,transparent);background:color-mix(in srgb,var(--oee) 7%,transparent);font-size:15px;color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.chips span{font-size:13px;padding:8px 12px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);color:var(--muted)}
-.timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.timeline .st{padding:18px;display:grid;gap:8px;align-content:start;position:relative}
-.timeline code{font:500 12px/1 var(--mono);color:var(--accent-ink)}
-.timeline h3{font-size:16px}
-.timeline p{font-size:14px;color:var(--muted)}
-@media (max-width:1000px){.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.timeline{grid-template-columns:1fr}}
-.case{padding:22px;display:grid;gap:14px;align-content:start}
-.case .tag{width:max-content;font:500 11px/1 var(--mono);padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
-.case blockquote{margin:0;font-size:16px;color:var(--ink);font-style:italic}
-.case .who{font-size:13px;color:var(--muted)}
-.mets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.mets div{padding:12px;border-radius:12px;background:var(--glass-2);border:1px solid var(--glass-line)}
-.mets b{display:block;font:500 22px/1 var(--mono);color:var(--oee)}
-.mets span{font-size:12px;color:var(--muted)}
-@media (max-width:420px){.mets{grid-template-columns:1fr}}
-.diff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media (max-width:700px){.diff{grid-template-columns:1fr}}
-.diff .tile.hl{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 0 28px -12px color-mix(in srgb,var(--accent) 60%,transparent),var(--glass-shadow)}
-.offer{padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;background:var(--solid);color:var(--on-solid);border-radius:var(--r)}
-.offer h2{font-size:clamp(26px,3.4vw,40px)}
-.offer p,.offer li{color:var(--solid-muted)}
-.offer ul{padding-left:18px;margin:14px 0 0;display:grid;gap:6px}
-.offer .side{display:grid;gap:10px;justify-items:start}
-.offer small{color:var(--solid-muted);font-size:13px}
-@media (max-width:860px){.offer{grid-template-columns:1fr}}
-.faq{display:grid;gap:10px;max-width:880px}
-.faq details{padding:4px 20px;border-radius:var(--r-sm)}
-.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:16px;padding:16px 30px 16px 0;position:relative}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:0;top:12px;font:400 24px/1 var(--display);color:var(--accent-ink);transition:transform .2s}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{color:var(--muted);padding-bottom:18px;max-width:70ch}
-.final{text-align:left}
-.final .cta-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}
-@media (max-width:900px){.final .cta-wrap{grid-template-columns:1fr}}
-.micro{font-size:13px;color:var(--muted)}
-#problema,#solucao,#beneficios,#como-funciona,#cases,#diferenciais,#oferta,#faq,#contato,#projetos{content-visibility:auto;contain-intrinsic-size:auto 800px}
+.wa{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:rgba(37,211,102,.88);color:#0B2E17;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .16s var(--ease)}
+.wa:active{transform:scale(.94)}
+.wa svg{width:28px;height:28px}
 
-/* ===== vidro só em barras e botões; cards sólidos ===== */
-.glass{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-.top{background:var(--bar)!important;backdrop-filter:blur(22px) saturate(1.6)!important;-webkit-backdrop-filter:blur(22px) saturate(1.6)!important}
-.top .glass,.nav.glass{background:var(--bar-pill)!important;backdrop-filter:blur(20px) saturate(1.6)!important;-webkit-backdrop-filter:blur(20px) saturate(1.6)!important;border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px -14px rgba(0,0,0,.45)}
-.btn-glass,.pill-glass{background:var(--btn-glass)!important;backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
-.btn-accent,.pill-accent{background:color-mix(in srgb,var(--accent) 82%,transparent)!important;backdrop-filter:blur(16px) saturate(1.8);-webkit-backdrop-filter:blur(16px) saturate(1.8);border:1px solid rgba(255,255,255,.35)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 26px -12px color-mix(in srgb,var(--accent) 80%,transparent)!important}
-.wa-fab{background:rgba(37,211,102,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px -8px rgba(0,0,0,.45)}
-@media (max-width:980px){.nav.glass{border-radius:20px!important}.nav.open{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:8px;gap:2px;box-shadow:0 24px 48px -16px rgba(0,0,0,.45)!important}.nav.open a{border-radius:12px;padding:14px 16px}}
+/* movimento */
+.js .rise{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rise.in{opacity:1;transform:none}
+.js .shutter img{clip-path:inset(0 0 100% 0);transform:scale(1.12);transition:clip-path 1.1s cubic-bezier(.77,0,.175,1),transform 1.6s var(--ease)}
+.js .shutter.in img{clip-path:inset(0 0 0 0);transform:scale(1)}
+.drift img{animation:slow 24s ease-in-out infinite alternate}
+@keyframes slow{to{transform:scale(1.08) translateX(-2%)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .rise{opacity:1;transform:none}
+  .js .shutter img{clip-path:none;transform:none}
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#problema">Pular para o conteúdo</a>
-<div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
 
-<header class="top">
+<header class="bar">
   <div class="wrap">
-    <a class="brand glass" href="#inicio" style="border-radius:999px" aria-label="ConectaOT, início"><svg class="logo-ico" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0A192F"/><circle cx="32" cy="32" r="20" stroke="#1E293B" stroke-width="5"/><path d="M18 44 L32 30 L40 38 L50 20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20 H50 V28" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">Conecta<b>OT</b></span></a>
-    <nav class="nav glass" id="nav" style="border-radius:999px" aria-label="Principal">
-      <a href="#inicio" class="on">Início</a>
-      <a href="#solucao">Solução</a>
-      <a href="#como-funciona">Como funciona</a>
+    <a class="brand" href="#inicio" aria-label="ConectaOT, início">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0B132B"/><circle cx="32" cy="32" r="20" stroke="#3A506B" stroke-width="5"/><path d="M18 44 L32 30 L40 38 L50 20" stroke="#5BC0DE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20 H50 V28" stroke="#5BC0DE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Conecta<b>OT</b></span>
+    </a>
+    <nav class="links" id="nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#calculo">Custo da parada</a>
       <a href="#projetos">Projetos</a>
-      <a href="#cases">Cases</a>
-      <a href="#faq">Dúvidas</a>
+      <a href="#duvidas">Dúvidas</a>
     </nav>
-    <div class="tools">
-      <button class="icon-btn glass" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro">
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <button class="icon-btn glass menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
-      </button>
-      <a class="pill pill-accent" href="#contato" style="padding:12px 16px;font-weight:600">Solicitar diagnóstico gratuito</a>
-    </div>
+    <button class="btn btn-glass icon" id="theme" type="button" aria-label="Alternar tema claro ou escuro">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="btn btn-glass icon menu" id="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+    <a class="btn btn-go" href="#contato">Solicitar diagnóstico gratuito</a>
   </div>
 </header>
 
-
-<main id="inicio">
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-head">
-      <div>
-        <span class="pill pill-glass"><span style="width:7px;height:7px;border-radius:50%;background:var(--oee)"></span>Automação industrial · Indústria 4.0 · Caçador/SC</span>
-        <h1 style="margin-top:18px">Saiba por que sua máquina parou <b>antes que a parada vire prejuízo.</b></h1>
-        <p class="hero-sub">Conectamos CLPs novos e antigos a painéis em tempo real, automatizamos e modernizamos máquinas. Você enxerga produção, paradas e OEE por turno, sem trocar o equipamento.</p>
-        <ul class="hero-points">
-          <li>Funciona com o CLP que você já tem</li>
-          <li>Coleta somente leitura: não altera o programa da máquina</li>
-          <li>Engenharia com 60+ comissionamentos no Brasil e no exterior</li>
-        </ul>
-        <div class="hero-ctas"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="txt-link" href="#projetos">Ver projetos entregues ↓</a></div>
-      </div>
-    </div>
-    <div class="bento" style="margin-top:34px" aria-label="Exemplo de painel ConectaOT, valores ilustrativos">
-      <article class="card glass metric c4">
-        <div class="card-h"><div><h3>Produção por etapa</h3><p>Supervisório web · por turno</p></div><span class="badge">exemplo</span></div>
-        <div class="big num">12.480 <span class="lbl">peças/dia</span></div>
-        <div class="bars" aria-hidden="true">
-          <div><span style="--h:78"></span><small>Corte</small></div><div><span style="--h:64"></span><small>Seca</small></div><div><span style="--h:70"></span><small>Class</small></div>
-          <div><span style="--h:52"></span><small>Cola</small></div><div><span style="--h:58"></span><small>Pren</small></div><div><span class="hi" style="--h:88"></span><small>Exp</small></div>
-        </div>
-      </article>
-      <article class="card glass metric c4 spark">
-        <div class="card-h"><div><h3>Dados do CLP ao vivo</h3><p>Máquina antiga, sem trocar o CLP</p></div><span class="badge ok">● online</span></div>
-        <div class="big num" id="kRate">1.284 <span class="lbl">lâminas/h</span></div>
-        <svg viewBox="0 0 320 110" preserveAspectRatio="none" aria-hidden="true">
-          <g stroke="var(--hair)"><line x1="0" x2="320" y1="28" y2="28"/><line x1="0" x2="320" y1="56" y2="56"/><line x1="0" x2="320" y1="84" y2="84"/></g>
-          <path id="sArea" fill="var(--data)" fill-opacity=".10" d=""/>
-          <path id="sLine" fill="none" stroke="var(--data)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d=""/>
-          <circle id="sDot" r="5" fill="var(--accent)" stroke="var(--bg)" stroke-width="2"/>
-        </svg>
-        <div class="chip-foot"><span class="mono">DB10.Speed · DB12.Rejects</span><span class="badge">somente leitura</span></div>
-      </article>
-      <article class="card glass metric c4">
-        <div class="card-h"><div><h3>OEE · Disponibilidade</h3><p>Paradas e alarmes em tempo real</p></div><span class="badge">últimas 8 h</span></div>
-        <div class="ring" aria-label="94,1 por cento de disponibilidade, exemplo">
-          <svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="62" fill="none" stroke="var(--hair)" stroke-width="9"/><circle cx="75" cy="75" r="62" fill="none" stroke="var(--oee)" stroke-width="9" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="23.4"/></svg>
-          <div class="val"><b class="num">94,1%</b><small>disponível</small></div>
-        </div>
-        <div class="chip-foot"><span>3 paradas · 28 min</span><span class="badge">valores ilustrativos</span></div>
-      </article>
-    </div>
+<main id="principal">
+<div class="board wrap" id="inicio">
+  <div class="t name">
+    <h1>Conecta<b>OT</b></h1>
+    <p>Saiba por que sua máquina parou, antes que a parada vire prejuízo.</p>
   </div>
-</section>
-
-<div class="trust" aria-label="Números e credenciais">
-  <div class="wrap">
-    <div class="n"><strong>15+</strong><span>anos em automação industrial</span></div>
-    <div class="n"><strong>60+</strong><span>comissionamentos internacionais</span></div>
-    <div class="n"><strong>9</strong><span>países com obra em campo</span></div>
-    <div class="n"><strong>6</strong><span>plataformas de CLP dominadas</span></div>
-    <div class="plat"><span><b>Siemens TIA Portal · Beckhoff TwinCAT 3 · Rockwell Studio 5000 · CODESYS · Schneider · Delta</b></span><span class="seal">✓ Engenheiro responsável com registro no CREA-SC · ART em cada projeto</span></div>
+  <figure class="t pic p-hero shutter">
+    <img src="img/lamina.jpg" width="1536" height="1024" alt="Torno laminador desenrolando uma tora de pinus em lâmina contínua" fetchpriority="high">
+    <figcaption>Laminação, o tipo de linha que a gente automatiza</figcaption>
+  </figure>
+  <div class="t state">
+    <p>Lemos o CLP que você já tem e mostramos produção, paradas e OEE por turno, sem trocar a máquina.</p>
+  </div>
+  <div class="t live" aria-label="Exemplo de leitura ao vivo de um CLP, valores ilustrativos">
+    <span class="big num" id="rate">1.284</span>
+    <svg viewBox="0 0 320 80" preserveAspectRatio="none" aria-hidden="true"><path id="line" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" d=""/><circle id="dot" r="5" fill="var(--metric)"/></svg>
+    <div class="row"><span>lâminas por hora, lidas do CLP</span><span class="soft">exemplo</span></div>
+  </div>
+  <div class="t oee" aria-label="Exemplo de disponibilidade, 94,1 por cento">
+    <span class="big num">94,1%</span>
+    <div class="meter"><i style="transform:scaleX(.941)"></i></div>
+    <div class="soft" style="font-size:14px">disponibilidade nas últimas 8 h · 3 paradas, 28 min</div>
+  </div>
+  <div class="t act">
+    <p>Diagnóstico técnico gratuito: 30 minutos com um engenheiro.</p>
+    <a class="btn" href="#contato">Solicitar diagnóstico</a>
+  </div>
+  <figure class="t pic p-a drift"><img src="img/painel.jpg" width="1024" height="1280" alt="Painel elétrico aberto com módulos de CLP e LEDs de status" loading="lazy"></figure>
+  <figure class="t pic p-b drift"><img src="img/secador.jpg" width="1536" height="1024" alt="Linha de secagem de lâminas com rolos e vapor" loading="lazy"></figure>
+  <div class="t nums" aria-label="Experiência">
+    <span><b>15+</b>anos em automação</span><span><b>60+</b>comissionamentos internacionais</span><span><b>9</b>países com obra em campo</span>
   </div>
 </div>
 
-<section id="problema">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">O problema</span><h2>A máquina parou. De novo. E ninguém sabe dizer quanto tempo nem por quê.</h2><p class="lead">Na maioria das fábricas, o dado existe dentro do CLP, mas não chega a quem decide. O resultado aparece no fim do mês como meta não batida.</p></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>Paradas sem registro</h3><p>O apontamento é manual, chega atrasado e raramente traz a causa real.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>OEE estimado no achismo</h3><p>Sem dado de máquina, disponibilidade e performance viram planilha preenchida depois do turno.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><h3>Equipamento obsoleto</h3><p>CLP descontinuado, sem peça de reposição e sem quem conheça o programa.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-2a2 2 0 0 0-4 0"/></svg></span><h3>Processos manuais</h3><p>Contagem, conferência e ajustes que dependem da atenção do operador.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></span><h3>Integração difícil</h3><p>Máquinas de fabricantes diferentes que não conversam entre si nem com o ERP.</p></div>
-    </div>
+<section class="intro wrap" aria-labelledby="sobre">
+  <h2 id="sobre" class="h2 rise" style="margin-bottom:28px">O dado já existe. Só não chega até você.</h2>
+  <p class="lead rise">A parada é anotada à mão, atrasada e sem causa. Nós levamos o dado do CLP ao celular de quem decide.</p>
+  <div class="cols">
+    <p class="rise"><b>Quem somos.</b> Engenharia de automação com 15 anos de chão de fábrica, 60 comissionamentos no exterior e registro no CREA-SC, com ART em cada projeto.</p>
+    <p class="rise"><b>O que fazemos.</b> Coleta de dados de CLP, supervisórios web, programação de CLP e IHM, retrofit de máquinas, visão computacional e partida em campo.</p>
+    <p class="rise"><b>Onde estamos.</b> Em Caçador, no polo madeireiro de Santa Catarina. Atendemos todo o Brasil remotamente e viajamos para comissionar onde a máquina estiver.</p>
+    <p class="rise"><b>Como falar.</b> WhatsApp (49) 99120-8836 ou contato@conectaot.com.br. Respondemos em até um dia útil.</p>
   </div>
 </section>
 
-<section id="solucao">
-  <div class="wrap split">
+<section class="split wrap" id="servicos" aria-labelledby="serv-h">
+  <div class="light">
+    <h2 id="serv-h"><span>Do CLP</span><span>ao celular.</span></h2>
+    <div class="foot">
+      <p>Programamos e modernizamos a máquina quando é preciso, e tiramos os dados dela quando o objetivo é enxergar a produção.</p>
+      <a class="btn btn-glass" href="#como">Ver como funciona</a>
+    </div>
+  </div>
+  <div class="rows">
+    <article class="rise"><h3>Coleta de dados de CLP</h3><p>Um gateway no painel lê as variáveis da máquina em tempo real, sem alterar o programa.</p><ul><li>Somente leitura</li><li>S7, ADS, EtherNet/IP</li><li>Gateway Linux</li></ul></article>
+    <article class="rise"><h3>Supervisórios web</h3><p>Produção, paradas, alarmes e tendências por turno, no navegador e no celular.</p><ul><li>Tempo real</li><li>Histórico</li><li>Relatório por turno</li></ul></article>
+    <article class="rise"><h3>Programação de CLP e IHM</h3><p>Máquinas novas, melhorias de processo e lógica de segurança, com sequenciadores documentados.</p><ul><li>Siemens</li><li>Beckhoff</li><li>Rockwell, CODESYS</li></ul></article>
+    <article class="rise"><h3>Retrofit de máquinas</h3><p>Troca de controladores sem peça de reposição, incluindo migração de TIA Portal para TwinCAT 3.</p><ul><li>EtherCAT</li><li>Inversores</li><li>Janela planejada</li></ul></article>
+    <article class="rise"><h3>Visão computacional</h3><p>Câmera sobre o processo para contar peças e apontar defeitos antes que sigam adiante.</p><ul><li>Contagem</li><li>Defeitos</li><li>Piloto em laminação</li></ul></article>
+  </div>
+</section>
+
+<section class="how wrap" id="como" aria-labelledby="como-h">
+  <div class="top">
     <div>
-      <div class="sec-title"><span class="eyebrow">A solução</span><h2>Automação e dados de máquina, do CLP ao celular do gestor.</h2><p class="lead">A ConectaOT une engenharia de automação e software. Programamos e modernizamos a máquina quando é preciso e tiramos os dados dela quando o objetivo é enxergar a produção.</p></div>
-      <div class="three">
-        <div><code>1</code><span>Lemos as variáveis que já existem no seu CLP.</span></div>
-        <div><code>2</code><span>Tratamos os dados em um gateway industrial instalado no painel.</span></div>
-        <div><code>3</code><span>Você acompanha produção, paradas e OEE em um painel web.</span></div>
-      </div>
-      <p class="result"><b>Resultado esperado:</b> causa de parada registrada automaticamente, OEE medido em vez de estimado, decisões de manutenção baseadas em histórico e base pronta para manutenção preditiva.</p>
+      <h2 id="como-h" class="h2 rise">Muitos sinais, uma leitura.</h2>
+      <p class="rise">O CLP fala em centenas de variáveis. O gateway ConectaOT escolhe as que importam, organiza e entrega um painel que qualquer gestor entende.</p>
     </div>
-    <ul class="deliver">
-      <li><b>Coleta de dados de CLP (IIoT):</b> gateway industrial que lê as variáveis da máquina em tempo real, somente leitura.</li>
-      <li><b>Supervisórios e dashboards web:</b> produção, paradas, alarmes e tendências por turno, no navegador e no celular.</li>
-      <li><b>Programação de CLP e IHM:</b> máquinas novas, melhorias e lógica de segurança.</li>
-      <li><b>Retrofit de máquinas:</b> substituição de controladores obsoletos, incluindo migração Siemens TIA Portal → Beckhoff TwinCAT 3.</li>
-      <li><b>Visão computacional:</b> contagem e detecção de defeitos com câmera.</li>
-      <li><b>Comissionamento em campo:</b> partida assistida no Brasil e no exterior.</li>
-    </ul>
+    <aside class="rise" aria-label="Etapas do projeto">
+      <div class="step"><b>10</b><span><strong>Diagnóstico.</strong> Conversa e visita para entender máquina, CLP e objetivo.</span></div>
+      <div class="step"><b>20</b><span><strong>Projeto.</strong> Escopo, prazo e valor por escrito.</span></div>
+      <div class="step"><b>30</b><span><strong>Implantação.</strong> Em janela combinada com a produção.</span></div>
+      <div class="step"><b>40</b><span><strong>Testes.</strong> Validação dos dados com a sua equipe.</span></div>
+      <div class="step"><b>50</b><span><strong>Suporte.</strong> Treinamento e ajustes após a partida.</span></div>
+    </aside>
   </div>
-</section>
-
-<section id="beneficios">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Peças por hora e por turno, comparadas com a meta.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><h3>Segurança preservada</h3><p>A coleta não envia comandos para a máquina.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span><h3>Menos retrabalho</h3><p>Defeitos detectados antes de seguir no processo.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Rastreabilidade</h3><p>Histórico de produção, alarmes e parâmetros por lote.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina.</p></div>
-    </div>
-    <div class="chips" aria-label="Aplicações típicas">
-      <span>Laminação, secagem, prensagem e classificação</span><span>Máquinas operatrizes e células</span><span>Tanques e processos térmicos</span><span>Bancadas de teste e ensaio</span><span>CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS</span>
+  <svg class="diagram" id="diag" viewBox="0 0 1200 270" role="img" aria-label="Diagrama: sinais dispersos do CLP são reunidos pelo gateway e organizados em indicadores"></svg>
+  <div class="vis">
+    <svg class="diagram-v" id="diagv" viewBox="0 0 270 1200" role="img" aria-label="Diagrama vertical do mesmo fluxo"></svg>
+    <div class="thirds">
+      <div class="rise"><h3>Ler</h3><p>Centenas de tags do CLP, lidas sem escrever nada na máquina.</p></div>
+      <div class="rise"><h3>Reunir</h3><p>O gateway filtra, carimba o horário e guarda o histórico.</p></div>
+      <div class="rise"><h3>Mostrar</h3><p>Produção, paradas e OEE organizados por turno no painel.</p></div>
     </div>
   </div>
 </section>
 
-<section id="como-funciona">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Como funciona</span><h2>Do diagnóstico ao painel funcionando</h2><p class="lead">Numeramos as etapas como num sequenciador de CLP: de 10 em 10, para sobrar espaço para o passo que o seu projeto precisar.</p></div>
-    <div class="timeline">
-      <div class="st glass"><code>PASSO 10</code><h3>Diagnóstico</h3><p>Conversa técnica e visita (ou vídeo) para entender a máquina, o CLP e o objetivo.</p></div>
-      <div class="st glass"><code>PASSO 20</code><h3>Projeto e engenharia</h3><p>Escopo, arquitetura, prazo e valor por escrito, com o que entra e o que fica de fora.</p></div>
-      <div class="st glass"><code>PASSO 30</code><h3>Implantação</h3><p>Programação, gateway ou retrofit, sempre em janela combinada com a produção.</p></div>
-      <div class="st glass"><code>PASSO 40</code><h3>Integração e testes</h3><p>Validação dos dados com a equipe, testes de I/O e partida assistida.</p></div>
-      <div class="st glass"><code>PASSO 50</code><h3>Suporte</h3><p>Treinamento, ajustes pós-partida e acompanhamento contínuo.</p></div>
+<section class="wrap" id="calculo" aria-labelledby="calc-h">
+  <div class="calc">
+    <div class="q">
+      <h2 id="calc-h" class="rise">Quanto custa a sua parada?</h2>
+      <p class="rise">Arraste com os números da sua linha. A conta roda aqui no navegador e nada é enviado.</p>
+      <div class="field"><label for="cMin">Minutos parados por dia <output id="oMin" for="cMin">40</output></label><input id="cMin" type="range" min="5" max="240" step="5" value="40"></div>
+      <div class="field"><label for="cPh">Peças por hora <output id="oPh" for="cPh">600</output></label><input id="cPh" type="range" min="50" max="3000" step="50" value="600"></div>
+      <div class="field"><label for="cVal">Margem por peça (R$) <output id="oVal" for="cVal">0,80</output></label><input id="cVal" type="range" min="0.1" max="20" step="0.1" value="0.8"></div>
+      <div class="field"><label for="cDays">Dias de produção no mês <output id="oDays" for="cDays">22</output></label><input id="cDays" type="range" min="10" max="30" step="1" value="22"></div>
+    </div>
+    <div class="r" aria-live="polite">
+      <span class="total" id="total">R$ 7.040</span>
+      <p>de produção perdida por mês.</p>
+      <p id="pieces">8.800 peças deixam de sair da máquina por mês. Saber a causa de cada parada é o primeiro passo para recuperar parte disso.</p>
+      <a class="btn" href="#contato">Solicitar diagnóstico</a>
     </div>
   </div>
 </section>
 
-<section id="projetos">
+<section class="work" id="projetos" aria-labelledby="proj-h">
   <div class="wrap">
-    <div class="sec-head">
-      <div><span class="eyebrow">Portfólio</span><h2>Projetos entregues</h2><p>Indústria de compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo.</p></div>
+    <div class="head">
+      <h2 id="proj-h" class="rise">Projetos</h2>
+      <p class="rise">Entregues em compensados, laminação, florestal e equipamentos de teste. Clientes preservados por sigilo; as fotos mostram o tipo de ambiente onde trabalhamos.</p>
     </div>
-
-    <div class="projects collapsed" id="projects">
-      <article class="proj glass" data-cat="soft">
-        <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
-        <span class="tagline">Projeto 01 · app próprio</span>
-        <p class="quote">Talhões no mapa, medições offline e alertas de poda e desbaste, com marketplace de viveiros.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>PWA · mapas · offline</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>manejo.conectaot.com.br</span><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
-      </article>
-
-      <article class="proj glass" data-cat="sup">
-        <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">S7-1214C</span></div>
-        <span class="tagline">CLP + dashboard web</span>
-        <p class="quote">Temperatura, ciclos e histórico do cozimento acompanhados pelo navegador, com banco de dados próprio.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>Siemens · PHP · MySQL</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Em operação</span></div>
-      </article>
-
-      <article class="proj solid dark" data-cat="sup soft">
-        <div class="proj-top"><span class="av">CL</span><div><h3>Classificadora de lâminas</h3><p>Coleta de dados · laminação</p></div><span class="badge">MVP</span></div>
-        <span class="tagline">Plataforma ConectaOT</span>
-        <p class="quote">Gateway lendo o CLP da máquina em tempo real. Produção por turno e paradas sem mexer no programa original.</p>
-        <div class="meter"><div class="meter-h"><span>Modo de acesso</span><span>somente leitura</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Em operação</span></div>
-      </article>
-
-      <article class="proj glass" data-cat="auto">
-        <div class="proj-top"><span class="av">SC</span><div><h3>Secador de lâminas</h3><p>Automação · retrofit</p></div><span class="badge">TwinCAT 3</span></div>
-        <span class="tagline">TIA Portal → TwinCAT 3</span>
-        <p class="quote">Conversão da lógica do secador para Beckhoff, com inversores Altivar em rede EtherCAT.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>ST / SCL · EtherCAT</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Laminação</span></div>
-      </article>
-
-      <article class="proj glass" data-cat="auto">
-        <div class="proj-top"><span class="av">TL</span><div><h3>Torno laminador</h3><p>Automação · programa e IHM</p></div><span class="badge">Campo</span></div>
-        <span class="tagline">Máquinas de laminação</span>
-        <p class="quote">Programação, posicionamento e comissionamento de tornos e linhas de laminação, inclusive no exterior.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>Siemens · Beckhoff</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Brasil e exterior</span></div>
-      </article>
-
-      <article class="proj glass" data-cat="auto sup">
-        <div class="proj-top"><span class="av">PC</span><div><h3>Picador industrial</h3><p>Automação · CODESYS</p></div><span class="badge">M810</span></div>
-        <span class="tagline">Alarmes, histórico e usuários</span>
-        <p class="quote">Programa em CODESYS com gestão de alarmes, histórico de eventos, níveis de usuário e teclas de função.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>CODESYS · IHM</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Concluído</span></div>
-      </article>
-
-      <article class="proj glass" data-cat="sup">
-        <div class="proj-top"><span class="av">BH</span><div><h3>Bancada de testes hidráulicos</h3><p>Supervisório · ensaios</p></div><span class="badge">Testes</span></div>
-        <span class="tagline">Registro de ensaios</span>
-        <p class="quote">Sistema para executar e registrar testes hidráulicos, com acompanhamento das grandezas durante o ensaio.</p>
-        <div class="meter"><div class="meter-h"><span>Entrega</span><span>software de teste</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Equipamentos</span></div>
-      </article>
-
-      <article class="proj glass" data-cat="vis">
-        <div class="proj-top"><span class="av">VC</span><div><h3>Visão na guilhotina</h3><p>Visão computacional · laminação</p></div><span class="badge">P&amp;D</span></div>
-        <span class="tagline">Contagem de lâminas</span>
-        <p class="quote">Câmera sobre o tapete para contar lâminas e apontar defeitos, reduzindo a conferência manual.</p>
-        <div class="meter"><div class="meter-h"><span>Status</span><span>em desenvolvimento</span></div><div class="tr"><i style="width:45%"></i></div></div>
-        <div class="proj-foot"><span>Piloto</span></div>
-      </article>
+    <div class="wall r1">
+      <figure class="rise" style="flex-basis:44%"><div class="frame"><img src="img/pinus.jpg" width="1536" height="1024" alt="Plantio de pinus na serra catarinense com neblina" loading="lazy"></div><figcaption>Manejo Florestal, app próprio no ar <a href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir o app ↗</a></figcaption></figure>
+      <figure class="rise" style="flex-basis:22%"><div class="frame"><img src="img/painel.jpg" width="1024" height="1280" alt="Painel de CLP com módulos e cabos" loading="lazy"></div><figcaption>Classificadora de lâminas <span>coleta de dados</span></figcaption></figure>
+      <figure class="rise" style="flex-basis:28%"><div class="frame txtf" style="background:var(--steel);color:#F4F6FA"><div class="txt"><h3 class="tt">Tanque de cozimento de toras</h3><p>Supervisório com Siemens S7-1214C, banco de dados e painel web com temperatura, ciclos e histórico.</p></div></div><figcaption>Supervisório <span>compensados</span></figcaption></figure>
     </div>
-<button class="btn btn-glass more" id="moreBtn" type="button" aria-controls="projects" aria-expanded="false">Ver todos os projetos</button>
-</div></section>
-<section id="cases">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Resultados</span><h2>Resultados na prática</h2><p class="lead">Cases ilustrativos do tipo de resultado buscado. Os números abaixo são exemplos.</p></div>
-    <div class="grid2">
-      <article class="case glass">
-        <span class="tag">EXEMPLO ILUSTRATIVO</span>
-        <h3>Indústria de compensados · classificadora de lâminas</h3>
-        <blockquote>“Antes a gente sabia que a máquina parava, mas não quanto. Em 30 dias de painel descobrimos que três causas respondiam pela maior parte do tempo parado.”</blockquote>
-        <div class="mets"><div><b>−28%</b><span>parada não programada em 3 meses</span></div><div><b>+9 p.p.</b><span>de OEE</span></div><div><b>5 dias</b><span>de implantação, sem parar a linha</span></div></div>
-        <span class="who">Gerente de manutenção (exemplo)</span>
-      </article>
-      <article class="case glass">
-        <span class="tag">EXEMPLO ILUSTRATIVO</span>
-        <h3>Retrofit de secador · TIA Portal → TwinCAT 3</h3>
-        <blockquote>“O controlador antigo não tinha mais peça de reposição. O retrofit manteve a máquina e ainda ganhamos diagnóstico de alarmes.”</blockquote>
-        <div class="mets"><div><b>0 h</b><span>de parada fora da janela planejada</span></div><div><b>8 meses</b><span>retorno estimado do investimento</span></div><div><b>100%</b><span>da lógica migrada e documentada</span></div></div>
-        <span class="who">Diretor industrial (exemplo)</span>
-      </article>
+    <div class="wall r2">
+      <figure class="rise" style="flex-basis:30%"><div class="frame"><img src="img/secador.jpg" width="1536" height="1024" alt="Secador contínuo de lâminas" loading="lazy"></div><figcaption>Secador de lâminas <span>TIA Portal para TwinCAT 3</span></figcaption></figure>
+      <figure class="rise" style="flex-basis:22%"><div class="frame txtf" style="background:var(--field);color:var(--on-field)"><div class="txt"><h3 class="tt">Picador industrial</h3><p>CODESYS com alarmes, histórico e níveis de usuário.</p></div></div><figcaption>Automação <span>M810</span></figcaption></figure>
+      <figure class="rise" style="flex-basis:34%"><div class="frame"><img src="img/lamina.jpg" width="1536" height="1024" alt="Torno laminador em operação" loading="lazy"></div><figcaption>Torno laminador <span>programa e IHM</span></figcaption></figure>
+    </div>
+    <div class="wall r3">
+      <figure class="rise" style="flex-basis:22%"><div class="frame txtf" style="background:var(--sand);color:var(--sand-ink)"><div class="txt"><h3 class="tt">Bancada de testes hidráulicos</h3><p>Execução e registro de ensaios com acompanhamento das grandezas.</p></div></div><figcaption>Supervisório <span>ensaios</span></figcaption></figure>
+      <figure class="rise" style="flex-basis:40%"><div class="frame"><img src="img/estoque.jpg" width="1536" height="1024" alt="Pilhas de lâminas de pinus no estoque" loading="lazy"></div><figcaption>Visão na guilhotina <span>contagem de lâminas, em piloto</span></figcaption></figure>
+      <figure class="rise" style="flex-basis:26%"><div class="frame"><img src="img/comissionamento.jpg" width="1024" height="1280" alt="Engenheiro com notebook ao lado de uma máquina durante comissionamento" loading="lazy"></div><figcaption>Comissionamento <span>Brasil e exterior</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="diferenciais">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2></div>
-    <div class="diff">
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Engenharia de ponta a ponta</h3><p>Quem programa o CLP é quem constrói o painel. Sem repasse entre empresas.</p></div>
-      <div class="tile glass hl"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Somente leitura por padrão</h3><p>A coleta de dados não escreve no CLP. A segurança da máquina continua no programa e no operador.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Multiplataforma</h3><p>Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS no mesmo projeto.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg></span><h3>Integração com o que já existe</h3><p>Não exige trocar a máquina nem o CLP.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Experiência de campo internacional</h3><p>60+ comissionamentos em 9 países.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Escopo fechado</h3><p>Prazo e valor por escrito antes de começar.</p></div>
+<section class="wrap" aria-labelledby="ro-h">
+  <div class="ro">
+    <div class="say">
+      <h2 id="ro-h" class="rise">Só lemos o CLP. Nunca escrevemos.</h2>
+      <p class="rise">A coleta é somente leitura. O painel mostra o que a máquina faz, mas não envia comando nenhum. Se o gateway desligar, a máquina segue produzindo; só o painel para de atualizar.</p>
+    </div>
+    <div class="flow rise" aria-label="Fluxo dos dados">
+      <div class="node">CLP da máquina <span>S7 · ADS · Logix</span></div>
+      <div class="node">Gateway ConectaOT <span>Linux industrial</span></div>
+      <div class="node ok">Painel web <span style="color:inherit">PC e celular</span></div>
+      <div class="node no">Nenhum comando volta para a máquina.</div>
     </div>
   </div>
 </section>
 
-<section id="oferta">
-  <div class="wrap">
-    <div class="offer">
-      <div>
-        <span class="badge acc">Oferta</span>
-        <h2 style="margin-top:14px">Diagnóstico técnico gratuito da sua máquina</h2>
-        <p style="margin-top:12px">Em uma conversa de 30 minutos, um engenheiro avalia o seu CLP e o seu objetivo e indica o caminho: coleta de dados, retrofit ou automação. Sem custo e sem compromisso.</p>
-        <ul><li>Avaliação de compatibilidade do CLP e da rede</li><li>Indicação das variáveis que geram mais resultado</li><li>Estimativa de prazo e faixa de investimento</li></ul>
-      </div>
-      <div class="side"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><small>Leva menos de 1 minuto · Resposta em até 1 dia útil</small></div>
+<section class="wrap" id="duvidas" aria-labelledby="faq-h">
+  <div class="faq">
+    <h2 id="faq-h">Dúvidas de quem compra</h2>
+    <div class="list">
+      <details name="faq" open><summary>Qual o prazo de implantação?</summary><p>Uma coleta de dados em uma máquina costuma levar poucos dias. Retrofit e automação completa têm cronograma definido no projeto, por escrito.</p></details>
+      <details name="faq"><summary>Funciona com máquinas antigas?</summary><p>Sim. Trabalhamos com Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS, incluindo modelos descontinuados. A compatibilidade é confirmada no diagnóstico.</p></details>
+      <details name="faq"><summary>Precisa parar a produção?</summary><p>A coleta normalmente é instalada sem parar a linha. Retrofits são feitos em janela combinada com a produção.</p></details>
+      <details name="faq"><summary>É seguro conectar a máquina?</summary><p>A coleta é somente leitura e não envia comandos ao CLP. Se o gateway desligar, a máquina segue funcionando normalmente.</p></details>
+      <details name="faq"><summary>Quanto custa?</summary><p>Depende do número de máquinas e do escopo. Depois do diagnóstico gratuito você recebe escopo, prazo e valor fechados por escrito.</p></details>
+      <details name="faq"><summary>Como é o suporte depois da entrega?</summary><p>Treinamento e ajustes pós-partida estão incluídos. Depois o suporte segue remoto ou presencial, conforme a planta precisar.</p></details>
     </div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
-    <div class="faq">
-      <details class="glass"><summary>Qual o prazo de implantação?</summary><p>Depende do escopo. Uma coleta de dados em uma máquina costuma levar poucos dias. Retrofit e automação completa são definidos no projeto, com cronograma por escrito.</p></details>
-      <details class="glass"><summary>Funciona com máquinas antigas?</summary><p>Sim. Trabalhamos com CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS, incluindo modelos descontinuados. A compatibilidade é confirmada no diagnóstico.</p></details>
-      <details class="glass"><summary>Precisa parar a produção?</summary><p>A coleta de dados normalmente é instalada sem parar a linha. Retrofits são feitos em janela combinada com a produção.</p></details>
-      <details class="glass"><summary>É seguro conectar a máquina?</summary><p>A coleta é somente leitura: o sistema não envia comandos ao CLP. Se o gateway desligar, a máquina segue funcionando normalmente.</p></details>
-      <details class="glass"><summary>Quanto custa?</summary><p>O valor depende do número de máquinas e do escopo. Após o diagnóstico gratuito, você recebe escopo, prazo e valor fechados por escrito.</p></details>
-      <details class="glass"><summary>Como é o suporte depois da entrega?</summary><p>Incluímos treinamento e ajustes pós-partida. Depois, o suporte pode continuar de forma remota ou presencial, conforme a necessidade da planta.</p></details>
-    </div>
+<section class="contact" id="contato" aria-labelledby="ct-h">
+  <div class="strip" aria-hidden="true">
+    <img class="w" src="img/lamina.jpg" alt="" loading="lazy"><img class="p" src="img/painel.jpg" alt="" loading="lazy"><img class="w" src="img/pinus.jpg" alt="" loading="lazy"><img class="s" src="img/estoque.jpg" alt="" loading="lazy"><img class="p" src="img/comissionamento.jpg" alt="" loading="lazy"><img class="w" src="img/secador.jpg" alt="" loading="lazy">
+    <img class="w" src="img/lamina.jpg" alt="" loading="lazy"><img class="p" src="img/painel.jpg" alt="" loading="lazy"><img class="w" src="img/pinus.jpg" alt="" loading="lazy"><img class="s" src="img/estoque.jpg" alt="" loading="lazy"><img class="p" src="img/comissionamento.jpg" alt="" loading="lazy"><img class="w" src="img/secador.jpg" alt="" loading="lazy">
   </div>
-</section>
-
-<section id="contato" class="final">
-  <div class="wrap cta-wrap">
-    <div class="c-info glass">
-      <span class="eyebrow">Diagnóstico gratuito</span>
-      <h2>Pare de estimar. Comece a medir.</h2>
-      <p style="color:var(--muted)">Descubra em 30 minutos quanto a sua máquina pode render a mais, sem trocar o equipamento.</p>
-      <div class="c-line"><div><small>WhatsApp</small><b class="num">(49) 99120-8836</b></div><button type="button" data-copy="(49) 99120-8836">copiar</button></div>
-      <div class="c-line"><div><small>E-mail</small><b>contato@conectaot.com.br</b></div><button type="button" data-copy="contato@conectaot.com.br">copiar</button></div>
-      <div class="c-line"><div><small>Base</small><b>Caçador · Santa Catarina</b></div></div>
-    </div>
-    <form class="glass" id="leadForm" novalidate>
-      <p class="micro full" style="grid-column:1/-1">Leva menos de 1 minuto. Respondemos em até 1 dia útil.</p>
-      <div class="field"><label for="fName">Nome</label><input id="fName" name="nome" autocomplete="name" placeholder="Seu nome"></div>
-      <div class="field"><label for="fCompany">Empresa</label><input id="fCompany" name="empresa" autocomplete="organization" placeholder="Nome da empresa"></div>
-      <div class="field"><label for="fType">O que você precisa?</label>
-        <select id="fType" name="tipo"><option>Coleta de dados</option><option>Supervisório</option><option>Retrofit</option><option>Automação de máquina</option><option>Visão computacional</option><option>Outro</option></select></div>
-      <div class="field"><label for="fPlc">Modelo do CLP <span class="micro">(opcional)</span></label><input id="fPlc" name="clp" placeholder="Não sabe? Deixe em branco"></div>
-      <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com S7-300, queremos ver paradas e produção por turno."></textarea></div>
-      <div class="f-foot">
-        <p id="hint">Sem custo e sem compromisso. Seus dados são usados apenas para responder ao seu pedido.</p>
-        <a class="btn btn-accent" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-      </div>
+  <div class="wrap">
+    <h2 id="ct-h">Pare de estimar. Comece a medir.</h2>
+    <p class="sub">Diagnóstico técnico gratuito: em 30 minutos um engenheiro avalia o seu CLP e indica o caminho. Sem custo e sem compromisso.</p>
+    <form class="form" id="lead" novalidate>
+      <label class="vh" for="fN">Nome</label><input id="fN" name="nome" autocomplete="name" placeholder="Seu nome">
+      <label class="vh" for="fE">Empresa e máquina</label><input id="fE" name="empresa" placeholder="Empresa e máquina">
+      <a class="btn btn-go" id="send" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Solicitar diagnóstico gratuito</a>
     </form>
+    <div class="small"><span>Leva menos de um minuto. A conversa continua no WhatsApp.</span><span class="c">Resposta em até 1 dia útil.</span></div>
+    <div class="lines">
+      <span>WhatsApp <b class="num">(49) 99120-8836</b> <button type="button" data-copy="(49) 99120-8836">copiar</button></span>
+      <span>contato@conectaot.com.br <button type="button" data-copy="contato@conectaot.com.br">copiar</button></span>
+      <span>Caçador, Santa Catarina</span>
+    </div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span style="display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600"><svg class="logo-ico" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0A192F"/><circle cx="32" cy="32" r="20" stroke="#1E293B" stroke-width="5"/><path d="M18 44 L32 30 L40 38 L50 20" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 20 H50 V28" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">Conecta<b>OT</b></span></span>
-    <span>Automação industrial e dados de máquina · Indústria 4.0</span>
-    <span class="sp">© <span id="yr">2026</span> ConectaOT · Caçador/SC</span>
+<footer class="wrap">
+  <svg class="mark" viewBox="0 0 1000 300" preserveAspectRatio="none" role="img" aria-label="ConectaOT"><rect x="2.0" y="66" width="107.1" height="234" rx="10" fill="var(--tile-2)"/><text x="55.6" y="209.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#F4F6FA">C</text><rect x="113.1" y="24" width="107.1" height="276" rx="10" fill="var(--steel)"/><text x="166.7" y="188.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#F4F6FA">O</text><rect x="224.2" y="102" width="107.1" height="198" rx="10" fill="var(--tile-2)"/><text x="277.8" y="227.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#F4F6FA">N</text><rect x="335.3" y="42" width="107.1" height="258" rx="10" fill="var(--sand)"/><text x="388.9" y="197.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#0B132B">E</text><rect x="446.4" y="84" width="107.1" height="216" rx="10" fill="var(--steel)"/><text x="500.0" y="218.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#F4F6FA">C</text><rect x="557.6" y="0" width="107.1" height="300" rx="10" fill="var(--tile-2)"/><text x="611.1" y="176.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#F4F6FA">T</text><rect x="668.7" y="114" width="107.1" height="186" rx="10" fill="var(--sand)"/><text x="722.2" y="233.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#0B132B">A</text><rect x="779.8" y="18" width="107.1" height="282" rx="10" fill="var(--accent)"/><text x="833.3" y="185.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#0B132B">O</text><rect x="890.9" y="60" width="107.1" height="240" rx="10" fill="var(--field)"/><text x="944.4" y="206.0" text-anchor="middle" font-family="Plus Jakarta Sans,Inter,sans-serif" font-weight="800" font-size="76" fill="#0B132B">T</text></svg>
+  <div class="foot-cols">
+    <nav aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#calculo">Custo da parada</a><a href="#projetos">Projetos</a><a href="#duvidas">Dúvidas</a><a href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Manejo Florestal</a><a href="#contato">Contato</a></nav>
+    <address>Caçador, Santa Catarina<br>(49) 99120-8836<br>contato@conectaot.com.br</address>
   </div>
+  <div class="last"><span>© <span id="yr">2026</span> ConectaOT. Fotos ilustrativas geradas por IA.</span><a class="btn btn-glass" href="#inicio">Voltar ao topo</a></div>
 </footer>
-<a class="wa-fab" href="https://wa.me/5549991208836?text=Ol%C3%A1%2C%20ConectaOT!%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
-</a>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<a class="wa" href="https://wa.me/5549991208836?text=Ol%C3%A1%2C%20ConectaOT!%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <script>
 (function(){
-  var root=document.documentElement;
-  document.getElementById('themeBtn').addEventListener('click',function(){
-    var c=root.getAttribute('data-theme')||'dark';var n=c==='dark'?'light':'dark';root.setAttribute('data-theme',n);
-    try{localStorage.setItem('cot-theme',n);}catch(e){}
-  });
-  var nav=document.getElementById('nav'),mb=document.getElementById('menuBtn');
-  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
-  var links=[].slice.call(nav.querySelectorAll('a'));
-  links.forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false);});});
-  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
-  function spy(){var y=scrollY+140,i=0;secs.forEach(function(s,k){if(s&&s.getBoundingClientRect().top+scrollY<=y)i=k;});links.forEach(function(a,k){a.classList.toggle('on',k===i);});}
-  var tk=0;addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){spy();tk=0;});}},{passive:true});spy();
+  var root=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('theme').addEventListener('click',function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('cot-theme',n)}catch(e){}});
+  var nav=document.getElementById('nav'),mb=document.getElementById('menu');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
   document.getElementById('yr').textContent=new Date().getFullYear();
-  // sparkline ilustrativa
-  var d=[1120,1190,1240,1180,1265,1302,1250,1284],W=320,H=110,min=1050,max=1350;
-  function p(v,i){return[(i/(d.length-1))*W,H-10-((v-min)/(max-min))*(H-20)];}
-  function draw(){var pts=d.map(p),path='M'+pts.map(function(q){return q[0].toFixed(1)+' '+q[1].toFixed(1)}).join(' L');
-    document.getElementById('sLine').setAttribute('d',path);document.getElementById('sArea').setAttribute('d',path+' L'+W+' '+H+' L0 '+H+' Z');
-    var l=pts[pts.length-1],dot=document.getElementById('sDot');dot.setAttribute('cx',l[0]-6);dot.setAttribute('cy',l[1]);
-    document.getElementById('kRate').firstChild.nodeValue=d[d.length-1].toLocaleString('pt-BR')+' ';}
+
+  var els=document.querySelectorAll('.rise,.shutter');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var sib=[].slice.call(e.target.parentNode.children).filter(function(x){return x.classList.contains('rise')});var i=Math.max(0,sib.indexOf(e.target));e.target.style.transitionDelay=(i*70)+'ms';e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+
+  var d=[1120,1190,1240,1180,1265,1302,1250,1284],W=320,H=80,min=1050,max=1350;
+  function pt(v,i){return[(i/(d.length-1))*W,H-8-((v-min)/(max-min))*(H-16)]}
+  function draw(){var p=d.map(pt);document.getElementById('line').setAttribute('d','M'+p.map(function(q){return q[0].toFixed(1)+' '+q[1].toFixed(1)}).join(' L'));var l=p[p.length-1],c=document.getElementById('dot');c.setAttribute('cx',l[0]-6);c.setAttribute('cy',l[1]);document.getElementById('rate').textContent=d[d.length-1].toLocaleString('pt-BR')}
   draw();
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
-    var vis=true,sv=document.getElementById('sLine').ownerSVGElement;
-    if('IntersectionObserver' in window){new IntersectionObserver(function(e){vis=e[0].isIntersecting;}).observe(sv);}
-    setInterval(function(){if(document.hidden||!vis)return;var n=Math.round(Math.min(max-20,Math.max(min+40,d[d.length-1]+(Math.random()-.5)*70)));d.push(n);d.shift();draw();},3000);
-  }
-  var more=document.getElementById('moreBtn'),pj=document.getElementById('projects');
-  if(more&&pj)more.addEventListener('click',function(){var c=pj.classList.toggle('collapsed');more.setAttribute('aria-expanded',!c);more.textContent=c?'Ver todos os projetos':'Mostrar menos';});
-  // FAQ: um aberto por vez
-  var dts=[].slice.call(document.querySelectorAll('.faq details'));
-  dts.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)dts.forEach(function(o){if(o!==x)o.open=false;});});});
-  // copiar
-  var t=document.getElementById('toast'),tt;
-  function say(m){t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},2200);}
-  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
-    var v=b.getAttribute('data-copy');
-    function sel(){var el=b.parentNode.querySelector('b'),r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);say('Selecionado, use Ctrl+C');}
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(function(){say('Copiado: '+v)},sel);}else sel();
-  });});
-  // formulário → WhatsApp
-  var f=document.getElementById('leadForm'),send=document.getElementById('sendBtn'),hint=document.getElementById('hint');
-  function build(){var n=f.nome.value.trim(),c=f.empresa.value.trim(),k=f.clp.value.trim(),m=f.mensagem.value.trim();
-    var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'');
-    send.href='https://wa.me/5549991208836?text='+encodeURIComponent(txt);}
-  f.addEventListener('input',build);f.addEventListener('change',build);build();
-  send.addEventListener('click',function(){build();hint.textContent='Abrindo o WhatsApp com o pedido pronto. Um engenheiro vai responder por lá.';});
-  f.addEventListener('submit',function(e){e.preventDefault();});
+  if(!reduce)setInterval(function(){if(document.hidden)return;d.push(Math.round(Math.min(max-20,Math.max(min+40,d[d.length-1]+(Math.random()-.5)*70))));d.shift();draw()},3000);
+
+  function rnd(s){return function(){s=(s*9301+49297)%233280;return s/233280}}
+  function build(svg,vert){var r=rnd(7),n=144,out='';for(var k=0;k<n;k++){var x,y,c,z=k%3;
+      if(z===0){x=r()*360+10;y=r()*230+20;c=k%2?'var(--steel)':'var(--tile-2)'}
+      else if(z===1){var q=Math.floor(k/3);x=430+(q%16)*21;y=112+Math.floor(q/16)*16;c='var(--soft)'}
+      else{var j=Math.floor(k/3);x=820+(j%8)*44;y=40+Math.floor(j/8)*36;c='var(--metric)'}
+      if(vert){var tx=y,ty=x;x=tx;y=ty}
+      out+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="13" height="13" rx="2" fill="'+c+'"/>'}
+    svg.innerHTML=out}
+  build(document.getElementById('diag'),false);build(document.getElementById('diagv'),true);
+
+  var $=function(id){return document.getElementById(id)};
+  var fmt=function(v){return v.toLocaleString('pt-BR',{maximumFractionDigits:0})};
+  function calc(){var m=+$('cMin').value,ph=+$('cPh').value,v=+$('cVal').value,dd=+$('cDays').value;
+    $('oMin').textContent=m;$('oPh').textContent=fmt(ph);$('oVal').textContent=v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});$('oDays').textContent=dd;
+    var pcs=m/60*ph*dd,rs=pcs*v;
+    $('total').textContent='R$ '+fmt(rs);
+    $('pieces').textContent=fmt(pcs)+' peças deixam de sair da máquina por mês. Saber a causa de cada parada é o primeiro passo para recuperar parte disso.';buildMsg()}
+  var f=$('lead'),s=$('send');
+  function buildMsg(){var n=f.nome.value.trim(),e=f.empresa.value.trim();var t='Olá, ConectaOT! Quero o diagnóstico gratuito.'+(n?'\nNome: '+n:'')+(e?'\nEmpresa e máquina: '+e:'')+'\nPela calculadora do site, minha parada custa cerca de '+$('total').textContent+' por mês.';
+    s.href='https://wa.me/5549991208836?text='+encodeURIComponent(t)}
+  ['cMin','cPh','cVal','cDays'].forEach(function(i){$(i).addEventListener('input',calc)});
+  f.addEventListener('input',buildMsg);f.addEventListener('submit',function(e){e.preventDefault()});
+  calc();
+
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-copy');if(navigator.clipboard)navigator.clipboard.writeText(v).then(function(){b.textContent='copiado'},function(){})})});
 })();
 </script>
 </body>
