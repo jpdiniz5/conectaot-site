@@ -1,0 +1,3374 @@
+{
+ "url": "index.html",
+ "at": "2026-11-02T16:45:23.451Z",
+ "allow": [
+  "mono",
+  "glass"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    1,
+    0.53,
+    0.87,
+    0.49,
+    0.8,
+    1,
+    0.78,
+    0.47,
+    0.82,
+    0.64
+   ],
+   "motion": {
+    "elements": 37,
+    "css": 3,
+    "transitions": 34,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 8893,
+     "screens": 9.9,
+     "words": 851,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 17,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "lamina.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "pinus.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "lamina.jpg",
+      "estoque.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ConectaOT",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 123.8,
+     "vw": 8.6,
+     "font": "Plus Jakarta Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.88,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.53,
+     "top": 94,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ConectaOT",
+     "words": 1,
+     "lines": 1,
+     "size": 123.8,
+     "font": "Plus Jakarta Sans"
+    },
+    "headings": [
+     {
+      "text": "ConectaOT",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 123.8,
+      "vw": 8.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.88,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 94,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Saiba por que sua máquina parou, antes que a parada vire prejuízo.",
+      "words": 12,
+      "chars": 66,
+      "lines": 3,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 328,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "94,1%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.21,
+      "top": 494,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "1.289",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 694,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "O dado já existe. Só não chega até você.",
+      "words": 9,
+      "chars": 40,
+      "lines": 1,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 1230,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A parada é anotada à mão, atrasada e sem causa. Nós levamos o dado do CLP ao celular de quem decide.",
+      "words": 21,
+      "chars": 100,
+      "lines": 2,
+      "size": 31.7,
+      "vw": 2.2,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 1319,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Coleta de dados de CLP",
+      "words": 5,
+      "chars": 22,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1752,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Do CLP ao celular.",
+      "words": 4,
+      "chars": 18,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1780,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Supervisórios web",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 1916,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Programação de CLP e IHM",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 2079,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Retrofit de máquinas",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 2267,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Visão computacional",
+      "words": 2,
+      "chars": 19,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.17,
+      "top": 2430,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Muitos sinais, uma leitura.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 2716,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "R$ 7.040",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 100.8,
+      "vw": 7,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.51,
+      "top": 3772,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Quanto custa a sua parada?",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 46.1,
+      "vw": 3.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 3772,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Projetos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 129.6,
+      "vw": 9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 4669,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Só lemos o CLP. Nunca escrevemos.",
+      "words": 6,
+      "chars": 33,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 6153,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Dúvidas de quem compra",
+      "words": 4,
+      "chars": 22,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 6725,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Pare de estimar. Comece a medir.",
+      "words": 6,
+      "chars": 32,
+      "lines": 1,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 7746,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 19,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.09,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      23,
+      28,
+      32,
+      46,
+      61,
+      101,
+      124,
+      130
+     ],
+     "sizeCount": 15,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.2
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 129.6,
+      "vw": 9,
+      "font": "Plus Jakarta Sans",
+      "text": "Projetos"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "1.289",
+      "94,1%",
+      "15+",
+      "60+",
+      "9",
+      "10"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b132b",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.59,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#f4d6b0",
+       "top": 1724,
+       "hsl": {
+        "h": 34,
+        "s": 0.76,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#d97706",
+       "top": 3732,
+       "hsl": {
+        "h": 32,
+        "s": 0.95,
+        "l": 0.44
+       }
+      },
+      {
+       "color": "#1c2541",
+       "top": 4511,
+       "hsl": {
+        "h": 225,
+        "s": 0.4,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#3a506b",
+       "top": 7476,
+       "hsl": {
+        "h": 213,
+        "s": 0.3,
+        "l": 0.32
+       }
+      },
+      {
+       "color": "#0b132b",
+       "top": 8244,
+       "hsl": {
+        "h": 225,
+        "s": 0.59,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b4c2d4",
+       "share": 0.41
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.38
+      },
+      {
+       "color": "#0b132b",
+       "share": 0.16
+      },
+      {
+       "color": "#e3eaf3",
+       "share": 0.04
+      },
+      {
+       "color": "#f59e0b",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#5bc0de",
+      "hsl": {
+       "h": 194,
+       "s": 0.66,
+       "l": 0.61
+      },
+      "fg": "#0b132b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 3,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo",
+      "Solicitar diagnóstico gratuito",
+      "Solicitar diagnóstico"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 5,
+     "roundedBoxes": 30,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 15,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1724
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.26
+     }
+    ],
+    "nav": {
+     "links": 7,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 8893,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div#inicio.board.wrap",
+      "tag": "div",
+      "top": 64,
+      "height": 1008,
+      "words": 86,
+      "media": 4,
+      "middle": 37,
+      "heading": {
+       "text": "Conecta",
+       "size": 124,
+       "tag": "h1"
+      },
+      "left": 42,
+      "right": 18,
+      "textLeft": 42,
+      "textRight": 251,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.intro.wrap",
+      "tag": "section",
+      "top": 1072,
+      "height": 652,
+      "words": 117,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "O dado já existe. Só não chega até você.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 23,
+      "textLeft": 20,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#servicos.split.wrap",
+      "tag": "section",
+      "top": 1724,
+      "height": 833,
+      "words": 144,
+      "media": 0,
+      "middle": 92,
+      "heading": {
+       "text": "Do CLP",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 76,
+      "right": 52,
+      "textLeft": 76,
+      "textRight": 52,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#como.how.wrap",
+      "tag": "section",
+      "top": 2557,
+      "height": 1017,
+      "words": 110,
+      "media": 1,
+      "middle": 16,
+      "heading": {
+       "text": "Muitos sinais, uma leitura.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 28,
+      "textLeft": 20,
+      "textRight": 28,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculo.wrap",
+      "tag": "section",
+      "top": 3574,
+      "height": 937,
+      "words": 73,
+      "media": 0,
+      "middle": 86,
+      "heading": {
+       "text": "R$ 7.040",
+       "size": 101,
+       "tag": "span"
+      },
+      "left": 60,
+      "right": 328,
+      "textLeft": 60,
+      "textRight": 328,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projetos.work",
+      "tag": "section",
+      "top": 4511,
+      "height": 1449,
+      "words": 118,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Projetos",
+       "size": 130,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.wrap",
+      "tag": "section",
+      "top": 5960,
+      "height": 606,
+      "words": 61,
+      "media": 0,
+      "middle": 200,
+      "heading": {
+       "text": "Só lemos o CLP. Nunca escrevemos.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 42,
+      "textLeft": 20,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#duvidas.wrap",
+      "tag": "section",
+      "top": 6566,
+      "height": 910,
+      "words": 163,
+      "media": 0,
+      "middle": 112,
+      "heading": {
+       "text": "Dúvidas de quem compra",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 374,
+      "textLeft": 20,
+      "textRight": 374,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact",
+      "tag": "section",
+      "top": 7476,
+      "height": 768,
+      "words": 55,
+      "media": 8,
+      "middle": 339,
+      "heading": {
+       "text": "Pare de estimar. Comece a medir.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.wrap",
+      "tag": "footer",
+      "top": 8244,
+      "height": 649,
+      "words": 27,
+      "media": 1,
+      "middle": 191,
+      "heading": null,
+      "left": 20,
+      "right": 43,
+      "textLeft": 20,
+      "textRight": 43,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ConectaOT",
+      "size": 124,
+      "top": 94,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 13
+     },
+     {
+      "x": 1022,
+      "n": 7
+     },
+     {
+      "x": 519,
+      "n": 6
+     },
+     {
+      "x": 42,
+      "n": 5
+     },
+     {
+      "x": 752,
+      "n": 5
+     },
+     {
+      "x": 60,
+      "n": 2
+     },
+     {
+      "x": 76,
+      "n": 2
+     },
+     {
+      "x": 969,
+      "n": 2
+     },
+     {
+      "x": 376,
+      "n": 1
+     },
+     {
+      "x": 495,
+      "n": 1
+     },
+     {
+      "x": 508,
+      "n": 1
+     },
+     {
+      "x": 530,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.06,
+    "voidBox": {
+     "x": 540,
+     "y": 240,
+     "w": 300,
+     "h": 240
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.92,
+    0.92,
+    0.51,
+    0.86,
+    0.62,
+    0.48,
+    0.77,
+    0.91,
+    0.81,
+    0.66,
+    0.91,
+    0.64
+   ],
+   "motion": {
+    "elements": 37,
+    "css": 3,
+    "transitions": 34,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 11607,
+     "screens": 11.3,
+     "words": 830,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 17,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "lamina.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "pinus.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "lamina.jpg",
+      "estoque.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ConectaOT",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 66,
+     "vw": 8.6,
+     "font": "Plus Jakarta Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.88,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.89,
+     "top": 94,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ConectaOT",
+     "words": 1,
+     "lines": 1,
+     "size": 66,
+     "font": "Plus Jakarta Sans"
+    },
+    "headings": [
+     {
+      "text": "ConectaOT",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 66,
+      "vw": 8.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.88,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 94,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "1.284",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1162,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "94,1%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 1162,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "O dado já existe. Só não chega até você.",
+      "words": 9,
+      "chars": 40,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2252,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Do CLP ao celular.",
+      "words": 4,
+      "chars": 18,
+      "lines": 2,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 2800,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Muitos sinais, uma leitura.",
+      "words": 4,
+      "chars": 27,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 4435,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Quanto custa a sua parada?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 6466,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "R$ 7.040",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 53.8,
+      "vw": 7,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 7000,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Projetos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 69.1,
+      "vw": 9,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 7505,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Só lemos o CLP. Nunca escrevemos.",
+      "words": 6,
+      "chars": 33,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 8775,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Dúvidas de quem compra",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 9413,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Pare de estimar. Comece a medir.",
+      "words": 6,
+      "chars": 32,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 10412,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.09,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      30,
+      34,
+      54,
+      66,
+      69
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.2
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 69.1,
+      "vw": 9,
+      "font": "Plus Jakarta Sans",
+      "text": "Projetos"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "1.284",
+      "94,1%",
+      "15+",
+      "60+",
+      "9",
+      "10"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b132b",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.59,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1c2541",
+       "top": 72,
+       "hsl": {
+        "h": 225,
+        "s": 0.4,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#f4d6b0",
+       "top": 2769,
+       "hsl": {
+        "h": 34,
+        "s": 0.76,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#d97706",
+       "top": 6976,
+       "hsl": {
+        "h": 32,
+        "s": 0.95,
+        "l": 0.44
+       }
+      },
+      {
+       "color": "#3a506b",
+       "top": 10142,
+       "hsl": {
+        "h": 213,
+        "s": 0.3,
+        "l": 0.32
+       }
+      },
+      {
+       "color": "#0b132b",
+       "top": 10869,
+       "hsl": {
+        "h": 225,
+        "s": 0.59,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b4c2d4",
+       "share": 0.41
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.39
+      },
+      {
+       "color": "#0b132b",
+       "share": 0.16
+      },
+      {
+       "color": "#e3eaf3",
+       "share": 0.04
+      },
+      {
+       "color": "#f59e0b",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#0b132b",
+      "hsl": {
+       "h": 225,
+       "s": 0.59,
+       "l": 0.11
+      },
+      "fg": "#f4f6fa"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 6,
+     "roundedBoxes": 30,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 14,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.51
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 11607,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.t.name",
+      "tag": "div",
+      "top": 72,
+      "height": 348,
+      "words": 15,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Conecta",
+       "size": 66,
+       "tag": "h1"
+      },
+      "left": 42,
+      "right": 391,
+      "textLeft": 42,
+      "textRight": 391,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.t.pic",
+      "tag": "figure",
+      "top": 428,
+      "height": 546,
+      "words": 9,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 36,
+      "textRight": 400,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.state",
+      "tag": "div",
+      "top": 982,
+      "height": 150,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 42,
+      "right": 54,
+      "textLeft": 42,
+      "textRight": 54,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.act",
+      "tag": "div",
+      "top": 1368,
+      "height": 150,
+      "words": 12,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 42,
+      "right": 255,
+      "textLeft": 42,
+      "textRight": 255,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.nums",
+      "tag": "div",
+      "top": 2014,
+      "height": 134,
+      "words": 12,
+      "media": 0,
+      "middle": 6,
+      "heading": null,
+      "left": 42,
+      "right": 260,
+      "textLeft": 42,
+      "textRight": 260,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.intro.wrap",
+      "tag": "section",
+      "top": 2156,
+      "height": 613,
+      "words": 117,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "O dado já existe. Só não chega até você.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#servicos.split.wrap",
+      "tag": "section",
+      "top": 2769,
+      "height": 1570,
+      "words": 144,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Do CLP",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.top",
+      "tag": "div",
+      "top": 4435,
+      "height": 319,
+      "words": 70,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 172,
+      "textLeft": 20,
+      "textRight": 172,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.vis",
+      "tag": "div",
+      "top": 4794,
+      "height": 1456,
+      "words": 36,
+      "media": 1,
+      "middle": 16,
+      "heading": {
+       "text": "Ler",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 21,
+      "textLeft": 364,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculo.wrap",
+      "tag": "section",
+      "top": 6346,
+      "height": 1050,
+      "words": 73,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Quanto custa a sua parada?",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 44,
+      "right": 42,
+      "textLeft": 44,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projetos.work",
+      "tag": "section",
+      "top": 7396,
+      "height": 1282,
+      "words": 118,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Projetos",
+       "size": 69,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.wrap",
+      "tag": "section",
+      "top": 8679,
+      "height": 638,
+      "words": 61,
+      "media": 0,
+      "middle": 24,
+      "heading": {
+       "text": "Só lemos o CLP. Nunca escrevemos.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 42,
+      "textLeft": 20,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#duvidas.wrap",
+      "tag": "section",
+      "top": 9317,
+      "height": 825,
+      "words": 163,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Dúvidas de quem compra",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 176,
+      "textLeft": 20,
+      "textRight": 176,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact",
+      "tag": "section",
+      "top": 10142,
+      "height": 727,
+      "words": 55,
+      "media": 8,
+      "middle": 985,
+      "heading": {
+       "text": "Pare de estimar. Comece a medir.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.wrap",
+      "tag": "footer",
+      "top": 10869,
+      "height": 737,
+      "words": 27,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ConectaOT",
+      "size": 66,
+      "top": 94,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 42,
+      "n": 26
+     },
+     {
+      "x": 20,
+      "n": 12
+     },
+     {
+      "x": 364,
+      "n": 4
+     },
+     {
+      "x": 290,
+      "n": 2
+     },
+     {
+      "x": 396,
+      "n": 2
+     },
+     {
+      "x": 557,
+      "n": 2
+     },
+     {
+      "x": 304,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.86,
+    0.89,
+    0.58,
+    0.74,
+    0.92,
+    0.55,
+    0.53,
+    0.92,
+    0.85,
+    1,
+    1,
+    0.69
+   ],
+   "motion": {
+    "elements": 36,
+    "css": 3,
+    "transitions": 33,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 13243,
+     "screens": 15.7,
+     "words": 830,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 9,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "lamina.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "pinus.jpg",
+      "painel.jpg",
+      "secador.jpg",
+      "lamina.jpg",
+      "estoque.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ConectaOT",
+     "words": 1,
+     "chars": 9,
+     "lines": 1,
+     "size": 56,
+     "vw": 14.4,
+     "font": "Plus Jakarta Sans",
+     "weight": 700,
+     "tracking": -0.05,
+     "leading": 0.88,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.78,
+     "top": 94,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ConectaOT",
+     "words": 1,
+     "lines": 1,
+     "size": 56,
+     "font": "Plus Jakarta Sans"
+    },
+    "headings": [
+     {
+      "text": "ConectaOT",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 56,
+      "vw": 14.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.88,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 94,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Saiba por que sua máquina parou, antes que a parada vire prejuízo.",
+      "words": 12,
+      "chars": 66,
+      "lines": 3,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 258,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "94,1%",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 659,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "1.256",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 1045,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "O dado já existe. Só não chega até você.",
+      "words": 9,
+      "chars": 40,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1950,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A parada é anotada à mão, atrasada e sem causa. Nós levamos o dado do CLP ao celular de quem decide.",
+      "words": 21,
+      "chars": 100,
+      "lines": 4,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2046,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Do CLP ao celular.",
+      "words": 4,
+      "chars": 18,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 2832,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Coleta de dados de CLP",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3346,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Supervisórios web",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3596,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Programação de CLP e IHM",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 3821,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Retrofit de máquinas",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 4047,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Visão computacional",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 4273,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Muitos sinais, uma leitura.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4559,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ler",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.45,
+      "top": 5155,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Reunir",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.45,
+      "top": 5412,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Mostrar",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.45,
+      "top": 5645,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Quanto custa a sua parada?",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6018,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "R$ 7.040",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 48,
+      "vw": 12.3,
+      "font": "JetBrains Mono",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": true,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6608,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Projetos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 64,
+      "vw": 16.4,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.6,
+      "top": 7122,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tanque de cozimento de toras",
+      "words": 5,
+      "chars": 28,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 7957,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Picador industrial",
+      "words": 2,
+      "chars": 18,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 8449,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Bancada de testes hidráulicos",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 8917,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Só lemos o CLP. Nunca escrevemos.",
+      "words": 6,
+      "chars": 33,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9855,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Dúvidas de quem compra",
+      "words": 4,
+      "chars": 22,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 10606,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Pare de estimar. Comece a medir.",
+      "words": 6,
+      "chars": 32,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Plus Jakarta Sans",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 11708,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 25,
+     "maxLines": 4,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.9,
+       "mono": false
+      },
+      {
+       "family": "Plus Jakarta Sans",
+       "share": 0.09,
+       "mono": false
+      },
+      {
+       "family": "JetBrains Mono",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      22,
+      30,
+      34,
+      48,
+      56,
+      64
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.2
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 64,
+      "vw": 16.4,
+      "font": "Plus Jakarta Sans",
+      "text": "Projetos"
+     },
+     "monoShare": 0.01,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "JetBrains Mono"
+     ],
+     "monoSamples": [
+      "1.256",
+      "94,1%",
+      "15+",
+      "60+",
+      "9",
+      "10"
+     ],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0b132b",
+     "bodyBgHsl": {
+      "h": 225,
+      "s": 0.59,
+      "l": 0.11
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1c2541",
+       "top": 72,
+       "hsl": {
+        "h": 225,
+        "s": 0.4,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#f4d6b0",
+       "top": 2804,
+       "hsl": {
+        "h": 34,
+        "s": 0.76,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#d97706",
+       "top": 6584,
+       "hsl": {
+        "h": 32,
+        "s": 0.95,
+        "l": 0.44
+       }
+      },
+      {
+       "color": "#3a506b",
+       "top": 11478,
+       "hsl": {
+        "h": 213,
+        "s": 0.3,
+        "l": 0.32
+       }
+      },
+      {
+       "color": "#0b132b",
+       "top": 12459,
+       "hsl": {
+        "h": 225,
+        "s": 0.59,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b4c2d4",
+       "share": 0.41
+      },
+      {
+       "color": "#f4f6fa",
+       "share": 0.39
+      },
+      {
+       "color": "#0b132b",
+       "share": 0.16
+      },
+      {
+       "color": "#e3eaf3",
+       "share": 0.04
+      },
+      {
+       "color": "#f59e0b",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#5bc0de",
+      "hsl": {
+       "h": 194,
+       "s": 0.66,
+       "l": 0.61
+      },
+      "fg": "#0b132b"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 1,
+     "radius": 10,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 6,
+     "roundedBoxes": 30,
+     "boxRadius": 10,
+     "squareMedia": 0,
+     "roundedMedia": 7,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 72
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3318
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 10698
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.28
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 64,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 13243,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.t.name",
+      "tag": "div",
+      "top": 72,
+      "height": 287,
+      "words": 15,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Conecta",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 42,
+      "right": 63,
+      "textLeft": 42,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.t.pic",
+      "tag": "figure",
+      "top": 367,
+      "height": 263,
+      "words": 9,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 36,
+      "textRight": 99,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.state",
+      "tag": "div",
+      "top": 865,
+      "height": 150,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 42,
+      "right": 72,
+      "textLeft": 42,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.live",
+      "tag": "div",
+      "top": 1023,
+      "height": 220,
+      "words": 8,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "1.256",
+       "size": 34,
+       "tag": "span"
+      },
+      "left": 42,
+      "right": 42,
+      "textLeft": 42,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.oee",
+      "tag": "div",
+      "top": 637,
+      "height": 220,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "94,1%",
+       "size": 34,
+       "tag": "span"
+      },
+      "left": 42,
+      "right": 62,
+      "textLeft": 42,
+      "textRight": 62,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.act",
+      "tag": "div",
+      "top": 1251,
+      "height": 158,
+      "words": 12,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 42,
+      "right": 103,
+      "textLeft": 42,
+      "textRight": 103,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.t.nums",
+      "tag": "div",
+      "top": 1653,
+      "height": 193,
+      "words": 12,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 42,
+      "right": 86,
+      "textLeft": 42,
+      "textRight": 86,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.intro.wrap",
+      "tag": "section",
+      "top": 1854,
+      "height": 950,
+      "words": 117,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "O dado já existe. Só não chega até você.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.light",
+      "tag": "div",
+      "top": 2804,
+      "height": 506,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Do CLP",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.rows",
+      "tag": "div",
+      "top": 3318,
+      "height": 1144,
+      "words": 117,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Coleta de dados de CLP",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 48,
+      "right": 50,
+      "textLeft": 48,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.top",
+      "tag": "div",
+      "top": 4559,
+      "height": 503,
+      "words": 70,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 25,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.vis",
+      "tag": "div",
+      "top": 5102,
+      "height": 700,
+      "words": 36,
+      "media": 1,
+      "middle": 16,
+      "heading": {
+       "text": "Ler",
+       "size": 22,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 37,
+      "textLeft": 194,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#calculo.wrap",
+      "tag": "section",
+      "top": 5898,
+      "height": 1128,
+      "words": 73,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Quanto custa a sua parada?",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 44,
+      "right": 42,
+      "textLeft": 44,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projetos.work",
+      "tag": "section",
+      "top": 7026,
+      "height": 2733,
+      "words": 118,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Projetos",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.wrap",
+      "tag": "section",
+      "top": 9759,
+      "height": 751,
+      "words": 38,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Só lemos o CLP. Nunca escrevemos.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#duvidas.wrap",
+      "tag": "section",
+      "top": 10510,
+      "height": 967,
+      "words": 145,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Dúvidas de quem compra",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 46,
+      "textLeft": 20,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact",
+      "tag": "section",
+      "top": 11478,
+      "height": 981,
+      "words": 55,
+      "media": 0,
+      "middle": 918,
+      "heading": {
+       "text": "Pare de estimar. Comece a medir.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.wrap",
+      "tag": "footer",
+      "top": 12459,
+      "height": 784,
+      "words": 27,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ConectaOT",
+      "size": 56,
+      "top": 94,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 42,
+      "n": 29
+     },
+     {
+      "x": 20,
+      "n": 15
+     },
+     {
+      "x": 194,
+      "n": 4
+     },
+     {
+      "x": 253,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 49,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "15 different font sizes (14, 15, 16, 17, 18, 20, 22, 23, 28, 32, 46, 61, 101, 124, 130).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (20px, 1022px, 519px, 42px, 752px, 60px, 76px); the three most used hold only 53% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "WARN",
+   "id": "empty-middle",
+   "width": 768,
+   "message": "1 section(s) have content at both edges and 985px of nothing between: \"Pare de estimar. Comece a medir.\"",
+   "fix": "Bring the two parts together on the grid, or put the picture or figure of the section in the middle. An empty middle third reads as a hole, the same as an empty half."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 390,
+   "message": "3 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/claude/conectaot-site/.taste-skill/inspect/desktop-fold.jpg",
+   "pages": [
+    "/home/claude/conectaot-site/.taste-skill/inspect/desktop-page-01.jpg",
+    "/home/claude/conectaot-site/.taste-skill/inspect/desktop-page-02.jpg",
+    "/home/claude/conectaot-site/.taste-skill/inspect/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/claude/conectaot-site/.taste-skill/inspect/tablet-fold.jpg",
+   "pages": [
+    "/home/claude/conectaot-site/.taste-skill/inspect/tablet-page-01.jpg",
+    "/home/claude/conectaot-site/.taste-skill/inspect/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/claude/conectaot-site/.taste-skill/inspect/mobile-fold.jpg",
+   "pages": [
+    "/home/claude/conectaot-site/.taste-skill/inspect/mobile-page-01.jpg",
+    "/home/claude/conectaot-site/.taste-skill/inspect/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
