@@ -369,6 +369,9 @@ footer .sp{margin-left:auto}
 .btn-accent,.pill-accent{background:color-mix(in srgb,var(--accent) 82%,transparent)!important;backdrop-filter:blur(16px) saturate(1.8);-webkit-backdrop-filter:blur(16px) saturate(1.8);border:1px solid rgba(255,255,255,.35)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 26px -12px color-mix(in srgb,var(--accent) 80%,transparent)!important}
 .wa-fab{background:rgba(37,211,102,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 24px -8px rgba(0,0,0,.45)}
 @media (max-width:980px){.nav.glass{border-radius:20px!important}.nav.open{background:var(--card)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:8px;gap:2px;box-shadow:0 24px 48px -16px rgba(0,0,0,.45)!important}.nav.open a{border-radius:12px;padding:14px 16px}}
+.cs{display:grid;gap:12px}.cs b{display:block;font-size:13px;color:var(--accent-ink);font-weight:600;margin-bottom:2px}.cs p{margin:0;font-size:15px;color:var(--muted)}
+.case .tag{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.mets b{font-size:18px!important}
 </style>
 </head>
 <body>
@@ -580,21 +583,27 @@ footer .sp{margin-left:auto}
 </div></section>
 <section id="cases">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Resultados</span><h2>Resultados na prática</h2><p class="lead">Cases ilustrativos do tipo de resultado buscado. Os números abaixo são exemplos.</p></div>
+    <div class="sec-title"><span class="eyebrow">Cases</span><h2>Como resolvemos na prática</h2><p class="lead">Dois projetos em operação na indústria de compensados. Clientes preservados por sigilo.</p></div>
     <div class="grid2">
       <article class="case glass">
-        <span class="tag">EXEMPLO ILUSTRATIVO</span>
-        <h3>Indústria de compensados · classificadora de toras</h3>
-        <blockquote>“Antes a gente sabia que a máquina parava, mas não quanto. Em 30 dias de painel descobrimos que três causas respondiam pela maior parte do tempo parado.”</blockquote>
-        <div class="mets"><div><b>−28%</b><span>parada não programada em 3 meses</span></div><div><b>+9 p.p.</b><span>de OEE</span></div><div><b>5 dias</b><span>de implantação, sem parar a linha</span></div></div>
-        <span class="who">Gerente de manutenção (exemplo)</span>
+        <span class="tag">EM OPERAÇÃO</span>
+        <h3>Classificadora de toras</h3>
+        <div class="cs">
+          <div><b>Desafio</b><p>A classificação acontecia na máquina, mas os números de cada tora ficavam presos no CLP. Não havia histórico para conferir volume, bitola e destino.</p></div>
+          <div><b>O que fizemos</b><p>O CLP passou a enviar cada leitura por HTTP para uma API em PHP, que grava no banco de dados. Um painel web mostra tudo em tempo real.</p></div>
+          <div><b>O que o cliente ganhou</b><p>Registro automático de cada tora, consulta por turno e por box, e base para planejar a produção com dado real.</p></div>
+        </div>
+        <div class="mets"><div><b>4</b><span>dados por tora: quantidade, box, diâmetro médio e tamanho</span></div><div><b>HTTP</b><span>do CLP direto para a API, sem PC no painel</span></div><div><b>Tempo real</b><span>painel web com histórico</span></div></div>
       </article>
       <article class="case glass">
-        <span class="tag">EXEMPLO ILUSTRATIVO</span>
-        <h3>Retrofit de secador · CLP legado modernizado</h3>
-        <blockquote>“O controlador antigo não tinha mais peça de reposição. O retrofit manteve a máquina e ainda ganhamos diagnóstico de alarmes.”</blockquote>
-        <div class="mets"><div><b>0 h</b><span>de parada fora da janela planejada</span></div><div><b>8 meses</b><span>retorno estimado do investimento</span></div><div><b>100%</b><span>da lógica migrada e documentada</span></div></div>
-        <span class="who">Diretor industrial (exemplo)</span>
+        <span class="tag">EM OPERAÇÃO</span>
+        <h3>Tanque de cozimento de toras</h3>
+        <div class="cs">
+          <div><b>Desafio</b><p>O cozimento das toras dependia de acompanhamento no local. Temperatura e duração dos ciclos não ficavam registradas.</p></div>
+          <div><b>O que fizemos</b><p>O CLP do tanque envia os dados por HTTP para uma API em PHP com MySQL, e um dashboard web mostra temperatura, ciclos e histórico.</p></div>
+          <div><b>O que o cliente ganhou</b><p>Acompanhamento do cozimento pelo navegador, de qualquer lugar, e histórico de cada ciclo para conferir a qualidade.</p></div>
+        </div>
+        <div class="mets"><div><b>24 h</b><span>acompanhamento pelo navegador</span></div><div><b>Ciclos</b><span>registrados com temperatura e duração</span></div><div><b>MySQL</b><span>histórico consultável</span></div></div>
       </article>
     </div>
   </div>
