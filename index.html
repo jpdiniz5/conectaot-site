@@ -168,7 +168,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hcar .ring,.hcar .ring svg{width:100px;height:100px}
 .hcar .ring .val b{font-size:20px}
 .card.hcar-app{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:22px;border-radius:18px;overflow:hidden;padding:14px;min-height:100%}
-.hcar-app img{width:100%;height:200px;border-radius:12px;display:block;object-fit:cover;object-position:center top}
+.hcar-app img{width:100%;height:200px;border-radius:12px;display:block;object-fit:cover;object-position:center}
 .hcar-app h3{font-size:22px;margin:6px 0 8px}.hcar-app p{color:var(--muted);margin:0 0 14px;line-height:1.5}
 .hcar-nav{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px}
 .hcar-nav button{border:0;cursor:pointer;background:transparent;color:var(--muted);font-size:18px;width:34px;height:34px;border-radius:50%}
@@ -176,7 +176,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hcar-dots{display:flex;gap:8px}
 .hcar-dots button{width:8px;height:8px;padding:0;border-radius:99px;background:color-mix(in srgb,var(--ink) 25%,transparent);transition:width .3s}
 .hcar-dots button[aria-current=true]{width:24px;background:var(--accent)}
-@media (max-width:760px){.card.hcar-app{grid-template-columns:1fr}.hcar-app img{height:auto;aspect-ratio:16/10}}
+@media (max-width:760px){.card.hcar-app{grid-template-columns:1fr;align-content:center}.hcar-app img{height:auto;aspect-ratio:900/290}}
 @media (prefers-reduced-motion:reduce){.hcar-slide{transition:none}}
 .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
 .card{padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .25s ease}
@@ -476,7 +476,7 @@ footer .sp{margin-left:auto}
       </article>
     </div></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 2"><article class="card glass hcar-app">
-      <img src="img/projetos/manejo.webp" width="1200" height="750" alt="Telas do app Manejo Florestal" loading="lazy" decoding="async">
+      <img src="img/projetos/manejo-banner.webp" width="1440" height="464" alt="Telas do app Manejo Florestal" loading="lazy" decoding="async">
       <div><span class="badge ok">● no ar</span><h3>Manejo Florestal</h3><p>App próprio para produtores de pinus: talhões no mapa, medições offline e alertas de poda e desbaste, com marketplace de viveiros.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     </div>
