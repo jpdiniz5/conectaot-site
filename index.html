@@ -487,11 +487,11 @@ footer .sp{margin-left:auto}
       </article>
     </div></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 6"><article class="card glass hcar-app">
-      <div class="mock solo"><button type="button" class="mock-pc zoom" aria-label="Ampliar tela do supervisório de cozimento"><img src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" alt="Supervisório de cozimento de toras: temperatura e status dos tanques, últimos ciclos e histórico (dados de demonstração)" loading="lazy" decoding="async"></button></div>
+      <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/cozimento-full.webp?v=1" aria-label="Ampliar tela do supervisório de cozimento"><img src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" alt="Supervisório de cozimento de toras: temperatura e status dos tanques, últimos ciclos e histórico (dados de demonstração)" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● em operação · supervisório</span><h3>Cozimento de toras</h3><p>Temperatura, pressão e receita de cada tanque em tempo real, com o histórico de todos os ciclos e o motivo de cada cancelamento. Valores ilustrativos.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 6"><article class="card glass hcar-app">
-      <div class="mock solo"><button type="button" class="mock-pc zoom" aria-label="Ampliar tela da classificadora de toras"><img src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" alt="Classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal (dados de demonstração)" loading="lazy" decoding="async"></button></div>
+      <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora de toras"><img src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" alt="Classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal (dados de demonstração)" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● em operação · coleta de dados</span><h3>Classificadora de toras</h3><p>Diâmetro e comprimento de cada tora, ocupação dos boxes e quanto de cada box está dentro da faixa configurada. Valores ilustrativos.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 6"><article class="card glass hcar-app">
@@ -595,7 +595,7 @@ footer .sp{margin-left:auto}
       </article>
 
       <article class="proj glass" data-cat="sup">
-        <figure class="proj-shot"><button type="button" class="zoom" aria-label="Ampliar tela do supervisório"><img src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard do supervisório de cozimento de toras: status dos tanques, últimos ciclos e histórico (dados de demonstração)"></button></figure>
+        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/cozimento-full.webp?v=1" aria-label="Ampliar tela do supervisório"><img src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard do supervisório de cozimento de toras: status dos tanques, últimos ciclos e histórico (dados de demonstração)"></button></figure>
         <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">HTTP + PHP</span></div>
         <span class="tagline">CLP + API PHP</span>
         <p class="quote">O CLP envia os dados por HTTP para uma API em PHP, que grava no MySQL: temperatura, ciclos e histórico do cozimento, acompanhados num dashboard web.</p>
@@ -604,7 +604,7 @@ footer .sp{margin-left:auto}
       </article>
 
       <article class="proj solid dark" data-cat="sup soft">
-        <figure class="proj-shot"><button type="button" class="zoom" aria-label="Ampliar tela da classificadora"><img src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard da classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal configurada (dados de demonstração)"></button></figure>
+        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora"><img src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard da classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal configurada (dados de demonstração)"></button></figure>
         <div class="proj-top"><span class="av">CT</span><div><h3>Classificadora de toras</h3><p>Coleta de dados · pátio de toras</p></div><span class="badge">HTTP + PHP</span></div>
         <span class="tagline">CLP + API PHP</span>
         <p class="quote">O CLP envia os dados por HTTP para uma API em PHP, que grava no banco de dados: quantidade de toras, box de destino, diâmetro médio e tamanho, em tempo real.</p>
@@ -811,7 +811,7 @@ footer .sp{margin-left:auto}
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""></div>
 <script>
 (()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img');let last;
-document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');im.src=i.src;im.alt=i.alt;last=b;lb.classList.add('on');lb.querySelector('button').focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseenter'))}));
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');im.src=b.dataset.full||i.src;im.alt=i.alt;last=b;lb.classList.add('on');lb.querySelector('button').focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseenter'))}));
 const close=()=>{lb.classList.remove('on');last?.focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseleave'))};
 lb.addEventListener('click',e=>{if(e.target!==im)close()});addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('on'))close()});})();
 (()=>{const c=document.getElementById('hcar');if(!c)return;const sl=[...c.querySelectorAll('.hcar-slide')],dots=c.querySelector('.hcar-dots');let i=0,t;
