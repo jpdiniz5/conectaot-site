@@ -158,7 +158,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hcar{position:relative;margin-top:28px}
 .hcar-track{display:grid;perspective:1800px;padding:10px 0 6px}html,body{overflow-x:clip}
 .hcar-slide{grid-area:1/1;width:74%;justify-self:center;position:relative;opacity:0;visibility:hidden;transform-origin:50% 50%;transition:transform .85s cubic-bezier(.22,.7,.2,1),opacity .85s ease,filter .85s ease,visibility .85s;background:var(--card);border-radius:22px;box-shadow:0 30px 60px -26px rgba(0,0,0,.5);cursor:pointer;will-change:transform}
-.hcar-slide.on{cursor:auto}.hcar-slide:not(.on)>*{pointer-events:none}.hcar-slide>.bento{padding:14px}@media (max-width:760px){.hcar-slide{width:88%}}
+.hcar-slide.on{cursor:auto}.hcar-slide:not(.on)>*{pointer-events:none}.hcar-slide>.bento{padding:14px}@media (max-width:760px){.hcar-slide{width:86%;align-self:start;overflow:hidden}.hcar-slide.on{overflow:visible}.card.hcar-app{padding:14px 14px 20px!important;gap:12px!important}.hcar .mock{width:100%;padding-right:22px;padding-bottom:12px;box-sizing:border-box}.hcar .mock .mock-cel{width:30%}.hcar-app h3{font-size:20px;margin:2px 0 6px}.hcar-app p{font-size:14.5px;margin:0 0 12px}.hcar-slide>.bento{padding:10px!important;gap:10px}.hcar .bento>*:nth-child(n+3){display:none}}
 .hcar .bento{margin:0}
 .hcar .card{padding:14px 16px}
 .hcar .big{font-size:24px}
@@ -849,13 +849,13 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==
 (()=>{const c=document.getElementById('hcar');if(!c)return;const sl=[...c.querySelectorAll('.hcar-slide')],n=sl.length,dots=c.querySelector('.hcar-dots'),rm=matchMedia('(prefers-reduced-motion: reduce)'),sm=matchMedia('(max-width:760px)');let i=0,t;
 sl.forEach((s,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para slide '+(k+1));b.onclick=()=>{go(k);play()};dots.append(b);
 s.addEventListener('click',e=>{if(k!==i){e.preventDefault();e.stopPropagation();go(k);play()}},true)});
-function place(){const m=sm.matches,step=m?16:30,rot=m?8:16;sl.forEach((s,k)=>{let d=((k-i)%n+n)%n;if(d>n/2)d-=n;const a=Math.abs(d);
+function place(){const m=sm.matches,step=m?24:30,rot=m?10:16;sl.forEach((s,k)=>{let d=((k-i)%n+n)%n;if(d>n/2)d-=n;const a=Math.abs(d);
 if(a>2){s.style.opacity=0;s.style.visibility='hidden';s.style.zIndex=0;s.style.transform=`translateX(${Math.sign(d)*step*2.6}%) translateZ(-420px) rotateY(${-Math.sign(d)*rot*2}deg) scale(.6)`;return}
-s.style.visibility='visible';s.style.zIndex=10-a;s.style.opacity=[1,1,.6][a];s.style.filter=['none','brightness(.8) saturate(.8)','brightness(.62) saturate(.7) blur(1px)'][a];
-s.style.transform=`translateX(${d*step}%) translateZ(${-a*160}px) rotateY(${-d*rot}deg) scale(${1-a*.1})`})}
+s.style.visibility='visible';s.style.zIndex=10-a;s.style.opacity=m?[1,.85,0][a]:[1,1,.6][a];s.style.filter=m?['none','brightness(.55) saturate(.6) blur(1.5px)','none'][a]:['none','brightness(.8) saturate(.8)','brightness(.62) saturate(.7) blur(1px)'][a];
+s.style.transform=`translateX(${d*step}%) translateZ(${-a*160}px) rotateY(${-d*rot}deg) scale(${1-a*.1})`});if(m){const act=sl[i];act.style.maxHeight='none';const h=act.scrollHeight;sl.forEach(s=>{if(s!==act)s.style.maxHeight=h+'px'})}else sl.forEach(s=>s.style.maxHeight='')}
 function go(k){i=((k%n)+n)%n;sl.forEach((s,k2)=>{const on=k2===i;s.classList.toggle('on',on);s.setAttribute('aria-hidden',!on);[...s.children].forEach(ch=>ch.toggleAttribute('inert',!on))});[...dots.children].forEach((d,k2)=>d.setAttribute('aria-current',k2===i));place()}
 function play(){clearInterval(t);if(!rm.matches)t=setInterval(()=>go(i+1),7000)}
-if(rm.matches)sl.forEach(s=>s.style.transition='none');sm.addEventListener?.('change',place);
+if(rm.matches)sl.forEach(s=>s.style.transition='none');sm.addEventListener?.('change',place);addEventListener('load',place);addEventListener('resize',place);
 c.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{go(i+ +b.dataset.d);play()});
 c.addEventListener('mouseenter',()=>clearInterval(t));c.addEventListener('mouseleave',play);c.addEventListener('focusin',()=>clearInterval(t));
 let x0=null;c.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play()}x0=null});
