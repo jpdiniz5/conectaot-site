@@ -356,7 +356,7 @@ footer .sp{margin-left:auto}
 .three code{font:500 12px/1 var(--mono);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
 .result{margin-top:14px;padding:16px;border-radius:var(--r-sm);border:1px solid color-mix(in srgb,var(--oee) 35%,transparent);background:color-mix(in srgb,var(--oee) 7%,transparent);font-size:15px;color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.chips span{font-size:13px;padding:8px 12px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);color:var(--muted)}
+.chips span{font-size:13px;padding:8px 12px;border-radius:999px;background:var(--glass-2);border:1px solid var(--glass-line);color:var(--muted)}.chips.apps{align-items:center;margin-top:22px}.chips-lbl{font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:6px}.chips.apps span{display:inline-flex;align-items:center;gap:8px;color:var(--ink)}.chips.apps span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}@media (max-width:640px){.chips-lbl{width:100%;margin:0 0 2px}}
 .timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
 .timeline .st{padding:18px;display:grid;gap:8px;align-content:start;position:relative}
 .timeline code{font:500 12px/1 var(--mono);color:var(--accent-ink)}
@@ -553,7 +553,7 @@ footer .sp{margin-left:auto}
 
 <section id="beneficios">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2></div>
+    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2><p class="lead">Dados da máquina viram decisão: menos parada, mais produção e histórico de tudo, sem trocar o equipamento.</p></div>
     <div class="grid3">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Peças por hora e por turno, comparadas com a meta.</p></div>
@@ -562,8 +562,8 @@ footer .sp{margin-left:auto}
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Rastreabilidade</h3><p>Histórico de produção, alarmes e parâmetros por lote.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina.</p></div>
     </div>
-    <div class="chips" aria-label="Aplicações típicas">
-      <span>Laminação, secagem, prensagem e classificação</span><span>Máquinas operatrizes e células</span><span>Tanques e processos térmicos</span><span>Bancadas de teste e ensaio</span><span>CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS</span>
+    <div class="chips apps" aria-label="Onde aplicamos">
+      <b class="chips-lbl">Onde aplicamos</b><span>Laminação e prensagem</span><span>Pátio de toras</span><span>Máquinas e células</span><span>Processos térmicos</span><span>Bancadas de teste</span><span>Apps de gestão</span>
     </div>
   </div>
 </section>
