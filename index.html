@@ -154,6 +154,29 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:760px){.capbars{grid-template-columns:repeat(2,minmax(0,1fr))}.capbar:last-child{grid-column:span 2}}
 
 /* bento */
+/* v4 referências */
+.live{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:12px 16px;border-radius:14px;max-width:720px;font-size:13px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 #22c55e88;animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px #22c55e00}100%{box-shadow:0 0 0 0 #22c55e00}}
+.live b{font-family:var(--mono);font-weight:500;font-size:15px;color:var(--ink)}
+.live small{color:var(--muted);display:block;font-size:11px}
+.live .tag{margin-left:auto;font:500 10px var(--mono);color:var(--faint)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid var(--hair);color:var(--ink);text-decoration:none;font-weight:600}
+.btn-ghost:hover{background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stat{padding:22px;border-radius:16px;text-align:left}
+.stat b{display:block;font:500 40px/1 var(--mono);letter-spacing:-.03em;color:var(--accent)}
+.stat span{display:block;margin-top:8px;color:var(--muted);font-size:14px}
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.who .tile small{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;border-radius:16px;overflow:hidden}
+.cmp th,.cmp td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--hair)}
+.cmp thead th{font-weight:600;color:var(--muted);font-size:13px}
+.cmp td:first-child,.cmp th:first-child{color:var(--muted);font-weight:500}
+.cmp .us{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--ink);font-weight:600}
+.cmp-wrap{overflow-x:auto;border-radius:16px}
+.note{margin-top:10px;font-size:12px;color:var(--faint)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.who{grid-template-columns:1fr}.cmp{min-width:640px}}
 /* hero carousel */
 .hcar{position:relative;margin-top:28px}
 .hcar-track{display:grid;perspective:1800px;padding:10px 0 6px}html,body{overflow-x:clip}
@@ -451,7 +474,14 @@ footer .sp{margin-left:auto}
           <li><span><b>Painéis em tempo real</b> de produção, paradas e OEE por turno</span></li>
           <li><span><b>Software sob medida e SaaS</b>: sistemas web e apps de gestão, como o Manejo Florestal e a Agenda Saúde</span></li>
         </ul>
-        <div class="hero-ctas"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="txt-link" href="#projetos">Ver projetos entregues ↓</a></div>
+        <div class="hero-ctas"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="btn-ghost" href="https://wa.me/5549991208836?text=Ol%C3%A1%2C%20ConectaOT!%20Quero%20falar%20com%20um%20engenheiro." target="_blank" rel="noopener">Falar com engenheiro no WhatsApp</a></div>
+        <div class="live glass" aria-label="Demonstração de leitura de CLP, valores ilustrativos">
+          <span class="dot" aria-hidden="true"></span><div><small>Prensa 02 · CLP</small><b id="lvState">Rodando</b></div>
+          <div><small>Velocidade</small><b id="lvSpd">1.284</b> <small style="display:inline">lâm/h</small></div>
+          <div><small>Peças no turno</small><b id="lvCnt">3.412</b></div>
+          <div><small>Última leitura</small><b id="lvAge">há 1 s</b></div>
+          <span class="tag">demonstração ilustrativa</span>
+        </div>
       </div>
     </div>
     <div class="hcar" id="hcar" aria-roledescription="carrossel" aria-label="Exemplos de entregas ConectaOT">
@@ -515,6 +545,17 @@ footer .sp{margin-left:auto}
   </div>
 </section>
 
+<section id="numeros" style="padding-top:10px">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat glass"><b>0</b><span>alterações no programa do seu CLP para coletar dados</span></div>
+      <div class="stat glass"><b>100%</b><span>coleta somente leitura, sem risco para a produção</span></div>
+      <div class="stat glass"><b>24/7</b><span>dados gravados no banco, consultáveis a qualquer hora</span></div>
+      <div class="stat glass"><b>1 dia</b><span>útil para responder o seu pedido de diagnóstico</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="problema">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">O problema</span><h2>A máquina parou. De novo. E ninguém sabe dizer por quanto tempo nem por quê.</h2><p class="lead">O dado já existe no CLP, mas fica preso na máquina. Sem banco de dados e sem sistema, a decisão sai de planilha, de memória e de mensagem no WhatsApp, e o prejuízo só aparece no fechamento do mês.</p></div>
@@ -548,6 +589,17 @@ footer .sp{margin-left:auto}
       <li><b>Visão computacional:</b> contagem e detecção de defeitos com câmera.</li>
       <li><b>Comissionamento em campo:</b> partida assistida no Brasil e no exterior.</li>
     </ul>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">Para quem é</span><h2>Feito para quem produz. E para quem gerencia.</h2></div>
+    <div class="who">
+      <div class="tile glass"><small>Indústria</small><h3>Compensados, laminação e máquinas</h3><p>Coleta de dados do CLP, supervisório, retrofit e programação, com OEE e paradas por turno.</p></div>
+      <div class="tile glass"><small>Florestal</small><h3>Produtores de pinus</h3><p>O app Manejo Florestal: talhões no mapa, medições offline e alertas de poda e desbaste.</p></div>
+      <div class="tile glass"><small>Gestão</small><h3>Empresas que vivem de planilha</h3><p>Sistemas web e SaaS sob medida: clientes, pedidos, ordens de serviço e indicadores num só lugar.</p></div>
+    </div>
   </div>
 </section>
 
@@ -701,6 +753,24 @@ footer .sp{margin-left:auto}
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Experiência de campo</h3><p>Partida de máquinas no Brasil e no exterior.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Escopo fechado</h3><p>Prazo e valor por escrito antes de começar.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="comparativo">
+  <div class="wrap">
+    <div class="sec-title"><span class="eyebrow">Comparativo</span><h2>Medir de verdade, sem trocar a máquina.</h2></div>
+    <div class="cmp-wrap glass"><table class="cmp">
+      <thead><tr><th></th><th class="us">ConectaOT</th><th>Apontamento manual</th><th>SCADA tradicional</th></tr></thead>
+      <tbody>
+        <tr><td>Troca de equipamento</td><td class="us">Não precisa</td><td>Não precisa</td><td>Às vezes</td></tr>
+        <tr><td>Dado de parada</td><td class="us">Automático, na hora</td><td>À mão, depois do turno</td><td>Automático</td></tr>
+        <tr><td>CLP antigo</td><td class="us">Compatível</td><td>Não se aplica</td><td>Depende do driver</td></tr>
+        <tr><td>Acesso pelo celular</td><td class="us">Sim, pelo navegador</td><td>Não</td><td>Geralmente com licença extra</td></tr>
+        <tr><td>Banco de dados próprio</td><td class="us">Sim, os dados são seus</td><td>Planilha</td><td>Sim</td></tr>
+        <tr><td>Suporte</td><td class="us">Engenheiro local, Caçador/SC</td><td>—</td><td>Integrador ou fabricante</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Comparação qualitativa, para orientação. Cada projeto é avaliado no diagnóstico.</p>
   </div>
 </section>
 
@@ -860,6 +930,11 @@ c.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{go(i+ +b.dataset.d);pla
 c.addEventListener('mouseenter',()=>clearInterval(t));c.addEventListener('mouseleave',play);c.addEventListener('focusin',()=>clearInterval(t));
 let x0=null;c.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play()}x0=null});
 go(0);play()})();
+</script>
+<script>
+(()=>{const sp=document.getElementById('lvSpd');if(!sp)return;let v=1284,c=3412,a=1;const f=n=>n.toLocaleString('pt-BR');
+setInterval(()=>{v=Math.max(1180,Math.min(1340,v+Math.round((Math.random()-.5)*30)));c+=Math.round(v/3600*2);a=1;sp.textContent=f(v);document.getElementById('lvCnt').textContent=f(c);document.getElementById('lvAge').textContent='há 1 s'},2000);
+setInterval(()=>{a++;document.getElementById('lvAge').textContent='há '+a+' s'},1000)})();
 </script>
 </body>
 </html>
