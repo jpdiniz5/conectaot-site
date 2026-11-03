@@ -204,6 +204,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 @media (max-width:1000px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.projects{grid-template-columns:1fr}}
+.proj-shot{margin:-6px -6px 2px;border-radius:12px;overflow:hidden;aspect-ratio:16/10;background:#0B132B}.proj-shot img{width:100%;height:100%;object-fit:cover;display:block}
 .proj{padding:18px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease}
 .proj:hover{transform:translateY(-4px)}
 .proj-top{display:flex;align-items:center;gap:12px}
@@ -524,6 +525,7 @@ footer .sp{margin-left:auto}
 
     <div class="projects collapsed" id="projects">
       <article class="proj glass" data-cat="soft">
+        <figure class="proj-shot"><img src="img/projetos/manejo.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Telas do app Manejo Florestal: início, talhões e marketplace"></figure>
         <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
         <span class="tagline">Projeto 01 · app próprio</span>
         <p class="quote">Talhões no mapa, medições offline e alertas de poda e desbaste, com marketplace de viveiros.</p>
