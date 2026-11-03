@@ -609,19 +609,19 @@ footer .sp{margin-left:auto}
 
       <article class="proj glass" data-cat="sup">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/cozimento-full.webp?v=1" aria-label="Ampliar tela do supervisório"><img src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard do supervisório de cozimento de toras: status dos tanques, últimos ciclos e histórico (dados de demonstração)"></button></figure>
-        <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">HTTP + PHP</span></div>
-        <span class="tagline">CLP + API PHP</span>
-        <p class="quote">O CLP envia os dados por HTTP para uma API em PHP, que grava no MySQL: temperatura, ciclos e histórico do cozimento, acompanhados num dashboard web.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · HTTP · PHP · MySQL</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">Web + API</span></div>
+        <span class="tagline">CLP + API</span>
+        <p class="quote">O CLP envia os dados pela web para uma API, que grava no banco de dados: temperatura, ciclos e histórico do cozimento, acompanhados num dashboard web.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · web · API · banco de dados</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Em operação</span></div>
       </article>
 
       <article class="proj solid dark" data-cat="sup soft">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora"><img src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard da classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal configurada (dados de demonstração)"></button></figure>
-        <div class="proj-top"><span class="av">CT</span><div><h3>Classificadora de toras</h3><p>Coleta de dados · pátio de toras</p></div><span class="badge">HTTP + PHP</span></div>
-        <span class="tagline">CLP + API PHP</span>
-        <p class="quote">O CLP envia os dados por HTTP para uma API em PHP, que grava no banco de dados: quantidade de toras, box de destino, diâmetro médio e tamanho, em tempo real.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · HTTP · PHP · banco de dados</span></div><div class="tr"><i style="width:100%"></i></div></div>
+        <div class="proj-top"><span class="av">CT</span><div><h3>Classificadora de toras</h3><p>Coleta de dados · pátio de toras</p></div><span class="badge">Web + API</span></div>
+        <span class="tagline">CLP + API</span>
+        <p class="quote">O CLP envia os dados pela web para uma API, que grava no banco de dados: quantidade de toras, box de destino, diâmetro médio e tamanho, em tempo real.</p>
+        <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · web · API · banco de dados</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Em operação</span></div>
       </article>
 
@@ -668,20 +668,20 @@ footer .sp{margin-left:auto}
         <h3>Classificadora de toras</h3>
         <div class="cs">
           <div><b>Desafio</b><p>A classificação acontecia na máquina, mas os números de cada tora ficavam presos no CLP. Não havia histórico para conferir volume, bitola e destino.</p></div>
-          <div><b>O que fizemos</b><p>O CLP passou a enviar cada leitura por HTTP para uma API em PHP, que grava no banco de dados. Um painel web mostra tudo em tempo real.</p></div>
+          <div><b>O que fizemos</b><p>O CLP passou a enviar cada leitura pela web para uma API, que grava no banco de dados. Um painel web mostra tudo em tempo real.</p></div>
           <div><b>O que o cliente ganhou</b><p>Registro automático de cada tora, consulta por turno e por box, e base para planejar a produção com dado real.</p></div>
         </div>
-        <div class="mets"><div><b>4</b><span>dados por tora: quantidade, box, diâmetro médio e tamanho</span></div><div><b>HTTP</b><span>do CLP direto para a API, sem PC no painel</span></div><div><b>Tempo real</b><span>painel web com histórico</span></div></div>
+        <div class="mets"><div><b>4</b><span>dados por tora: quantidade, box, diâmetro médio e tamanho</span></div><div><b>Web</b><span>do CLP direto para a API, sem PC no painel</span></div><div><b>Tempo real</b><span>painel web com histórico</span></div></div>
       </article>
       <article class="case glass">
         <span class="tag">EM OPERAÇÃO</span>
         <h3>Tanque de cozimento de toras</h3>
         <div class="cs">
           <div><b>Desafio</b><p>O cozimento das toras dependia de acompanhamento no local. Temperatura e duração dos ciclos não ficavam registradas.</p></div>
-          <div><b>O que fizemos</b><p>O CLP do tanque envia os dados por HTTP para uma API em PHP com MySQL, e um dashboard web mostra temperatura, ciclos e histórico.</p></div>
+          <div><b>O que fizemos</b><p>O CLP do tanque envia os dados pela web para uma API com banco de dados, e um dashboard web mostra temperatura, ciclos e histórico.</p></div>
           <div><b>O que o cliente ganhou</b><p>Acompanhamento do cozimento pelo navegador, de qualquer lugar, e histórico de cada ciclo para conferir a qualidade.</p></div>
         </div>
-        <div class="mets"><div><b>24 h</b><span>acompanhamento pelo navegador</span></div><div><b>Ciclos</b><span>registrados com temperatura e duração</span></div><div><b>MySQL</b><span>histórico consultável</span></div></div>
+        <div class="mets"><div><b>24 h</b><span>acompanhamento pelo navegador</span></div><div><b>Ciclos</b><span>registrados com temperatura e duração</span></div><div><b>Banco de dados</b><span>histórico consultável</span></div></div>
       </article>
     </div>
   </div>
