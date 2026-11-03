@@ -168,7 +168,17 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hcar .ring,.hcar .ring svg{width:100px;height:100px}
 .hcar .ring .val b{font-size:20px}
 .card.hcar-app{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:40px;padding:18px 28px;height:100%;box-sizing:border-box}
-.hcar-app img{height:340px;width:auto;aspect-ratio:1/2;border-radius:22px;border:4px solid #3A506B;display:block;flex:none}.hcar-app>div{max-width:420px}.hcar-slide{display:flex;align-items:center}.hcar-slide>*{width:100%}
+.mock{position:relative;width:min(560px,58%);flex:none;padding-right:44px;padding-bottom:18px}
+.mock button{all:unset;cursor:zoom-in;display:block}
+.mock .mock-pc{border:8px solid #2a3550;border-bottom-width:10px;border-radius:12px;background:#2a3550;box-shadow:0 18px 40px #0007}
+.mock-pc img{display:block;width:100%;height:auto;border-radius:4px}
+.mock .mock-pc::after{content:"";display:block;height:8px;margin:0 -30px -18px;background:#3A506B;border-radius:0 0 10px 10px}
+.mock .mock-cel{position:absolute;right:0;bottom:0;width:26%;border:4px solid #3A506B;border-radius:16px;overflow:hidden;background:#3A506B;box-shadow:0 14px 30px #0009}
+.mock-cel img{display:block;width:100%;height:auto}
+.mock button:hover{filter:brightness(1.06)}.mock button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:999;background:#0b132bf2;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:10px;box-shadow:0 20px 60px #000a}
+.lb button{position:absolute;top:14px;right:18px;background:#ffffff1a;color:#fff;border:0;width:42px;height:42px;border-radius:50%;font-size:22px;cursor:pointer}.hcar-app>div{max-width:420px}.hcar-slide{display:flex;align-items:center}.hcar-slide>*{width:100%}
 .hcar-app h3{font-size:22px;margin:6px 0 8px}.hcar-app p{color:var(--muted);margin:0 0 14px;line-height:1.5}
 .hcar-nav{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px}
 .hcar-nav button{border:0;cursor:pointer;background:transparent;color:var(--muted);font-size:18px;width:34px;height:34px;border-radius:50%}
@@ -176,7 +186,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hcar-dots{display:flex;gap:8px}
 .hcar-dots button{width:8px;height:8px;padding:0;border-radius:99px;background:color-mix(in srgb,var(--ink) 25%,transparent);transition:width .3s}
 .hcar-dots button[aria-current=true]{width:24px;background:var(--accent)}
-@media (max-width:760px){.card.hcar-app{flex-direction:column;gap:16px;text-align:center}.hcar-app img{height:420px}}
+@media (max-width:760px){.card.hcar-app{flex-direction:column;gap:16px;text-align:center}.mock{width:100%;padding-right:30px}}
 @media (prefers-reduced-motion:reduce){.hcar-slide{transition:none}}
 .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
 .card{padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .25s ease}
@@ -476,15 +486,15 @@ footer .sp{margin-left:auto}
       </article>
     </div></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 4"><article class="card glass hcar-app">
-      <img src="img/projetos/manejo-talhoes.webp" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal" loading="lazy" decoding="async">
+      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-talhoes.webp" width="1440" height="900" alt="Tela Seus talhões do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-talhoes.webp" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Seus talhões</h3><p>Cada talhão com idade, área, regime e volume estimado, mais os avisos de manejo para revisar.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 4"><article class="card glass hcar-app">
-      <img src="img/projetos/manejo-inicio.webp" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal" loading="lazy" decoding="async">
+      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-inicio.webp" width="1440" height="900" alt="Tela Sua floresta, em dia do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-inicio.webp" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Sua floresta, em dia</h3><p>Resumo da propriedade: área acompanhada, talhões medidos e o próximo passo de cada um.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 4"><article class="card glass hcar-app">
-      <img src="img/projetos/manejo-mercado.webp" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal" loading="lazy" decoding="async">
+      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-mercado.webp" width="1440" height="900" alt="Tela Marketplace florestal do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-mercado.webp" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Marketplace florestal</h3><p>Serviços, mudas e insumos indicados conforme os alertas abertos de cada talhão.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     </div>
@@ -786,7 +796,12 @@ footer .sp{margin-left:auto}
   f.addEventListener('submit',function(e){e.preventDefault();});
 })();
 </script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""></div>
 <script>
+(()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img');let last;
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');im.src=i.src;im.alt=i.alt;last=b;lb.classList.add('on');lb.querySelector('button').focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseenter'))}));
+const close=()=>{lb.classList.remove('on');last?.focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseleave'))};
+lb.addEventListener('click',e=>{if(e.target!==im)close()});addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('on'))close()});})();
 (()=>{const c=document.getElementById('hcar');if(!c)return;const sl=[...c.querySelectorAll('.hcar-slide')],dots=c.querySelector('.hcar-dots');let i=0,t;
 sl.forEach((_,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para slide '+(k+1));b.onclick=()=>{go(k);play()};dots.append(b)});
 function go(n){i=(n+sl.length)%sl.length;sl.forEach((s,k)=>{s.classList.toggle('on',k===i);s.toggleAttribute('inert',k!==i)});[...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i))}
