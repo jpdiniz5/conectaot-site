@@ -259,7 +259,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .proj.dark .av,.proj.dark .badge{background:rgba(127,127,127,.18);border-color:var(--solid-line);color:var(--on-solid)}
 .proj.dark .meter .tr{background:rgba(127,127,127,.25)} .proj.dark .meter .tr i{background:var(--accent)}
 .more{display:none;margin:16px auto 0}
-@media (max-width:640px){.projects.collapsed .proj:nth-child(n+5){display:none}.more{display:flex}}
+.proj-pair{display:flex;flex-direction:column;gap:14px;min-width:0}.proj-pair>.proj{flex:1;padding:14px 16px;gap:8px}.proj-pair .quote{padding:10px 12px;font-size:13.5px;line-height:1.45;margin:0}.proj-pair .proj-foot{margin-top:auto}@media (max-width:640px){.projects.collapsed>:nth-child(n+5){display:none}.more{display:flex}}
 .proj.dark .pill-glass{background:var(--accent);color:var(--on-accent);border-color:transparent}
 
 /* funil do processo */
@@ -625,6 +625,7 @@ footer .sp{margin-left:auto}
         <div class="proj-foot"><span>Em operação</span></div>
       </article>
 
+      <div class="proj-pair">
       <article class="proj glass" data-cat="auto">
         <div class="proj-top"><span class="av">SC</span><div><h3>Secador de lâminas</h3><p>Automação · retrofit</p></div><span class="badge">Retrofit</span></div>
         <span class="tagline">Controle modernizado</span>
@@ -640,7 +641,9 @@ footer .sp{margin-left:auto}
         <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · IHM · servoacionamentos</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Brasil e exterior</span></div>
       </article>
+      </div>
 
+      <div class="proj-pair">
       <article class="proj glass" data-cat="sup">
         <div class="proj-top"><span class="av">BH</span><div><h3>Bancada de testes hidráulicos</h3><p>Supervisório · ensaios</p></div><span class="badge">Testes</span></div>
         <span class="tagline">Registro de ensaios</span>
@@ -656,6 +659,7 @@ footer .sp{margin-left:auto}
         <div class="meter"><div class="meter-h"><span>Status</span><span>em desenvolvimento</span></div><div class="tr"><i style="width:45%"></i></div></div>
         <div class="proj-foot"><span>Piloto</span></div>
       </article>
+      </div>
     </div>
 <button class="btn btn-glass more" id="moreBtn" type="button" aria-controls="projects" aria-expanded="false">Ver todos os projetos</button>
 </div></section>
