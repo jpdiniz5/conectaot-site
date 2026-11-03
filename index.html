@@ -156,9 +156,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* bento */
 /* hero carousel */
 .hcar{position:relative;margin-top:28px}
-.hcar-track{display:grid}
-.hcar-slide{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease,visibility .6s}
-.hcar-slide.on{opacity:1;visibility:visible;transform:none}
+.hcar-track{display:grid;perspective:1800px;padding:10px 0 6px}html,body{overflow-x:clip}
+.hcar-slide{grid-area:1/1;width:74%;justify-self:center;position:relative;opacity:0;visibility:hidden;transform-origin:50% 50%;transition:transform .85s cubic-bezier(.22,.7,.2,1),opacity .85s ease,filter .85s ease,visibility .85s;background:var(--card);border-radius:22px;box-shadow:0 30px 60px -26px rgba(0,0,0,.5);cursor:pointer;will-change:transform}
+.hcar-slide.on{cursor:auto}.hcar-slide:not(.on)>*{pointer-events:none}.hcar-slide>.bento{padding:14px}@media (max-width:760px){.hcar-slide{width:88%}}
 .hcar .bento{margin:0}
 .hcar .card{padding:14px 16px}
 .hcar .big{font-size:24px}
@@ -176,9 +176,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mock.solo{padding-right:30px}.mock .mock-cel{position:absolute;right:0;bottom:0;width:26%;border:4px solid #3A506B;border-radius:16px;overflow:hidden;background:#3A506B;box-shadow:0 14px 30px #0009}
 .mock-cel img{display:block;width:100%;height:auto}
 .mock button:hover{filter:brightness(1.06)}.mock button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.lb{position:fixed;inset:0;z-index:999;background:#0b132bf2;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
-.lb.on{display:flex}.lb img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:10px;box-shadow:0 20px 60px #000a}
-.lb button{position:absolute;top:14px;right:18px;background:#ffffff1a;color:#fff;border:0;width:42px;height:42px;border-radius:50%;font-size:22px;cursor:pointer}.hcar-app>div{max-width:420px}.hcar-slide{display:flex;align-items:center}.hcar-slide>*{width:100%}
+.lb{position:fixed;inset:0;z-index:999;background:#0b132bf5;display:none;overflow:auto;overscroll-behavior:contain}.lb.on{display:block}.lb-stage{min-width:100%;min-height:100%;width:max-content;display:flex;align-items:center;justify-content:center;padding:70px 24px 40px;box-sizing:border-box}
+.lb img{display:block;max-width:none;height:auto;border-radius:10px;box-shadow:0 20px 60px #000a;cursor:zoom-in;user-select:none;-webkit-user-drag:none}.lb.zoomed img{cursor:grab}.lb.drag img{cursor:grabbing}.lb-tools{position:fixed;top:14px;right:18px;display:flex;gap:8px;z-index:2}.lb-tools button{background:#ffffff24;color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer}.lb-tools button:hover{background:#ffffff40}.lb-hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);color:#fff;font-size:13px;background:#0008;padding:6px 14px;border-radius:99px;pointer-events:none;white-space:nowrap}
+.hcar-app>div{max-width:420px}.hcar-slide{display:flex;align-items:center}.hcar-slide>*{width:100%}
 .hcar-app h3{font-size:22px;margin:6px 0 8px}.hcar-app p{color:var(--muted);margin:0 0 14px;line-height:1.5}
 .hcar-nav{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px}
 .hcar-nav button{border:0;cursor:pointer;background:transparent;color:var(--muted);font-size:18px;width:34px;height:34px;border-radius:50%}
@@ -458,11 +458,11 @@ footer .sp{margin-left:auto}
     <div class="hcar" id="hcar" aria-roledescription="carrossel" aria-label="Exemplos de entregas ConectaOT">
     <div class="hcar-track">
     <div class="hcar-slide on" aria-roledescription="slide" aria-label="1 de 7"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-inicio.webp" width="1440" height="900" alt="Tela Sua floresta, em dia do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-inicio.webp" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
+      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-inicio-full.webp?v=1" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-inicio.webp?v=2" width="1440" height="900" alt="Tela Sua floresta, em dia do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-inicio-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-inicio.webp?v=2" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Sua floresta, em dia</h3><p>Resumo da propriedade: área acompanhada, talhões medidos e o próximo passo de cada um.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 7"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/agenda-painel-full.webp?v=1" aria-label="Ampliar painel da clínica"><img src="img/projetos/agenda-pc-painel.webp?v=1" width="1440" height="900" alt="Painel da clínica: agendamentos do dia, confirmação, ocupação por profissional e movimento em tempo real (dados de demonstração)" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar agendamento no celular"><img src="img/projetos/agenda-cel.webp?v=1" width="390" height="780" alt="Paciente escolhendo o horário da consulta pelo navegador do celular" loading="lazy" decoding="async"></button></div>
+      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/agenda-painel-full.webp?v=2" aria-label="Ampliar painel da clínica"><img src="img/projetos/agenda-pc-painel.webp?v=1" width="1440" height="900" alt="Painel da clínica: agendamentos do dia, confirmação, ocupação por profissional e movimento em tempo real (dados de demonstração)" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/agenda-cel-full.webp?v=1" aria-label="Ampliar agendamento no celular"><img src="img/projetos/agenda-cel.webp?v=2" width="390" height="780" alt="Paciente escolhendo o horário da consulta pelo navegador do celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge">● em desenvolvimento · agendamento online</span><h3>Agenda cheia, menos faltas</h3><p>O paciente agenda pelo navegador do celular, sem instalar app. A clínica acompanha tudo num painel, com lembretes por WhatsApp e e-mail.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 7"><article class="card glass hcar-app">
@@ -474,11 +474,11 @@ footer .sp{margin-left:auto}
       <div><span class="badge ok">● em operação · supervisório</span><h3>Cozimento de toras</h3><p>Temperatura, pressão e receita de cada tanque em tempo real, com o histórico de todos os ciclos e o motivo de cada cancelamento. Valores ilustrativos.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="5 de 7"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-talhoes.webp" width="1440" height="900" alt="Tela Seus talhões do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-talhoes.webp" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
+      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-talhoes-full.webp?v=1" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-talhoes.webp?v=2" width="1440" height="900" alt="Tela Seus talhões do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-talhoes-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-talhoes.webp?v=2" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Seus talhões</h3><p>Cada talhão com idade, área, regime e volume estimado, mais os avisos de manejo para revisar.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="6 de 7"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-mercado.webp" width="1440" height="900" alt="Tela Marketplace florestal do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-mercado.webp" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
+      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-mercado-full.webp?v=1" aria-label="Ampliar versão computador"><img src="img/projetos/manejo-pc-mercado.webp?v=2" width="1440" height="900" alt="Tela Marketplace florestal do app Manejo Florestal no computador" loading="lazy" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-mercado-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-mercado.webp?v=2" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal no celular" loading="lazy" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Marketplace florestal</h3><p>Serviços, mudas e insumos indicados conforme os alertas abertos de cada talhão.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
     <div class="hcar-slide" aria-roledescription="slide" aria-label="7 de 7"><div class="bento" aria-label="Exemplo de painel ConectaOT, valores ilustrativos">
@@ -590,7 +590,7 @@ footer .sp{margin-left:auto}
 
     <div class="projects collapsed" id="projects">
       <article class="proj glass" data-cat="soft">
-        <figure class="proj-shot"><button type="button" class="zoom" aria-label="Ampliar telas do app"><img src="img/projetos/manejo.webp?v=2" width="1248" height="780" loading="lazy" decoding="async" alt="Telas do app Manejo Florestal: início, talhões e marketplace"></button></figure>
+        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/manejo-full.webp?v=1" aria-label="Ampliar telas do app"><img src="img/projetos/manejo.webp?v=3" width="1248" height="780" loading="lazy" decoding="async" alt="Telas do app Manejo Florestal: início, talhões e marketplace"></button></figure>
         <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
         <span class="tagline">Projeto 01 · app próprio</span>
         <p class="quote">Talhões no mapa, medições offline e alertas de poda e desbaste, com marketplace de viveiros.</p>
@@ -599,7 +599,7 @@ footer .sp{margin-left:auto}
       </article>
 
       <article class="proj glass" data-cat="soft">
-        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/agenda-full.webp?v=1" aria-label="Ampliar telas da plataforma de agendamento"><img src="img/projetos/agenda.webp?v=1" width="1248" height="780" loading="lazy" decoding="async" style="object-position:top left" alt="Plataforma de agendamento: painel da clínica no computador e agendamento pelo navegador do celular (dados de demonstração)"></button></figure>
+        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/agenda-full.webp?v=2" aria-label="Ampliar telas da plataforma de agendamento"><img src="img/projetos/agenda.webp?v=1" width="1248" height="780" loading="lazy" decoding="async" style="object-position:top left" alt="Plataforma de agendamento: painel da clínica no computador e agendamento pelo navegador do celular (dados de demonstração)"></button></figure>
         <div class="proj-top"><span class="av">AS</span><div><h3>Agenda Saúde</h3><p>Plataforma · clínicas e consultórios</p></div><span class="badge">Em desenvolvimento</span></div>
         <span class="tagline">Projeto 02 · plataforma própria</span>
         <p class="quote">Agendamento online pelo navegador do celular, sem instalar app: confirmação e lembretes por WhatsApp e e-mail, fila de espera e painel da clínica em tempo real, com LGPD desde o início.</p>
@@ -821,16 +821,37 @@ footer .sp{margin-left:auto}
   f.addEventListener('submit',function(e){e.preventDefault();});
 })();
 </script>
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><div class="lb-tools"><button type="button" data-z="-1" aria-label="Diminuir zoom">−</button><button type="button" data-z="1" aria-label="Aumentar zoom">+</button><button type="button" data-close aria-label="Fechar">×</button></div><div class="lb-stage"><img alt=""></div><span class="lb-hint">Clique para aproximar · role para dar zoom · arraste para mover</span></div>
 <script>
-(()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img');let last;
-document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');im.src=b.dataset.full||i.src;im.alt=i.alt;last=b;lb.classList.add('on');lb.querySelector('button').focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseenter'))}));
-const close=()=>{lb.classList.remove('on');last?.focus();document.getElementById('hcar')?.dispatchEvent(new Event('mouseleave'))};
-lb.addEventListener('click',e=>{if(e.target!==im)close()});addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('on'))close()});})();
-(()=>{const c=document.getElementById('hcar');if(!c)return;const sl=[...c.querySelectorAll('.hcar-slide')],dots=c.querySelector('.hcar-dots');let i=0,t;
-sl.forEach((_,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para slide '+(k+1));b.onclick=()=>{go(k);play()};dots.append(b)});
-function go(n){i=(n+sl.length)%sl.length;sl.forEach((s,k)=>{s.classList.toggle('on',k===i);s.toggleAttribute('inert',k!==i)});[...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i))}
-function play(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>go(i+1),7000)}
+(()=>{const lb=document.getElementById('lb'),st=lb.querySelector('.lb-stage'),im=st.querySelector('img'),hc=()=>document.getElementById('hcar');let last,s=1,moved=0,drag=null;
+const fitW=()=>{const w=im.naturalWidth||1,h=im.naturalHeight||1;return Math.max(80,Math.min(w,innerWidth*.94,(innerHeight-110)*w/h))};
+const maxS=()=>Math.max(3,(im.naturalWidth||1)*1.25/fitW());
+function set(ns,cx,cy){const r=im.getBoundingClientRect();if(cx==null){cx=innerWidth/2;cy=innerHeight/2}const fx=r.width?(cx-r.left)/r.width:.5,fy=r.height?(cy-r.top)/r.height:.5;
+s=Math.min(maxS(),Math.max(1,ns));im.style.width=Math.round(fitW()*s)+'px';lb.classList.toggle('zoomed',s>1.01);
+const q=im.getBoundingClientRect();lb.scrollLeft+=q.left+fx*q.width-cx;lb.scrollTop+=q.top+fy*q.height-cy}
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');last=b;s=1;im.style.width='';im.alt=i.alt;
+im.onload=()=>{im.style.width=Math.round(fitW())+'px';lb.scrollTo(0,0)};im.src=b.dataset.full||i.src;if(im.complete)im.onload();
+lb.classList.add('on');lb.classList.remove('zoomed');document.documentElement.style.overflow='hidden';lb.querySelector('[data-close]').focus();hc()?.dispatchEvent(new Event('mouseenter'))}));
+const close=()=>{lb.classList.remove('on','zoomed','drag');document.documentElement.style.overflow='';last?.focus();hc()?.dispatchEvent(new Event('mouseleave'))};
+lb.addEventListener('click',e=>{if(e.target===lb||e.target===st)close()});lb.querySelector('[data-close]').onclick=close;
+lb.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(s*(+b.dataset.z>0?1.5:1/1.5)));
+im.addEventListener('click',e=>{if(moved>5)return;s>1.01?set(1,e.clientX,e.clientY):set(2.5,e.clientX,e.clientY)});
+lb.addEventListener('wheel',e=>{if(!lb.classList.contains('on'))return;e.preventDefault();set(s*(e.deltaY<0?1.18:1/1.18),e.clientX,e.clientY)},{passive:false});
+im.addEventListener('pointerdown',e=>{moved=0;if(e.pointerType!=='mouse'||s<=1.01)return;drag={x:e.clientX,y:e.clientY,l:lb.scrollLeft,t:lb.scrollTop};lb.classList.add('drag');e.preventDefault()});
+addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;moved=Math.max(moved,Math.abs(dx)+Math.abs(dy));lb.scrollLeft=drag.l-dx;lb.scrollTop=drag.t-dy});
+addEventListener('pointerup',()=>{drag=null;lb.classList.remove('drag')});
+addEventListener('resize',()=>{if(lb.classList.contains('on'))set(s)});
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();else if(e.key==='+'||e.key==='=')set(s*1.5);else if(e.key==='-')set(s/1.5)});})();
+(()=>{const c=document.getElementById('hcar');if(!c)return;const sl=[...c.querySelectorAll('.hcar-slide')],n=sl.length,dots=c.querySelector('.hcar-dots'),rm=matchMedia('(prefers-reduced-motion: reduce)'),sm=matchMedia('(max-width:760px)');let i=0,t;
+sl.forEach((s,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para slide '+(k+1));b.onclick=()=>{go(k);play()};dots.append(b);
+s.addEventListener('click',e=>{if(k!==i){e.preventDefault();e.stopPropagation();go(k);play()}},true)});
+function place(){const m=sm.matches,step=m?16:30,rot=m?8:16;sl.forEach((s,k)=>{let d=((k-i)%n+n)%n;if(d>n/2)d-=n;const a=Math.abs(d);
+if(a>2){s.style.opacity=0;s.style.visibility='hidden';s.style.zIndex=0;s.style.transform=`translateX(${Math.sign(d)*step*2.6}%) translateZ(-420px) rotateY(${-Math.sign(d)*rot*2}deg) scale(.6)`;return}
+s.style.visibility='visible';s.style.zIndex=10-a;s.style.opacity=[1,1,.6][a];s.style.filter=['none','brightness(.8) saturate(.8)','brightness(.62) saturate(.7) blur(1px)'][a];
+s.style.transform=`translateX(${d*step}%) translateZ(${-a*160}px) rotateY(${-d*rot}deg) scale(${1-a*.1})`})}
+function go(k){i=((k%n)+n)%n;sl.forEach((s,k2)=>{const on=k2===i;s.classList.toggle('on',on);s.setAttribute('aria-hidden',!on);[...s.children].forEach(ch=>ch.toggleAttribute('inert',!on))});[...dots.children].forEach((d,k2)=>d.setAttribute('aria-current',k2===i));place()}
+function play(){clearInterval(t);if(!rm.matches)t=setInterval(()=>go(i+1),7000)}
+if(rm.matches)sl.forEach(s=>s.style.transition='none');sm.addEventListener?.('change',place);
 c.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{go(i+ +b.dataset.d);play()});
 c.addEventListener('mouseenter',()=>clearInterval(t));c.addEventListener('mouseleave',play);c.addEventListener('focusin',()=>clearInterval(t));
 let x0=null;c.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play()}x0=null});
