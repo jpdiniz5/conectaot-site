@@ -876,7 +876,7 @@ go(0);play()})();
 (()=>{const sl=document.getElementById('lpSlide');if(!sl)return;const pc=sl.querySelector('.mock-pc'),ce=sl.querySelector('.mock-cel'),pi=pc.querySelector('img'),ci=ce.querySelector('img'),bs=[...sl.querySelectorAll('.lp-chips button')];let i=0,t;
 ['odo','adv','barb'].forEach(k=>{['-pc-sm','-cel'].forEach(x=>{const im=new Image();im.src='img/projetos/lp-'+k+x+'.webp?v=4'})});
 function set(n){i=n;const k=bs[n].dataset.k,b='img/projetos/lp'+(k?'-'+k:'');bs.forEach((x,j)=>x.setAttribute('aria-pressed',j===n));pi.style.opacity=ci.style.opacity=.3;
-pi.srcset=b+'-pc-sm.webp?v=2 760w, '+b+'-pc.webp?v=2 1440w';pi.src=b+'-pc.webp?v=4';ci.src=b+'-cel.webp?v=4';pc.dataset.full=b+'-pc-full.webp?v=4';ce.dataset.full=b+'-cel-full.webp?v=4';
+pi.srcset=b+'-pc-sm.webp?v=4 760w, '+b+'-pc.webp?v=4 1440w';pi.src=b+'-pc.webp?v=4';ci.src=b+'-cel.webp?v=4';pc.dataset.full=b+'-pc-full.webp?v=4';ce.dataset.full=b+'-cel-full.webp?v=4';
 pi.alt='Exemplo de landing page para '+bs[n].textContent+' no computador (marca fictícia)';ci.alt='Exemplo de landing page para '+bs[n].textContent+' no celular (marca fictícia)';
 const on=()=>{pi.style.opacity=ci.style.opacity=1};pi.decode?pi.decode().then(on,on):on()}
 bs.forEach((b,n)=>b.addEventListener('click',e=>{e.stopPropagation();set(n);clearInterval(t)}));
