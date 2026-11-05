@@ -462,6 +462,25 @@ section{content-visibility:visible}
 .c-line b{overflow-wrap:anywhere}
 @media(max-width:420px){.c-line{flex-wrap:wrap;gap:12px}.c-line>div{flex-basis:100%}.c-line button{margin-left:0}.c-line b{font-size:15px}}
 .project-price{margin:0;font-size:13px;line-height:1.5;color:var(--muted);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}.project-price strong{font-size:22px;font-weight:600;color:var(--ink);white-space:nowrap}.project-price>span{font-size:13px}
+
+/* Acabamento mobile: selo inteiro, contatos e rodapé */
+.hcar-app .badge{display:inline-block;max-width:100%;width:fit-content;box-sizing:border-box;vertical-align:middle;text-align:center;white-space:normal;line-height:1.5}
+.c-line{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.c-line>div{min-width:0}
+.c-line button{justify-self:end;margin:0;flex-shrink:0}
+@media(max-width:480px){
+ .c-line{grid-template-columns:minmax(0,1fr);gap:10px}
+ .c-line>div{width:100%}
+ .c-line button{justify-self:end;margin:0}
+ .c-line b{font-size:15px;line-height:1.5}
+}
+@media(max-width:640px){
+ footer{padding-bottom:110px}
+ footer .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));justify-items:center;gap:16px 20px;text-align:center;line-height:1.6}
+ footer .wrap>span{grid-column:1/-1;min-width:0;max-width:100%;justify-content:center}
+ footer .sp{margin:0;white-space:normal;overflow-wrap:break-word}
+ footer .wrap>a{justify-self:center}
+}
 </style>
 </head>
 <body>
