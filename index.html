@@ -489,6 +489,14 @@ section{content-visibility:visible}
  .c-line button{grid-column:2;grid-row:1;justify-self:end;padding:9px 10px;min-height:40px;font-size:11px}
  .c-line b{font-size:clamp(12px,3.4vw,15px);line-height:1.5;overflow-wrap:anywhere}
 }
+
+/* Dois projetos sem imagem por coluna */
+.projects>.proj-pair{flex-basis:calc((100% - 36px)/3);align-self:stretch}
+.proj-pair{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:18px}
+.proj-pair>.proj{padding:14px 16px;gap:8px;min-height:0}
+.proj-pair .project-price strong{font-size:18px}
+@media(max-width:1000px){.projects>.proj-pair{flex-basis:calc((100% - 18px)/2)}}
+@media(max-width:640px){.projects>.proj-pair{flex-basis:100%;grid-template-rows:auto auto}}
 </style>
 </head>
 <body>
