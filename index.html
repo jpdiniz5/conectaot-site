@@ -455,6 +455,12 @@ h2,h3{text-wrap:balance}
 form input,form select,form textarea{min-width:0;max-width:100%}
 @media(max-width:1100px){.chips.apps{grid-template-columns:repeat(4,minmax(0,1fr))}.chips.apps span:last-child{grid-column:span 2}}
 @media(max-width:640px){.chips.apps{grid-template-columns:repeat(2,minmax(0,1fr))}.chips.apps span:last-child{grid-column:1/-1}.timeline>*,.diff>*,.grid3>*,.grid2>*{min-width:0}.badge-row{width:fit-content;max-width:100%;flex-wrap:wrap}.badge{white-space:normal;line-height:1.4}}
+
+/* Correções verificadas na simulação responsiva */
+section{content-visibility:visible}
+.c-line>div{min-width:0}
+.c-line b{overflow-wrap:anywhere}
+@media(max-width:420px){.c-line{flex-wrap:wrap;gap:12px}.c-line>div{flex-basis:100%}.c-line button{margin-left:0}.c-line b{font-size:15px}}
 </style>
 </head>
 <body>
