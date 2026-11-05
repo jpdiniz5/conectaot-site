@@ -369,6 +369,7 @@ footer .sp{margin-left:auto}
 .timeline p{font-size:14px;color:var(--muted)}
 @media (max-width:1000px){.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.timeline{grid-template-columns:1fr}}
+.case:only-child{grid-column:1/-1}
 .case{padding:22px;display:grid;gap:14px;align-content:start}
 .case .tag{width:max-content;font:500 11px/1 var(--mono);padding:6px 10px;border-radius:999px;background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
 .case blockquote{margin:0;font-size:16px;color:var(--ink);font-style:italic}
@@ -461,39 +462,35 @@ footer .sp{margin-left:auto}
     </div>
     <div class="hcar" id="hcar" aria-roledescription="carrossel" aria-label="Exemplos de entregas ConectaOT">
     <div class="hcar-track">
-    <div class="hcar-slide on" aria-roledescription="slide" aria-label="1 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide on" aria-roledescription="slide" aria-label="1 de 8"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-inicio-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-inicio-sm.webp?v=2 760w, img/projetos/manejo-pc-inicio.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-inicio.webp?v=2" width="1440" height="900" alt="Tela Sua floresta, em dia do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-inicio-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-inicio.webp?v=2" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal no celular" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Sua floresta, em dia</h3><p>Resumo da propriedade: área acompanhada, talhões medidos e o próximo passo de cada um.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 8"><article class="card glass hcar-app">
       <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/plc-full.webp?v=2" aria-label="Ampliar tela de programação de CLP"><img srcset="img/projetos/plc-sm.webp?v=2 760w, img/projetos/plc.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/plc.webp?v=2" width="1440" height="900" alt="Programação de CLP em texto estruturado: sequenciador por passos, eixos, receitas e monitoração online (exemplo ilustrativo)" decoding="async"></button></div>
       <div><span class="badge ok">● programação avançada de CLP</span><h3>Lógica limpa, máquina previsível</h3><p>Texto estruturado (IEC 61131-3), sequenciadores por passos, controle de eixos e servos, receitas, alarmes e registro de dados. Programas novos ou migração de CLPs antigos.</p><a class="pill pill-glass" href="#contato">Falar sobre o meu projeto →</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 9"><article class="card glass hcar-app" id="lpSlide">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 8"><article class="card glass hcar-app" id="lpSlide">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/lp-pc-full.webp?v=4" aria-label="Ampliar landing page no computador"><img srcset="img/projetos/lp-pc-sm.webp?v=4 760w, img/projetos/lp-pc.webp?v=4 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/lp-pc.webp?v=4" width="1440" height="900" alt="Exemplo de landing page para profissional de fisioterapia no computador (marca fictícia)" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/lp-cel-full.webp?v=4" aria-label="Ampliar landing page no celular"><img src="img/projetos/lp-cel.webp?v=4" width="390" height="780" alt="Exemplo de landing page para profissional no celular (marca fictícia)" decoding="async"></button></div>
       <div><span class="badge ok">● landing pages · para profissionais</span><h3>Sua página, do seu jeito</h3><p>Landing pages personalizadas e exclusivas para dentistas, fisioterapeutas, advogados, barbearias e outros profissionais: layout próprio, agendamento pelo WhatsApp, rápida no celular e pronta para o Google.</p><div class="lp-chips" role="tablist" aria-label="Exemplos por profissão"><button type="button" data-k="" aria-pressed="true">Fisioterapia</button><button type="button" data-k="odo">Odontologia</button><button type="button" data-k="adv">Advocacia</button><button type="button" data-k="barb">Barbearia</button></div><a class="pill pill-glass" href="https://wa.me/5549991208836?text=Ol%C3%A1%2C%20ConectaOT!%20Quero%20uma%20landing%20page%20personalizada." target="_blank" rel="noopener">Quero a minha página →</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 8"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/agenda-painel-full.webp?v=2" aria-label="Ampliar painel da clínica"><img srcset="img/projetos/agenda-pc-painel-sm.webp?v=1 760w, img/projetos/agenda-pc-painel.webp?v=1 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/agenda-pc-painel.webp?v=1" width="1440" height="900" alt="Painel da clínica: agendamentos do dia, confirmação, ocupação por profissional e movimento em tempo real (dados de demonstração)" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/agenda-cel-full.webp?v=2" aria-label="Ampliar agendamento no celular"><img src="img/projetos/agenda-cel.webp?v=2" width="390" height="780" alt="Paciente escolhendo o horário da consulta pelo navegador do celular" decoding="async"></button></div>
       <div><span class="badge">● em desenvolvimento · agendamento online</span><h3>Agenda cheia, menos faltas</h3><p>O paciente agenda pelo navegador do celular, sem instalar app. A clínica acompanha tudo num painel, com lembretes por WhatsApp e e-mail.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="5 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="5 de 8"><article class="card glass hcar-app">
       <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora de toras"><img srcset="img/projetos/classificadora-sm.webp?v=1 760w, img/projetos/classificadora.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" alt="Classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal (dados de demonstração)" decoding="async"></button></div>
       <div><span class="badge ok">● em operação · coleta de dados</span><h3>Classificadora de toras</h3><p>Diâmetro e comprimento de cada tora, ocupação dos boxes e quanto de cada box está dentro da faixa configurada. Valores ilustrativos.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="6 de 9"><article class="card glass hcar-app">
-      <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/cozimento-full.webp?v=1" aria-label="Ampliar tela do supervisório de cozimento"><img srcset="img/projetos/cozimento-sm.webp?v=1 760w, img/projetos/cozimento.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" alt="Supervisório de cozimento de toras: temperatura e status dos tanques, últimos ciclos e histórico (dados de demonstração)" decoding="async"></button></div>
-      <div><span class="badge ok">● em operação · supervisório</span><h3>Cozimento de toras</h3><p>Temperatura, pressão e receita de cada tanque em tempo real, com o histórico de todos os ciclos e o motivo de cada cancelamento. Valores ilustrativos.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
-    </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="7 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="6 de 8"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-talhoes-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-talhoes-sm.webp?v=2 760w, img/projetos/manejo-pc-talhoes.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-talhoes.webp?v=2" width="1440" height="900" alt="Tela Seus talhões do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-talhoes-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-talhoes.webp?v=2" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal no celular" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Seus talhões</h3><p>Cada talhão com idade, área, regime e volume estimado, mais os avisos de manejo para revisar.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="8 de 9"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="7 de 8"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-mercado-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-mercado-sm.webp?v=2 760w, img/projetos/manejo-pc-mercado.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-mercado.webp?v=2" width="1440" height="900" alt="Tela Marketplace florestal do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-mercado-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-mercado.webp?v=2" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal no celular" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Marketplace florestal</h3><p>Serviços, mudas e insumos indicados conforme os alertas abertos de cada talhão.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="9 de 9"><div class="bento" aria-label="Exemplo de painel ConectaOT, valores ilustrativos">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="8 de 8"><div class="bento" aria-label="Exemplo de painel ConectaOT, valores ilustrativos">
       <article class="card glass metric c4">
         <div class="card-h"><div><h3>Produção por etapa</h3><p>Supervisório web · por turno</p></div><span class="badge">exemplo</span></div>
         <div class="big num">12.480 <span class="lbl">peças/dia</span></div>
@@ -555,7 +552,7 @@ footer .sp{margin-left:auto}
     </div>
     <ul class="deliver">
       <li><b>Programação avançada de CLP:</b> texto estruturado, sequenciadores, eixos e servos, receitas e alarmes, em máquinas novas ou migração de CLPs legados.</li>
-      <li><b>Coleta de dados e banco de dados:</b> leitura do CLP sem alterar o programa, gravando em banco próprio via API, como na classificadora e no cozimento.</li>
+      <li><b>Coleta de dados e banco de dados:</b> leitura do CLP sem alterar o programa, gravando em banco próprio via API, como na classificadora de toras.</li>
       <li><b>Supervisórios e dashboards web:</b> produção, paradas, alarmes e tendências por turno, no navegador e no celular.</li>
       <li><b>Sistemas web e SaaS:</b> gestão de clientes, pedidos e ordens de serviço, e apps próprios como o Manejo Florestal.</li>
       <li><b>Agendamento online:</b> o cliente marca pelo celular e recebe confirmação e lembrete por WhatsApp e e-mail.</li>
@@ -620,14 +617,6 @@ footer .sp{margin-left:auto}
         <div class="proj-foot"><span>Web responsivo · WhatsApp · e-mail</span></div>
       </article>
 
-      <article class="proj glass" data-cat="sup">
-        <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/cozimento-full.webp?v=1" aria-label="Ampliar tela do supervisório"><img srcset="img/projetos/cozimento-sm.webp?v=1 760w, img/projetos/cozimento.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/cozimento.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard do supervisório de cozimento de toras: status dos tanques, últimos ciclos e histórico (dados de demonstração)"></button></figure>
-        <div class="proj-top"><span class="av">TC</span><div><h3>Tanque de cozimento</h3><p>Supervisório · compensados</p></div><span class="badge">Web + API</span></div>
-        <span class="tagline">CLP + API</span>
-        <p class="quote">O CLP envia os dados pela web para uma API, que grava no banco de dados: temperatura, ciclos e histórico do cozimento, acompanhados num dashboard web.</p>
-        <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · web · API · banco de dados</span></div><div class="tr"><i style="width:100%"></i></div></div>
-        <div class="proj-foot"><span>Em operação</span></div>
-      </article>
 
       <article class="proj solid dark" data-cat="sup soft">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora"><img srcset="img/projetos/classificadora-sm.webp?v=1 760w, img/projetos/classificadora.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard da classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal configurada (dados de demonstração)"></button></figure>
@@ -678,7 +667,7 @@ footer .sp{margin-left:auto}
 </div></section>
 <section id="cases">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Cases</span><h2>Como resolvemos na prática</h2><p class="lead">Dois projetos em operação na indústria de compensados.</p></div>
+    <div class="sec-title"><span class="eyebrow">Cases</span><h2>Como resolvemos na prática</h2><p class="lead">Um projeto em operação na indústria de compensados.</p></div>
     <div class="grid2">
       <article class="case glass">
         <span class="tag">EM OPERAÇÃO</span>
@@ -690,23 +679,13 @@ footer .sp{margin-left:auto}
         </div>
         <div class="mets"><div><b>4</b><span>dados por tora: quantidade, box, diâmetro médio e tamanho</span></div><div><b>Web</b><span>do CLP direto para a API, sem PC no painel</span></div><div><b>Tempo real</b><span>painel web com histórico</span></div></div>
       </article>
-      <article class="case glass">
-        <span class="tag">EM OPERAÇÃO</span>
-        <h3>Tanque de cozimento de toras</h3>
-        <div class="cs">
-          <div><b>Desafio</b><p>O cozimento das toras dependia de acompanhamento no local. Temperatura e duração dos ciclos não ficavam registradas.</p></div>
-          <div><b>O que fizemos</b><p>O CLP do tanque envia os dados pela web para uma API com banco de dados, e um dashboard web mostra temperatura, ciclos e histórico.</p></div>
-          <div><b>O que o cliente ganhou</b><p>Acompanhamento do cozimento pelo navegador, de qualquer lugar, e histórico de cada ciclo para conferir a qualidade.</p></div>
-        </div>
-        <div class="mets"><div><b>24 h</b><span>acompanhamento pelo navegador</span></div><div><b>Ciclos</b><span>registrados com temperatura e duração</span></div><div><b>Banco de dados</b><span>histórico consultável</span></div></div>
-      </article>
     </div>
   </div>
 </section>
 
 <section id="diferenciais">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Um único time do chão de fábrica ao navegador: quem entende a máquina também entrega o software.</p></div>
+    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Um único time do chão de fábrica ao navegador: quem entende a máquina também entrega o software.</p><p class="lead">Nascemos no Programa Nascer, no Centro de Inovação Inova Contestado, em Caçador (SC).</p></div>
     <div class="diff">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Engenharia e software de ponta a ponta</h3><p>Quem programa o CLP é quem cria o banco de dados, o painel e o app. Sem repasse entre empresas.</p></div>
       <div class="tile glass hl"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Somente leitura por padrão</h3><p>A coleta de dados não escreve no CLP. A segurança da máquina continua no programa e no operador.</p></div>
