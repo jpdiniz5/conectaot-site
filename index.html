@@ -529,6 +529,19 @@ section{content-visibility:visible}
 .hcar:not(.ready) .hcar-slide{transition:none!important}
 @media(min-width:1001px){#heroHeadline{min-height:2.16em}}
 @media(max-width:1000px){#heroHeadline{min-height:3.3em;text-wrap:balance}}
+
+/* Entrada sequencial dos serviços sem deslocar o layout */
+@keyframes heroPointReveal{
+ from{opacity:0;transform:translateY(10px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@media(prefers-reduced-motion:no-preference){
+ .hero-points li{animation:heroPointReveal .55s cubic-bezier(.22,.61,.36,1) both}
+ .hero-points li:nth-child(1){animation-delay:.12s}
+ .hero-points li:nth-child(2){animation-delay:.27s}
+ .hero-points li:nth-child(3){animation-delay:.42s}
+ .hero-points li:nth-child(4){animation-delay:.57s}
+}
 </style>
 </head>
 <body>
