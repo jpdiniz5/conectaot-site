@@ -524,6 +524,11 @@ section{content-visibility:visible}
  .hero-points{margin-top:10px;gap:5px 22px}
  .hero-ctas{margin-top:12px}
 }
+
+/* Atualização sem animação inicial nem salto entre frases */
+.hcar:not(.ready) .hcar-slide{transition:none!important}
+@media(min-width:1001px){#heroHeadline{min-height:2.16em}}
+@media(max-width:1000px){#heroHeadline{min-height:3.3em;text-wrap:balance}}
 </style>
 </head>
 <body>
@@ -559,7 +564,26 @@ section{content-visibility:visible}
   <div class="wrap">
     <div class="hero-head">
       <div>
-        <h1 id="heroHeadline" style="margin-top:18px">Da máquina ao software: <b>sua operação conectada e sob controle.</b></h1>
+        <h1 id="heroHeadline" style="margin-top:18px">Da máquina ao software: <b>sua operação conectada e sob controle.</b></h1><script>
+(function(){
+ var title=document.getElementById('heroHeadline');if(!title)return;
+ var options=[
+ ['Da máquina ao software: ','sua operação conectada e sob controle.'],
+ ['Conectamos sua máquina. ','Simplificamos sua operação.'],
+ ['Da máquina à decisão: ','dados que fazem sua operação avançar.'],
+ ['Automação e software para ','conectar sua operação de ponta a ponta.'],
+ ['Da indústria ao digital: ','soluções que conectam seu negócio.'],
+ ['Sua máquina gera dados. ','A\u00a0ConectaOT transforma em controle.'],
+ ['Da máquina ao software: ','sua fábrica conectada e sob controle.']
+ ];
+ var last=-1;try{last=Number(localStorage.getItem('conectaot-headline')??-1)}catch(e){}
+ var candidates=options.map(function(_,i){return i}).filter(function(i){return i!==last});
+ var index=candidates[Math.floor(Math.random()*candidates.length)];
+ var strong=document.createElement('b');strong.textContent=options[index][1];
+ title.replaceChildren(document.createTextNode(options[index][0]),strong);
+ try{localStorage.setItem('conectaot-headline',String(index))}catch(e){}
+})();
+</script>
         <p class="hero-sub">Programamos e modernizamos máquinas, levamos os dados do CLP para o banco de dados e transformamos tudo em sistemas web e aplicativos que a sua equipe usa no dia a dia.</p>
         <ul class="hero-points">
           <li><span><b>Programação de CLP</b> e retrofit, com comissionamento no Brasil e no exterior</span></li>
@@ -910,7 +934,7 @@ if(rm.matches)sl.forEach(s=>s.style.transition='none');sm.addEventListener?.('ch
 c.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{go(i+ +b.dataset.d);play()});
 c.addEventListener('mouseenter',()=>clearInterval(t));c.addEventListener('mouseleave',play);c.addEventListener('focusin',()=>clearInterval(t));
 let x0=null;c.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play()}x0=null});
-go(0);play()})();
+go(0);requestAnimationFrame(()=>requestAnimationFrame(()=>c.classList.add('ready')));play()})();
 </script>
 <script>
 (()=>{const sl=document.getElementById('lpSlide');if(!sl)return;const pc=sl.querySelector('.mock-pc'),ce=sl.querySelector('.mock-cel'),pi=pc.querySelector('img'),ci=ce.querySelector('img'),bs=[...sl.querySelectorAll('.lp-chips button')];let i=0,t;
@@ -923,26 +947,7 @@ bs.forEach((b,n)=>b.addEventListener('click',e=>{e.stopPropagation();set(n);clea
 t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i+1)%bs.length)},2600)})();
 </script>
 
-<script>
-(function(){
- var title=document.getElementById('heroHeadline');if(!title)return;
- var options=[
- ['Da máquina ao software: ','sua operação conectada e sob controle.'],
- ['Conectamos sua máquina. ','Simplificamos sua operação.'],
- ['Da máquina à decisão: ','dados que fazem sua operação avançar.'],
- ['Automação e software para ','conectar sua operação de ponta a ponta.'],
- ['Da indústria ao digital: ','soluções que conectam seu negócio.'],
- ['Sua máquina gera dados. ','A\u00a0ConectaOT transforma em controle.'],
- ['Da máquina ao software: ','sua fábrica conectada e sob controle.']
- ];
- var last=-1;try{last=Number(localStorage.getItem('conectaot-headline')??-1)}catch(e){}
- var candidates=options.map(function(_,i){return i}).filter(function(i){return i!==last});
- var index=candidates[Math.floor(Math.random()*candidates.length)];
- var strong=document.createElement('b');strong.textContent=options[index][1];
- title.replaceChildren(document.createTextNode(options[index][0]),strong);
- try{localStorage.setItem('conectaot-headline',String(index))}catch(e){}
-})();
-</script>
+
 
 </body>
 </html>
