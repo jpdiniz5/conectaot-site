@@ -481,6 +481,14 @@ section{content-visibility:visible}
  footer .sp{margin:0;white-space:normal;overflow-wrap:break-word}
  footer .wrap>a{justify-self:center}
 }
+
+/* Contatos compactos: ação sempre ao lado do valor */
+@media(max-width:480px){
+ .c-line{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:12px}
+ .c-line>div{width:auto;min-width:0}
+ .c-line button{grid-column:2;grid-row:1;justify-self:end;padding:9px 10px;min-height:40px;font-size:11px}
+ .c-line b{font-size:clamp(12px,3.4vw,15px);line-height:1.5;overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
