@@ -542,6 +542,13 @@ section{content-visibility:visible}
  .hero-points li:nth-child(3){animation-delay:.42s}
  .hero-points li:nth-child(4){animation-delay:.57s}
 }
+
+/* Ações entram após os tópicos, preservando a área de clique */
+@media(prefers-reduced-motion:no-preference){
+ .hero-ctas>a{animation:heroPointReveal .55s cubic-bezier(.22,.61,.36,1) both}
+ .hero-ctas>a:nth-child(1){animation-delay:.75s}
+ .hero-ctas>a:nth-child(2){animation-delay:.9s}
+}
 </style>
 </head>
 <body>
