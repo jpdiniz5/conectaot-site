@@ -559,7 +559,7 @@ section{content-visibility:visible}
   <div class="wrap">
     <div class="hero-head">
       <div>
-        <h1 style="margin-top:18px">Do CLP ao software: <b>sua fábrica conectada e sob controle.</b></h1>
+        <h1 id="heroHeadline" style="margin-top:18px">Da máquina ao software: <b>sua operação conectada e sob controle.</b></h1>
         <p class="hero-sub">Programamos e modernizamos máquinas, levamos os dados do CLP para o banco de dados e transformamos tudo em sistemas web e aplicativos que a sua equipe usa no dia a dia.</p>
         <ul class="hero-points">
           <li><span><b>Programação de CLP</b> e retrofit, com comissionamento no Brasil e no exterior</span></li>
@@ -922,5 +922,27 @@ const on=()=>{pi.style.opacity=ci.style.opacity=1};pi.decode?pi.decode().then(on
 bs.forEach((b,n)=>b.addEventListener('click',e=>{e.stopPropagation();set(n);clearInterval(t)}));
 t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i+1)%bs.length)},2600)})();
 </script>
+
+<script>
+(function(){
+ var title=document.getElementById('heroHeadline');if(!title)return;
+ var options=[
+ ['Da máquina ao software: ','sua operação conectada e sob controle.'],
+ ['Conectamos sua máquina. ','Simplificamos sua operação.'],
+ ['Da máquina à decisão: ','dados que fazem sua operação avançar.'],
+ ['Automação e software para ','conectar sua operação de ponta a ponta.'],
+ ['Da indústria ao digital: ','soluções que conectam seu negócio.'],
+ ['Sua máquina gera dados. ','A ConectaOT transforma em controle.'],
+ ['Da máquina ao software: ','sua fábrica conectada e sob controle.']
+ ];
+ var last=-1;try{last=Number(localStorage.getItem('conectaot-headline')??-1)}catch(e){}
+ var candidates=options.map(function(_,i){return i}).filter(function(i){return i!==last});
+ var index=candidates[Math.floor(Math.random()*candidates.length)];
+ var strong=document.createElement('b');strong.textContent=options[index][1];
+ title.replaceChildren(document.createTextNode(options[index][0]),strong);
+ try{localStorage.setItem('conectaot-headline',String(index))}catch(e){}
+})();
+</script>
+
 </body>
 </html>
