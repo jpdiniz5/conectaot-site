@@ -549,19 +549,6 @@ section{content-visibility:visible}
  .hero-ctas>a:nth-child(1){animation-delay:.75s}
  .hero-ctas>a:nth-child(2){animation-delay:.9s}
 }
-
-/* motion-experiment-2026-11-05: reversible checkpoint in GitHub */
-@keyframes sectionEntrance{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes diagnosisHighlight{0%,100%{box-shadow:0 8px 22px -12px var(--accent)}50%{box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 18%,transparent),0 10px 28px -8px var(--accent)}}
-@keyframes contactPulse{0%,100%{box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}50%{box-shadow:0 0 0 9px rgba(37,211,102,.15),0 10px 24px -8px rgba(0,0,0,.45)}}
-@media(prefers-reduced-motion:no-preference){
- .motion-enter{animation:sectionEntrance .55s cubic-bezier(.22,.61,.36,1) backwards;animation-delay:var(--reveal-delay,0ms)}
- .hero-ctas>a:first-child{animation:heroPointReveal .55s cubic-bezier(.22,.61,.36,1) .75s both,diagnosisHighlight 1.2s ease 2s 1}
- .wa-fab{animation:contactPulse 1.2s ease 5s 1}
- .proj-shot img{transition:transform .35s ease}
-}
-@media(hover:hover) and (prefers-reduced-motion:no-preference){.proj-shot:hover img{transform:scale(1.025)}}
-
 </style>
 </head>
 <body>
@@ -977,30 +964,10 @@ pi.srcset=b+'-pc-sm.webp?v=4 760w, '+b+'-pc.webp?v=4 1440w';pi.src=b+'-pc.webp?v
 pi.alt='Exemplo de landing page para '+bs[n].textContent+' no computador (marca fictícia)';ci.alt='Exemplo de landing page para '+bs[n].textContent+' no celular (marca fictícia)';
 const on=()=>{pi.style.opacity=ci.style.opacity=1};pi.decode?pi.decode().then(on,on):on()}
 bs.forEach((b,n)=>b.addEventListener('click',e=>{e.stopPropagation();set(n);clearInterval(t)}));
-t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i+1)%bs.length)},6000)})();
+t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i+1)%bs.length)},2600)})();
 </script>
 
 
-
-
-<script>
-/* Reveal each section once; content stays visible if JS is unavailable. */
-(function(){
- var rm=matchMedia('(prefers-reduced-motion: reduce)');if(rm.matches||!('IntersectionObserver' in window))return;
- var nodes=[].slice.call(document.querySelectorAll('.sec-title,.projects .proj,.timeline .st'));
- var observer=new IntersectionObserver(function(entries){
- entries.forEach(function(entry){if(!entry.isIntersecting)return;
- var el=entry.target;observer.unobserve(el);
- var group=el.closest('.projects,.timeline');
- var siblings=group?[].slice.call(group.querySelectorAll(el.matches('.st')?'.st':'.proj')):[el];
- var delay=(siblings.indexOf(el)%3)*80;
- el.style.setProperty('--reveal-delay',delay+'ms');el.classList.add('motion-enter');
- el.addEventListener('animationend',function done(){el.classList.remove('motion-enter');el.style.removeProperty('--reveal-delay');el.removeEventListener('animationend',done)});
- });},{threshold:.08});
- nodes.forEach(function(el){observer.observe(el)});
- rm.addEventListener('change',function(e){if(e.matches){observer.disconnect();nodes.forEach(function(el){el.classList.remove('motion-enter')})}});
-})();
-</script>
 
 </body>
 </html>
