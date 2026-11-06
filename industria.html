@@ -568,6 +568,32 @@ section{content-visibility:visible}
 .area-switch a{padding:6px 14px;border-radius:999px;text-decoration:none;color:var(--muted)}
 .area-switch a.on{background:var(--accent);color:#0B132B;font-weight:600}
 [hidden]{display:none!important}
+/* v7 compacto + transições */
+.mq{overflow:hidden;border-block:1px solid var(--hair);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-t{display:flex;gap:42px;width:max-content;animation:mq 38s linear infinite}
+.mq-t span{font:500 15px var(--f);color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:42px}
+.mq-t span::after{content:"✦";color:var(--accent);font-size:11px}
+.mq:hover .mq-t{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ba-tabs{position:relative;display:inline-flex;padding:5px;border-radius:999px;border:1px solid var(--hair);margin:4px 0 22px;background:color-mix(in srgb,var(--ink) 4%,transparent)}
+.ba-tabs button{position:relative;z-index:1;border:0;background:none;color:var(--muted);font:600 14px var(--f);padding:10px 18px;border-radius:999px;cursor:pointer;transition:color .3s}
+.ba-tabs button[aria-selected=true]{color:#0B132B}
+.ba-tabs i{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--accent);transition:transform .45s cubic-bezier(.2,.8,.2,1),width .45s cubic-bezier(.2,.8,.2,1)}
+.ba-panel{display:none}.ba-panel.on{display:block;animation:baIn .5s ease both}
+@keyframes baIn{from{opacity:0;transform:translateY(10px)}}
+.dcomp{grid-template-columns:repeat(4,minmax(0,1fr))!important}.dcomp .tile{padding:18px}
+@media (max-width:1000px){.dcomp{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:760px){
+ .timeline{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:-16px;padding-inline:16px}
+ .timeline .st{flex:0 0 78%;scroll-snap-align:start}
+ .grid3{grid-template-columns:1fr}
+ .ba-tabs button{padding:9px 12px;font-size:13px}
+}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.mq-t{animation:none}.rv{opacity:1;transform:none;transition:none}.ba-panel.on{animation:none}}
+[hidden]{display:none!important}
+.dcomp3 .tile{padding:18px}
 </style>
 </head>
 <body>
@@ -645,17 +671,13 @@ section{content-visibility:visible}
   </div>
 </section>
 
+<div class="mq" aria-label="Onde aplicamos"><div class="mq-t"><span>Linha de laminação</span><span>Pátio de toras</span><span>Processos térmicos</span><span>Bancadas de teste</span><span>Programação de CLP</span><span>Coleta de dados e OEE</span><span>Retrofit de máquinas</span><span>Comissionamento no Brasil e no exterior</span><span>Linha de laminação</span><span>Pátio de toras</span><span>Processos térmicos</span><span>Bancadas de teste</span><span>Programação de CLP</span><span>Coleta de dados e OEE</span><span>Retrofit de máquinas</span><span>Comissionamento no Brasil e no exterior</span></div></div>
 <section id="problema">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">O problema</span><h2>A máquina parou. De novo. E ninguém sabe dizer por quanto tempo nem por quê.</h2><p class="lead">O dado já existe no CLP, mas fica preso na máquina. Sem coleta e sem banco de dados, a decisão sai de planilha preenchida depois do turno, e o prejuízo só aparece no fechamento do mês.</p></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>Paradas sem registro</h3><p>O apontamento é feito à mão, depois do turno. OEE vira estimativa e a causa real da parada se perde.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><h3>CLP obsoleto, programa sem dono</h3><p>Controlador descontinuado, sem backup e sem ninguém que conheça a lógica. Qualquer falha vira dias de máquina parada.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></span><h3>Máquinas que não conversam</h3><p>Fabricantes diferentes, redes diferentes. O dado não chega ao banco de dados, ao supervisório nem ao ERP.</p></div>
-      
-      
-      
-    </div>
+    <div class="sec-title"><span class="eyebrow">Antes e depois</span><h2>A máquina parou. De novo. E ninguém sabe dizer por quanto tempo nem por quê.</h2></div>
+    <div class="ba-tabs" role="tablist" aria-label="Antes e depois"><button role="tab" aria-selected="true" data-t="a">Hoje, sem dados da máquina</button><button role="tab" aria-selected="false" data-t="d">Com a ConectaOT</button><i aria-hidden="true"></i></div>
+    <div class="ba-panel on" data-p="a"><div class="grid3"><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h3>Paradas sem registro</h3><p>O apontamento é feito à mão, depois do turno. OEE vira estimativa e a causa real da parada se perde.</p></div><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span><h3>CLP obsoleto, programa sem dono</h3><p>Controlador descontinuado, sem backup e sem ninguém que conheça a lógica. Qualquer falha vira dias de máquina parada.</p></div><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></span><h3>Máquinas que não conversam</h3><p>Fabricantes diferentes, redes diferentes. O dado não chega ao banco de dados, ao supervisório nem ao ERP.</p></div></div></div>
+    <div class="ba-panel" data-p="d"><div class="grid3"><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo, e o OEE medido por turno.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Produção por hora, turno e máquina, comparada com a meta, no celular.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><h3>Segurança preservada</h3><p>A coleta só lê o CLP. Nenhum comando é enviado para a máquina.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Rastreabilidade</h3><p>Histórico de produção, alarmes e parâmetros por turno e por lote.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/></svg></span><h3>Manutenção com histórico</h3><p>Decisões de manutenção baseadas em dados, com base pronta para preditiva.</p></div></div></div>
   </div>
 </section>
 
@@ -682,22 +704,7 @@ section{content-visibility:visible}
   </div>
 </section>
 
-<section id="beneficios">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2><p class="lead">Dados da máquina viram decisão: menos parada, mais produção e histórico de tudo, sem trocar o equipamento.</p></div>
-    <div class="grid3">
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo, e o OEE medido por turno.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Produção por hora, turno e máquina, comparada com a meta, no celular.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><h3>Segurança preservada</h3><p>A coleta só lê o CLP. Nenhum comando é enviado para a máquina.</p></div>
-      
-      
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Rastreabilidade</h3><p>Histórico de produção, alarmes e parâmetros por turno e por lote.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/></svg></span><h3>Manutenção com histórico</h3><p>Decisões de manutenção baseadas em dados, com base pronta para preditiva.</p></div>
-    </div>
-    <div class="chips apps" aria-label="Onde aplicamos">
-      <b class="chips-lbl">Onde aplicamos</b><span>Linha de laminação</span><span>Pátio de toras</span><span>Processos térmicos</span><span>Bancadas de teste</span>
-    </div>
-  </div>
-</section>
+
 
 <section id="como-funciona">
   <div class="wrap">
@@ -764,8 +771,8 @@ section{content-visibility:visible}
 </section>
 <section id="diferenciais">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Um único time do chão de fábrica ao navegador: quem entende a máquina também entrega o software.</p><p class="lead">Nascemos no Programa Nascer, no Centro de Inovação Inova Contestado, em Caçador (SC).</p></div>
-    <div class="diff">
+    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Um único time do chão de fábrica ao navegador: quem entende a máquina também entrega o software.</p></div>
+    <div class="diff dcomp3">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Engenharia e software de ponta a ponta</h3><p>Quem programa o CLP é quem cria o banco de dados, o painel e o app. Sem repasse entre empresas.</p></div>
       <div class="tile glass hl"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Somente leitura por padrão</h3><p>A coleta de dados não escreve no CLP. A segurança da máquina continua no programa e no operador.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Multiplataforma</h3><p>Os principais fabricantes de CLP na fábrica; web, celular e banco de dados no software.</p></div>
@@ -776,19 +783,7 @@ section{content-visibility:visible}
   </div>
 </section>
 
-<section id="oferta">
-  <div class="wrap">
-    <div class="offer">
-      <div>
-        <span class="badge acc">Oferta</span>
-        <h2 style="margin-top:14px">Diagnóstico técnico gratuito da sua máquina</h2>
-        <p style="margin-top:12px">Em uma conversa de 30 minutos, um engenheiro avalia o seu CLP e o seu objetivo e indica o caminho: coleta de dados, retrofit ou automação. Sem custo e sem compromisso.</p>
-        <ul><li>Avaliação de compatibilidade do CLP e da rede</li><li>Indicação das variáveis que geram mais resultado</li><li>Estimativa de prazo e faixa de investimento</li></ul>
-      </div>
-      <div class="side"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><small>Leva menos de 1 minuto · Resposta em até 1 dia útil</small></div>
-    </div>
-  </div>
-</section>
+
 
 <section id="faq">
   <div class="wrap">
@@ -936,5 +931,15 @@ t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i
 
 
 
+<script>
+(()=>{const t=document.querySelector('.ba-tabs');if(t){const bs=[...t.querySelectorAll('button')],ind=t.querySelector('i');
+const mv=b=>{ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft-5)+'px)'};
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.ba-panel').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.t));mv(b)}));
+addEventListener('load',()=>mv(bs[0]));addEventListener('resize',()=>mv(bs.find(b=>b.getAttribute('aria-selected')=='true')));mv(bs[0])}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+const els=[...document.querySelectorAll('main section:not(.hero) .sec-title, main section:not(.hero) .tile, main .st, main .proj, main details, main .deliver li, main .c-info, main #leadForm')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+els.forEach(el=>{const sib=[...el.parentElement.children].indexOf(el);el.style.transitionDelay=Math.min(sib,5)*70+'ms';el.classList.add('rv');io.observe(el)})})();
+</script>
 </body>
 </html>
