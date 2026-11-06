@@ -856,7 +856,7 @@ section{content-visibility:visible}
       <div class="field"><label for="fType">O que você precisa?</label>
         <select id="fType" name="tipo"><optgroup label="Indústria"><option data-ind>Programação de CLP / retrofit</option><option data-ind>Coleta de dados e OEE</option><option data-ind>Supervisório / dashboard</option></optgroup><optgroup label="Digital"><option>Sistema web / SaaS</option><option>Agendamento online</option><option>Landing page</option></optgroup><option>Outro</option></select></div>
       <div class="field" id="plcField"><label for="fPlc">Modelo do CLP <span class="micro">(opcional)</span></label><input id="fPlc" name="clp" placeholder="Não sabe? Deixe em branco"></div>
-      <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com CLP antigo, queremos ver paradas por turno · ou: clínica com 3 profissionais que quer agenda online."></textarea></div>
+      <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com CLP antigo, queremos ver paradas por turno."></textarea></div>
       <div class="f-foot">
         <p id="hint">Sem custo e sem compromisso. Seus dados são usados apenas para responder ao seu pedido (<a href="privacidade.html">privacidade</a>).</p>
         <a class="btn btn-accent" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -914,6 +914,7 @@ section{content-visibility:visible}
   function build(){var n=f.nome.value.trim(),c=f.empresa.value.trim(),k=(function(){var ind=f.tipo.selectedOptions[0].hasAttribute('data-ind');document.getElementById('plcField').hidden=!ind;return ind?f.clp.value.trim():''})(),m=f.mensagem.value.trim();
     var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito do meu projeto.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'');
     send.href='https://wa.me/5549991208836?text='+encodeURIComponent(txt);}
+  var PH={'Programação de CLP / retrofit':'Ex.: máquina com CLP antigo, sem backup do programa.','Coleta de dados e OEE':'Ex.: prensa com CLP antigo, queremos ver paradas por turno.','Supervisório / dashboard':'Ex.: ver temperatura e alarmes do processo no celular.','Sistema web / SaaS':'Ex.: controlar pedidos e clientes que hoje estão em planilha.','Agendamento online':'Ex.: clínica com 3 profissionais que quer agenda online.','Landing page':'Ex.: sou dentista e quero uma página com agendamento pelo WhatsApp.','Outro':'Conte em poucas palavras o que você precisa.'};f.tipo.addEventListener('change',function(){f.mensagem.placeholder=PH[f.tipo.value]||PH['Outro']});
   f.addEventListener('input',build);f.addEventListener('change',build);build();
   send.addEventListener('click',function(){build();hint.textContent='Abrindo o WhatsApp com o pedido pronto. Respondemos por lá.';});
   f.addEventListener('submit',function(e){e.preventDefault();});
