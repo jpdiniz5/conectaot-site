@@ -80,7 +80,7 @@ h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-h
 .num{font-variant-numeric:tabular-nums}
 section{padding-block:clamp(44px,6vw,80px)}
 .sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}
-.sec-head h2{font-size:clamp(28px,3.6vw,42px)}
+.sec-head h2{font-size:clamp(28px,3.8vw,44px)}
 .sec-head p{color:var(--muted);max-width:52ch;margin-top:8px}
 
 /* pílulas e botões */
@@ -301,7 +301,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .c-line b{overflow-wrap:anywhere}
 @media (max-width:420px){.c-info,form{padding:18px}}
 .c-info{padding:26px;display:flex;flex-direction:column;gap:16px}
-.c-info h2{font-size:clamp(28px,3.6vw,42px)}
+.c-info h2{font-size:clamp(28px,3.4vw,40px)}
 .c-line{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--glass-2);border:1px solid var(--glass-line)}
 .c-line small{display:block;font-size:11.5px;color:var(--muted)}
 .c-line b{font-weight:500;user-select:all}
@@ -385,11 +385,11 @@ footer .sp{margin-left:auto}
 .mets b{display:block;font:500 22px/1 var(--mono);color:var(--oee)}
 .mets span{font-size:12px;color:var(--muted)}
 @media (max-width:420px){.mets{grid-template-columns:1fr}}
-.diff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.diff{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}@media (max-width:1000px){.diff{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:700px){.diff{grid-template-columns:1fr}}
 .diff .tile.hl{border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 0 28px -12px color-mix(in srgb,var(--accent) 60%,transparent),var(--glass-shadow)}
 .offer{padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;background:var(--solid);color:var(--on-solid);border-radius:var(--r)}
-.offer h2{font-size:clamp(26px,3.4vw,40px)}
+.offer h2{font-size:clamp(28px,3.8vw,44px)}
 .offer p,.offer li{color:var(--solid-muted)}
 .offer ul{padding-left:18px;margin:14px 0 0;display:grid;gap:6px}
 .offer .side{display:grid;gap:10px;justify-items:start}
@@ -549,6 +549,20 @@ section{content-visibility:visible}
  .hero-ctas>a:nth-child(1){animation-delay:.75s}
  .hero-ctas>a:nth-child(2){animation-delay:.9s}
 }
+
+/* projetos v5 */
+#projetos>.wrap{max-width:var(--max)}
+.pgroup{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:34px 0 14px;font-size:20px}
+.pgroup small{font:500 13px var(--f);color:var(--muted)}
+.pgrid{display:grid;gap:18px;align-items:stretch}
+.pgrid+.pgrid{margin-top:18px}
+.pgrid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pgrid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pgrid.g4 .proj{padding:16px;gap:8px}.pgrid.g4 .quote{font-size:13.5px;line-height:1.45;padding:10px 12px;margin:0}
+.pgrid .proj-foot{margin-top:auto}
+@media (max-width:1000px){.pgrid.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.pgrid.g2,.pgrid.g4{grid-template-columns:1fr}}
+.offer{border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);background:linear-gradient(135deg,#0B132B,#12304a)}
 </style>
 </head>
 <body>
@@ -616,35 +630,27 @@ section{content-visibility:visible}
     </div>
     <div class="hcar" id="hcar" aria-roledescription="carrossel" aria-label="Exemplos de entregas ConectaOT">
     <div class="hcar-track">
-    <div class="hcar-slide on" aria-roledescription="slide" aria-label="1 de 8"><article class="card glass hcar-app">
+    <div class="hcar-slide on" aria-roledescription="slide" aria-label="1 de 6"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-inicio-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-inicio-sm.webp?v=2 760w, img/projetos/manejo-pc-inicio.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-inicio.webp?v=2" width="1440" height="900" alt="Tela Sua floresta, em dia do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-inicio-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-inicio.webp?v=2" width="390" height="780" alt="Tela Sua floresta, em dia do app Manejo Florestal no celular" decoding="async"></button></div>
       <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Sua floresta, em dia</h3><p>Resumo da propriedade: área acompanhada, talhões medidos e o próximo passo de cada um.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 8"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="2 de 6"><article class="card glass hcar-app">
       <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/plc-full.webp?v=2" aria-label="Ampliar tela de programação de CLP"><img srcset="img/projetos/plc-sm.webp?v=2 760w, img/projetos/plc.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/plc.webp?v=2" width="1440" height="900" alt="Programação de CLP em texto estruturado: sequenciador por passos, eixos, receitas e monitoração online" decoding="async"></button></div>
       <div><span class="badge ok">● programação avançada de CLP</span><h3>Lógica limpa, máquina previsível</h3><p>Texto estruturado (IEC 61131-3), sequenciadores por passos, controle de eixos e servos, receitas, alarmes e registro de dados. Programas novos ou migração de CLPs antigos.</p><a class="pill pill-glass" href="#contato">Falar sobre o meu projeto →</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 8"><article class="card glass hcar-app" id="lpSlide">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="3 de 6"><article class="card glass hcar-app" id="lpSlide">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/lp-pc-full.webp?v=4" aria-label="Ampliar landing page no computador"><img srcset="img/projetos/lp-pc-sm.webp?v=4 760w, img/projetos/lp-pc.webp?v=4 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/lp-pc.webp?v=4" width="1440" height="900" alt="Exemplo de landing page para profissional de fisioterapia no computador (marca fictícia)" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/lp-cel-full.webp?v=4" aria-label="Ampliar landing page no celular"><img src="img/projetos/lp-cel.webp?v=4" width="390" height="780" alt="Exemplo de landing page para profissional no celular (marca fictícia)" decoding="async"></button></div>
       <div><span class="badge ok">● landing pages · para profissionais</span><h3>Sua página, do seu jeito</h3><p>Landing pages personalizadas e exclusivas para dentistas, fisioterapeutas, advogados, barbearias e outros profissionais: layout próprio, agendamento pelo WhatsApp, rápida no celular e pronta para o Google.</p><div class="lp-chips" role="tablist" aria-label="Exemplos por profissão"><button type="button" data-k="" aria-pressed="true">Fisioterapia</button><button type="button" data-k="odo">Odontologia</button><button type="button" data-k="adv">Advocacia</button><button type="button" data-k="barb">Barbearia</button></div><a class="pill pill-glass" href="https://wa.me/5549991208836?text=Ol%C3%A1%2C%20ConectaOT!%20Quero%20uma%20landing%20page%20personalizada." target="_blank" rel="noopener">Quero a minha página →</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 8"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="4 de 6"><article class="card glass hcar-app">
       <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/agenda-painel-full.webp?v=2" aria-label="Ampliar painel da clínica"><img srcset="img/projetos/agenda-pc-painel-sm.webp?v=1 760w, img/projetos/agenda-pc-painel.webp?v=1 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/agenda-pc-painel.webp?v=1" width="1440" height="900" alt="Painel da clínica: agendamentos do dia, confirmação, ocupação por profissional e movimento em tempo real" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/agenda-cel-full.webp?v=2" aria-label="Ampliar agendamento no celular"><img src="img/projetos/agenda-cel.webp?v=2" width="390" height="780" alt="Paciente escolhendo o horário da consulta pelo navegador do celular" decoding="async"></button></div>
       <div><span class="badge">● em desenvolvimento · agendamento online</span><h3>Agenda cheia, menos faltas</h3><p>O paciente agenda pelo navegador do celular, sem instalar app. A clínica acompanha tudo num painel, com lembretes por WhatsApp e e-mail.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="5 de 8"><article class="card glass hcar-app">
+    <div class="hcar-slide" aria-roledescription="slide" aria-label="5 de 6"><article class="card glass hcar-app">
       <div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora de toras"><img srcset="img/projetos/classificadora-sm.webp?v=1 760w, img/projetos/classificadora.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" alt="Classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal" decoding="async"></button></div>
       <div><span class="badge ok">● em operação · coleta de dados</span><h3>Classificadora de toras</h3><p>Diâmetro e comprimento de cada tora, ocupação dos boxes e quanto de cada box está dentro da faixa configurada.</p><a class="pill pill-glass" href="#projetos">Ver projetos ↓</a></div>
     </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="6 de 8"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-talhoes-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-talhoes-sm.webp?v=2 760w, img/projetos/manejo-pc-talhoes.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-talhoes.webp?v=2" width="1440" height="900" alt="Tela Seus talhões do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-talhoes-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-talhoes.webp?v=2" width="390" height="780" alt="Tela Seus talhões do app Manejo Florestal no celular" decoding="async"></button></div>
-      <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Seus talhões</h3><p>Cada talhão com idade, área, regime e volume estimado, mais os avisos de manejo para revisar.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
-    </article></div>
-    <div class="hcar-slide" aria-roledescription="slide" aria-label="7 de 8"><article class="card glass hcar-app">
-      <div class="mock"><button type="button" class="mock-pc zoom" data-full="img/projetos/manejo-pc-mercado-full.webp?v=1" aria-label="Ampliar versão computador"><img srcset="img/projetos/manejo-pc-mercado-sm.webp?v=2 760w, img/projetos/manejo-pc-mercado.webp?v=2 1440w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo-pc-mercado.webp?v=2" width="1440" height="900" alt="Tela Marketplace florestal do app Manejo Florestal no computador" decoding="async"></button><button type="button" class="mock-cel zoom" data-full="img/projetos/manejo-mercado-full.webp?v=1" aria-label="Ampliar versão celular"><img src="img/projetos/manejo-mercado.webp?v=2" width="390" height="780" alt="Tela Marketplace florestal do app Manejo Florestal no celular" decoding="async"></button></div>
-      <div><span class="badge ok">● no ar · app Manejo Florestal</span><h3>Marketplace florestal</h3><p>Serviços, mudas e insumos indicados conforme os alertas abertos de cada talhão.</p><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
-    </article></div>
-<div class="hcar-slide" aria-roledescription="slide" aria-label="8 de 8"><article class="card glass hcar-app"><div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/oee-final.webp" aria-label="Ampliar painel OEE "><img src="img/projetos/oee-final.webp" width="1200" height="750" alt="Exemplo de painel OEE com disponibilidade, desempenho, qualidade e produção por hora"></button></div><div><span class="badge">OEE · gestão industrial</span><h3>OEE e produção em um só painel</h3><p>Disponibilidade, desempenho e qualidade por turno, produção por hora e motivos de parada. Uma solução sob medida para acompanhar sua operação.</p><a class="pill pill-glass" href="#projetos">Conhecer a solução ↓</a></div></article></div>  </div>
+<div class="hcar-slide" aria-roledescription="slide" aria-label="6 de 6"><article class="card glass hcar-app"><div class="mock solo"><button type="button" class="mock-pc zoom" data-full="img/projetos/oee-final.webp" aria-label="Ampliar painel OEE "><img src="img/projetos/oee-final.webp" width="1200" height="750" alt="Exemplo de painel OEE com disponibilidade, desempenho, qualidade e produção por hora"></button></div><div><span class="badge">OEE · gestão industrial</span><h3>OEE e produção em um só painel</h3><p>Disponibilidade, desempenho e qualidade por turno, produção por hora e motivos de parada. Uma solução sob medida para acompanhar sua operação.</p><a class="pill pill-glass" href="#projetos">Conhecer a solução ↓</a></div></article></div>  </div>
     <div class="hcar-nav"><button type="button" data-d="-1" aria-label="Anterior">‹</button><div class="hcar-dots"></div><button type="button" data-d="1" aria-label="Próximo">›</button></div>
     </div>
   </div>
@@ -694,8 +700,8 @@ section{content-visibility:visible}
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Mais disponibilidade</h3><p>Cada parada registrada com início, fim e motivo, e o OEE medido por turno.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3>Produtividade visível</h3><p>Produção por hora, turno e máquina, comparada com a meta, no celular.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><h3>Segurança preservada</h3><p>A coleta só lê o CLP. Nenhum comando é enviado para a máquina.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span><h3>Agenda sem faltas</h3><p>Confirmação e lembrete automáticos reduzem faltas e horários vazios.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Encontrado no Google</h3><p>Página própria, rápida e otimizada, que transforma busca em contato e agendamento.</p></div>
+      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></span><h3>Agenda sem faltas</h3><p>Confirmação e lembrete automáticos reduzem faltas e horários vazios.</p></div>
+      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Encontrado no Google</h3><p>Página própria, rápida e otimizada, que transforma busca em contato e agendamento.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Modernizar o controle custa menos que trocar a máquina, e um sistema próprio elimina planilha e retrabalho.</p></div>
     </div>
     <div class="chips apps" aria-label="Onde aplicamos">
@@ -720,10 +726,11 @@ section{content-visibility:visible}
 <section id="projetos">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="eyebrow">Portfólio</span><h2>Projetos entregues</h2><p>Indústria de compensados, laminação, florestal, equipamentos de teste e saúde.</p></div>
+      <div><span class="eyebrow">Portfólio</span><h2>Produtos e projetos</h2><p>Sistemas próprios com plano mensal e projetos de engenharia entregues sob medida.</p></div>
     </div>
 
-    <div class="projects collapsed" id="projects">
+    <h3 class="pgroup"><span>Produtos próprios</span><small>Plano mensal · pronto para usar</small></h3>
+    <div class="pgrid g2">
       <article class="proj glass" data-cat="soft">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/manejo-full.webp?v=5" aria-label="Ampliar telas do app"><img srcset="img/projetos/manejo-sm.webp?v=5 760w, img/projetos/manejo.webp?v=5 1248w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/manejo.webp?v=5" width="1248" height="780" loading="lazy" decoding="async" alt="Telas do app Manejo Florestal: início, talhões e marketplace"></button></figure>
         <div class="proj-top"><span class="av">MF</span><div><h3>Manejo Florestal</h3><p>Aplicativo · produtores de pinus</p></div><span class="badge ok">● no ar</span></div>
@@ -733,7 +740,6 @@ section{content-visibility:visible}
         <div class="meter"><div class="meter-h"><span>Stack</span><span>PWA · mapas · offline</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>manejo.conectaot.com.br</span><a class="pill pill-glass" href="https://manejo.conectaot.com.br" target="_blank" rel="noopener">Abrir app ↗</a></div>
       </article>
-
       <article class="proj glass" data-cat="soft">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/agenda-full.webp?v=2" aria-label="Ampliar telas da plataforma de agendamento"><img srcset="img/projetos/agenda-sm.webp?v=1 760w, img/projetos/agenda.webp?v=1 1248w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/agenda.webp?v=1" width="1248" height="780" loading="lazy" decoding="async" style="object-position:top left" alt="Plataforma de agendamento: painel da clínica no computador e agendamento pelo navegador do celular"></button></figure>
         <div class="proj-top"><span class="av">AS</span><div><h3>Agenda Saúde</h3><p>Plataforma · clínicas e consultórios</p></div><span class="badge">Em desenvolvimento</span></div>
@@ -743,68 +749,59 @@ section{content-visibility:visible}
         <div class="meter"><div class="meter-h"><span>Status</span><span>protótipo de telas</span></div><div class="tr"><i style="width:20%"></i></div></div>
         <div class="proj-foot"><span>Web responsivo · WhatsApp · e-mail</span></div>
       </article>
+    </div>
 
-
+    <h3 class="pgroup"><span>Projetos de engenharia</span><small>Sob medida · orçamento após o diagnóstico</small></h3>
+    <div class="pgrid g2">
       <article class="proj glass" data-cat="sup soft">
         <figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/classificadora-full.webp?v=1" aria-label="Ampliar tela da classificadora"><img srcset="img/projetos/classificadora-sm.webp?v=1 760w, img/projetos/classificadora.webp?v=1 1920w" sizes="(max-width: 760px) 92vw, 600px" src="img/projetos/classificadora.webp?v=1" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:top left" alt="Dashboard da classificadora de toras: diâmetro e comprimento médios, ocupação dos boxes e faixa ideal configurada"></button></figure>
         <div class="proj-top"><span class="av">CT</span><div><h3>Classificadora de toras</h3><p>Coleta de dados · pátio de toras</p></div><span class="badge">Web + API</span></div>
         <span class="tagline">CLP + API</span>
-        <p class="project-price"><strong>Sob consulta</strong></p>
         <p class="quote">O CLP envia os dados pela web para uma API, que grava no banco de dados: quantidade de toras, box de destino, diâmetro médio e tamanho, em tempo real.</p>
         <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · web · API · banco de dados</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Em operação</span></div>
       </article>
-
-<article class="proj glass" data-cat="sup"><figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/oee-final.webp" aria-label="Ampliar painel OEE "><img src="img/projetos/oee-final.webp" width="1200" height="750" alt="Exemplo de painel OEE com disponibilidade, desempenho, qualidade e produção por hora"></button></figure><div class="proj-top"><span class="av">OE</span><div><h3>OEE e eficiência industrial</h3><p>Dashboard · produção e paradas</p></div><span class="badge">Sob medida</span></div><span class="tagline">Indicadores por turno</span><p class="project-price"><strong>Sob consulta</strong></p><p class="quote">Disponibilidade, desempenho, qualidade e motivos de parada por máquina e turno. </p><div class="proj-foot"><a class="pill pill-glass" href="#contato">Solicitar proposta →</a></div></article>
-      <div class="proj-pair">
+      <article class="proj glass" data-cat="sup"><figure class="proj-shot"><button type="button" class="zoom" data-full="img/projetos/oee-final.webp" aria-label="Ampliar painel OEE "><img src="img/projetos/oee-final.webp" width="1200" height="750" alt="Exemplo de painel OEE com disponibilidade, desempenho, qualidade e produção por hora"></button></figure><div class="proj-top"><span class="av">OE</span><div><h3>OEE e eficiência industrial</h3><p>Dashboard · produção e paradas</p></div><span class="badge">Sob medida</span></div><span class="tagline">Indicadores por turno</span><p class="quote">Disponibilidade, desempenho, qualidade e motivos de parada por máquina e turno. </p><div class="proj-foot"><a class="pill pill-glass" href="#contato">Solicitar proposta →</a></div></article>
+    </div>
+    <div class="pgrid g4" id="projects">
       <article class="proj glass" data-cat="auto">
         <div class="proj-top"><span class="av">SC</span><div><h3>Secador de lâminas</h3><p>Automação · retrofit</p></div><span class="badge">Retrofit</span></div>
         <span class="tagline">Controle modernizado</span>
-        <p class="project-price"><strong>Sob consulta</strong></p>
         <p class="quote">Modernização do controle do secador: nova lógica de automação, inversores de frequência em rede industrial e sequências de operação documentadas, mantendo a mecânica da máquina.</p>
         <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · inversores · rede industrial</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Laminação</span></div>
       </article>
-
-      <article class="proj glass" data-cat="auto">
+<article class="proj glass" data-cat="auto">
         <div class="proj-top"><span class="av">TL</span><div><h3>Torno laminador</h3><p>Automação · programa e IHM</p></div><span class="badge">Campo</span></div>
         <span class="tagline">Máquinas de laminação</span>
-        <p class="project-price"><strong>Sob consulta</strong></p>
         <p class="quote">Programação, posicionamento e comissionamento de tornos e linhas de laminação, inclusive no exterior.</p>
         <div class="meter"><div class="meter-h"><span>Stack</span><span>CLP · IHM · servoacionamentos</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Brasil e exterior</span></div>
       </article>
-      </div>
-
-      <div class="proj-pair">
-      <article class="proj glass" data-cat="sup">
+<article class="proj glass" data-cat="sup">
         <div class="proj-top"><span class="av">BH</span><div><h3>Bancada de testes hidráulicos</h3><p>Supervisório · ensaios</p></div><span class="badge">Testes</span></div>
         <span class="tagline">Registro de ensaios</span>
-        <p class="project-price"><strong>Sob consulta</strong></p>
         <p class="quote">Sistema para executar e registrar testes hidráulicos, com acompanhamento das grandezas durante o ensaio.</p>
         <div class="meter"><div class="meter-h"><span>Entrega</span><span>software de teste</span></div><div class="tr"><i style="width:100%"></i></div></div>
         <div class="proj-foot"><span>Equipamentos</span></div>
       </article>
-
-      <article class="proj glass" data-cat="vis">
+<article class="proj glass" data-cat="vis">
         <div class="proj-top"><span class="av">VC</span><div><h3>Visão na guilhotina</h3><p>Visão computacional · laminação</p></div><span class="badge">P&amp;D</span></div>
         <span class="tagline">Contagem de lâminas</span>
-        <p class="project-price"><strong>Sob consulta</strong></p>
         <p class="quote">Câmera sobre o tapete para contar lâminas e apontar defeitos, reduzindo a conferência manual.</p>
         <div class="meter"><div class="meter-h"><span>Status</span><span>em desenvolvimento</span></div><div class="tr"><i style="width:45%"></i></div></div>
         <div class="proj-foot"><span>Piloto</span></div>
       </article>
-      </div>
     </div>
-<button class="btn btn-glass more" id="moreBtn" type="button" aria-controls="projects" aria-expanded="false">Ver todos os projetos</button>
-</div></section>
+  </div>
+</section>
 <section id="diferenciais">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Um único time do chão de fábrica ao navegador: quem entende a máquina também entrega o software.</p><p class="lead">Nascemos no Programa Nascer, no Centro de Inovação Inova Contestado, em Caçador (SC).</p></div>
     <div class="diff">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Engenharia e software de ponta a ponta</h3><p>Quem programa o CLP é quem cria o banco de dados, o painel e o app. Sem repasse entre empresas.</p></div>
       <div class="tile glass hl"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Somente leitura por padrão</h3><p>A coleta de dados não escreve no CLP. A segurança da máquina continua no programa e no operador.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Multiplataforma</h3><p>Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS na fábrica; web, celular e banco de dados no software.</p></div>
+      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Multiplataforma</h3><p>Os principais fabricantes de CLP na fábrica; web, celular e banco de dados no software.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0zM12 18v4"/></svg></span><h3>Integração com o que já existe</h3><p>Não exige trocar a máquina, o CLP nem o sistema que você já usa.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Experiência de campo e produto próprio</h3><p>Partida de máquinas no Brasil e no exterior, e sistemas próprios em uso, como o Manejo Florestal.</p></div>
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Escopo fechado</h3><p>Prazo e valor por escrito antes de começar, com suporte depois da entrega.</p></div>
@@ -817,9 +814,9 @@ section{content-visibility:visible}
     <div class="offer">
       <div>
         <span class="badge acc">Oferta</span>
-        <h2 style="margin-top:14px">Diagnóstico técnico gratuito da sua máquina</h2>
-        <p style="margin-top:12px">Em uma conversa de 30 minutos, um engenheiro avalia o seu CLP e o seu objetivo e indica o caminho: coleta de dados, retrofit ou automação. Sem custo e sem compromisso.</p>
-        <ul><li>Avaliação de compatibilidade do CLP e da rede</li><li>Indicação das variáveis que geram mais resultado</li><li>Estimativa de prazo e faixa de investimento</li></ul>
+        <h2 style="margin-top:14px">Diagnóstico gratuito do seu projeto</h2>
+        <p style="margin-top:12px">Em uma conversa de 30 minutos, avaliamos o seu objetivo e indicamos o caminho: automação, dados de máquina, sistema web, agendamento online ou landing page. Sem custo e sem compromisso.</p>
+        <ul><li>Na indústria: compatibilidade do CLP e variáveis que geram mais resultado</li><li>No digital: escopo das telas, funções e integrações com WhatsApp</li><li>Estimativa de prazo e faixa de investimento</li></ul>
       </div>
       <div class="side"><a class="btn btn-accent" href="#contato">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><small>Leva menos de 1 minuto · Resposta em até 1 dia útil</small></div>
     </div>
@@ -830,12 +827,14 @@ section{content-visibility:visible}
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
     <div class="faq">
-      <details class="glass"><summary>Qual o prazo de implantação?</summary><p>Depende do escopo. Uma coleta de dados em uma máquina costuma levar poucos dias. Retrofit e automação completa são definidos no projeto, com cronograma por escrito.</p></details>
+      <details class="glass"><summary>Qual o prazo de entrega?</summary><p>Depende do escopo. Uma landing page fica pronta em poucos dias, e uma coleta de dados em uma máquina também. Sistemas, retrofit e automação completa têm cronograma definido por escrito no projeto.</p></details>
       <details class="glass"><summary>Funciona com máquinas antigas?</summary><p>Sim. Trabalhamos com CLPs Siemens, Beckhoff, Rockwell, Schneider, Delta e CODESYS, incluindo modelos descontinuados. A compatibilidade é confirmada no diagnóstico.</p></details>
       <details class="glass"><summary>Precisa parar a produção?</summary><p>A coleta de dados normalmente é instalada sem parar a linha. Retrofits são feitos em janela combinada com a produção.</p></details>
       <details class="glass"><summary>É seguro conectar a máquina?</summary><p>A coleta é somente leitura: o sistema não envia comandos ao CLP. Se o gateway desligar, a máquina segue funcionando normalmente.</p></details>
-      <details class="glass"><summary>Quanto custa?</summary><p>O valor depende do número de máquinas e do escopo. Após o diagnóstico gratuito, você recebe escopo, prazo e valor fechados por escrito.</p></details>
-      <details class="glass"><summary>Como é o suporte depois da entrega?</summary><p>Incluímos treinamento e ajustes pós-partida. Depois, o suporte pode continuar de forma remota ou presencial, conforme a necessidade da planta.</p></details>
+      <details class="glass"><summary>Quanto custa?</summary><p>Produtos prontos, como o Manejo Florestal e a Agenda Saúde, têm plano mensal. Projetos sob medida dependem do escopo: após o diagnóstico gratuito, você recebe escopo, prazo e valor fechados por escrito.</p></details>
+      <details class="glass"><summary>Consigo alterar minha página ou sistema depois?</summary><p>Sim. Combinamos no projeto o que você mesmo edita (textos, fotos, horários, preços) e o que fica com o suporte. O domínio e os dados são seus.</p></details>
+      <details class="glass"><summary>Funciona no celular e aparece no Google?</summary><p>Sim. Páginas e sistemas são feitos primeiro para o celular, carregam rápido e saem com a configuração básica para o Google (título, descrição e mapa do site).</p></details>
+      <details class="glass"><summary>Como é o suporte depois da entrega?</summary><p>Incluímos treinamento e ajustes pós-partida. Depois, o suporte pode continuar de forma remota ou presencial, conforme a necessidade da fábrica ou do negócio.</p></details>
     </div>
   </div>
 </section>
@@ -844,8 +843,8 @@ section{content-visibility:visible}
   <div class="wrap cta-wrap">
     <div class="c-info glass">
       <span class="eyebrow">Diagnóstico gratuito</span>
-      <h2>Pare de estimar. Comece a medir.</h2>
-      <p style="color:var(--muted)">Descubra em 30 minutos quanto a sua máquina pode render a mais, sem trocar o equipamento.</p>
+      <h2>Conte o que você precisa. A gente mostra o caminho.</h2>
+      <p style="color:var(--muted)">Da máquina parada à agenda cheia: em 30 minutos você sai com escopo, prazo e faixa de investimento.</p>
       <div class="c-line"><div><small>WhatsApp</small><b class="num">(49) 99120-8836</b></div><button type="button" data-copy="(49) 99120-8836">copiar</button></div>
       <div class="c-line"><div><small>E-mail</small><b>contato@conectaot.com.br</b></div><button type="button" data-copy="contato@conectaot.com.br">copiar</button></div>
       <div class="c-line"><div><small>Base</small><b>Caçador · Santa Catarina</b></div></div>
@@ -855,9 +854,9 @@ section{content-visibility:visible}
       <div class="field"><label for="fName">Nome</label><input id="fName" name="nome" autocomplete="name" placeholder="Seu nome"></div>
       <div class="field"><label for="fCompany">Empresa</label><input id="fCompany" name="empresa" autocomplete="organization" placeholder="Nome da empresa"></div>
       <div class="field"><label for="fType">O que você precisa?</label>
-        <select id="fType" name="tipo"><option>Coleta de dados</option><option>Supervisório</option><option>Retrofit</option><option>Automação de máquina</option><option>Visão computacional</option><option>Outro</option></select></div>
-      <div class="field"><label for="fPlc">Modelo do CLP <span class="micro">(opcional)</span></label><input id="fPlc" name="clp" placeholder="Não sabe? Deixe em branco"></div>
-      <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com S7-300, queremos ver paradas e produção por turno."></textarea></div>
+        <select id="fType" name="tipo"><optgroup label="Indústria"><option data-ind>Programação de CLP / retrofit</option><option data-ind>Coleta de dados e OEE</option><option data-ind>Supervisório / dashboard</option></optgroup><optgroup label="Digital"><option>Sistema web / SaaS</option><option>Agendamento online</option><option>Landing page</option></optgroup><option>Outro</option></select></div>
+      <div class="field" id="plcField"><label for="fPlc">Modelo do CLP <span class="micro">(opcional)</span></label><input id="fPlc" name="clp" placeholder="Não sabe? Deixe em branco"></div>
+      <div class="field full"><label for="fMsg">Conte um pouco <span class="micro">(opcional)</span></label><textarea id="fMsg" name="mensagem" placeholder="Ex.: prensa com CLP antigo, queremos ver paradas por turno · ou: clínica com 3 profissionais que quer agenda online."></textarea></div>
       <div class="f-foot">
         <p id="hint">Sem custo e sem compromisso. Seus dados são usados apenas para responder ao seu pedido (<a href="privacidade.html">privacidade</a>).</p>
         <a class="btn btn-accent" id="sendBtn" href="https://wa.me/5549991208836" target="_blank" rel="noopener">Solicitar diagnóstico gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -870,7 +869,7 @@ section{content-visibility:visible}
 <footer>
   <div class="wrap">
     <span style="display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600"><svg class="logo-ico" viewBox="0 0 88 88" fill="none" aria-hidden="true"><rect width="88" height="88" rx="20" fill="#0B132B"/><path d="M14 44H30M30 30V58M40 30V58M40 44H50" stroke="#F4F6FA" stroke-width="6" stroke-linecap="round"/><path d="M58 30A16 16 0 0 0 58 58M66 30A16 16 0 0 1 66 58" stroke="#5BC0DE" stroke-width="6" stroke-linecap="round"/><circle cx="62" cy="44" r="5" fill="#F59E0B"/></svg><span class="brand-name">Conecta<b>OT</b></span></span>
-    <span>Automação industrial e dados de máquina · Indústria 4.0</span>
+    <span>Automação, dados e software · Caçador/SC</span>
     <a href="privacidade.html" style="color:var(--muted)">Privacidade</a>
     <a href="termos.html" style="color:var(--muted)">Termos de uso</a>
     <span class="sp">© <span id="yr">2026</span> ConectaOT. Todos os direitos reservados.</span>
@@ -898,7 +897,7 @@ section{content-visibility:visible}
   var tk=0;addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){spy();tk=0;});}},{passive:true});spy();
   document.getElementById('yr').textContent=new Date().getFullYear();
   var more=document.getElementById('moreBtn'),pj=document.getElementById('projects');
-  if(more&&pj)more.addEventListener('click',function(){var c=pj.classList.toggle('collapsed');more.setAttribute('aria-expanded',!c);more.textContent=c?'Ver todos os projetos':'Mostrar menos';});
+  if(false&&more&&pj)more.addEventListener('click',function(){var c=pj.classList.toggle('collapsed');more.setAttribute('aria-expanded',!c);more.textContent=c?'Ver todos os projetos':'Mostrar menos';});
   // FAQ: um aberto por vez
   var dts=[].slice.call(document.querySelectorAll('.faq details'));
   dts.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)dts.forEach(function(o){if(o!==x)o.open=false;});});});
@@ -912,11 +911,11 @@ section{content-visibility:visible}
   });});
   // formulário → WhatsApp
   var f=document.getElementById('leadForm'),send=document.getElementById('sendBtn'),hint=document.getElementById('hint');
-  function build(){var n=f.nome.value.trim(),c=f.empresa.value.trim(),k=f.clp.value.trim(),m=f.mensagem.value.trim();
-    var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'');
+  function build(){var n=f.nome.value.trim(),c=f.empresa.value.trim(),k=(function(){var ind=f.tipo.selectedOptions[0].hasAttribute('data-ind');document.getElementById('plcField').hidden=!ind;return ind?f.clp.value.trim():''})(),m=f.mensagem.value.trim();
+    var txt='Olá, ConectaOT! Quero solicitar o diagnóstico gratuito do meu projeto.'+(n?'\nNome: '+n:'')+(c?'\nEmpresa: '+c:'')+'\nPreciso de: '+f.tipo.value+(k?'\nCLP: '+k:'')+(m?'\n\n'+m:'');
     send.href='https://wa.me/5549991208836?text='+encodeURIComponent(txt);}
   f.addEventListener('input',build);f.addEventListener('change',build);build();
-  send.addEventListener('click',function(){build();hint.textContent='Abrindo o WhatsApp com o pedido pronto. Um engenheiro vai responder por lá.';});
+  send.addEventListener('click',function(){build();hint.textContent='Abrindo o WhatsApp com o pedido pronto. Respondemos por lá.';});
   f.addEventListener('submit',function(e){e.preventDefault();});
 })();
 </script>
@@ -945,8 +944,8 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==
 sl.forEach((s,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir para slide '+(k+1));b.onclick=()=>{go(k);play()};dots.append(b);
 s.addEventListener('click',e=>{if(k!==i){e.preventDefault();e.stopPropagation();go(k);play()}},true)});
 function place(){const m=sm.matches,step=m?24:30,rot=m?10:16;sl.forEach((s,k)=>{let d=((k-i)%n+n)%n;if(d>n/2)d-=n;const a=Math.abs(d);
-if(a>2){s.style.opacity=0;s.style.visibility='hidden';s.style.zIndex=0;s.style.transform=`translateX(${Math.sign(d)*step*2.6}%) translateZ(-420px) rotateY(${-Math.sign(d)*rot*2}deg) scale(.6)`;return}
-s.style.visibility='visible';s.style.zIndex=10-a;s.style.opacity=m?[1,.85,0][a]:[1,1,.6][a];s.style.filter=m?['none','brightness(.55) saturate(.6) blur(1.5px)','none'][a]:['none','brightness(.8) saturate(.8)','brightness(.62) saturate(.7) blur(1px)'][a];
+if(a>(m?0:1)){s.style.opacity=0;s.style.visibility='hidden';s.style.zIndex=0;s.style.transform=`translateX(${Math.sign(d)*step*2.6}%) translateZ(-420px) rotateY(${-Math.sign(d)*rot*2}deg) scale(.6)`;return}
+s.style.visibility='visible';s.style.zIndex=10-a;s.style.opacity=[1,.55][a];s.style.filter=['none','brightness(.7) saturate(.75)'][a];
 s.style.transform=`translateX(${d*step}%) translateZ(${-a*160}px) rotateY(${-d*rot}deg) scale(${1-a*.1})`});if(m){const act=sl[i];act.style.maxHeight='none';const h=act.scrollHeight;sl.forEach(s=>{if(s!==act)s.style.maxHeight=h+'px'})}else sl.forEach(s=>s.style.maxHeight='')}
 function go(k){i=((k%n)+n)%n;sl.forEach((s,k2)=>{const on=k2===i;s.classList.toggle('on',on);s.setAttribute('aria-hidden',!on);[...s.children].forEach(ch=>ch.toggleAttribute('inert',!on))});[...dots.children].forEach((d,k2)=>d.setAttribute('aria-current',k2===i));place()}
 function play(){clearInterval(t);if(!rm.matches)t=setInterval(()=>go(i+1),7000)}
