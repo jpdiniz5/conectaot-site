@@ -567,6 +567,31 @@ section{content-visibility:visible}
 .area-switch{display:inline-flex;gap:4px;padding:4px;border-radius:999px;border:1px solid var(--hair);font-size:13px;margin-bottom:6px}
 .area-switch a{padding:6px 14px;border-radius:999px;text-decoration:none;color:var(--muted)}
 .area-switch a.on{background:var(--accent);color:#0B132B;font-weight:600}
+
+/* v7 compacto + transições */
+.mq{overflow:hidden;border-block:1px solid var(--hair);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-t{display:flex;gap:42px;width:max-content;animation:mq 38s linear infinite}
+.mq-t span{font:500 15px var(--f);color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:42px}
+.mq-t span::after{content:"✦";color:var(--accent);font-size:11px}
+.mq:hover .mq-t{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ba-tabs{position:relative;display:inline-flex;padding:5px;border-radius:999px;border:1px solid var(--hair);margin:4px 0 22px;background:color-mix(in srgb,var(--ink) 4%,transparent)}
+.ba-tabs button{position:relative;z-index:1;border:0;background:none;color:var(--muted);font:600 14px var(--f);padding:10px 18px;border-radius:999px;cursor:pointer;transition:color .3s}
+.ba-tabs button[aria-selected=true]{color:#0B132B}
+.ba-tabs i{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--accent);transition:transform .45s cubic-bezier(.2,.8,.2,1),width .45s cubic-bezier(.2,.8,.2,1)}
+.ba-panel{display:none}.ba-panel.on{display:block;animation:baIn .5s ease both}
+@keyframes baIn{from{opacity:0;transform:translateY(10px)}}
+.dcomp{grid-template-columns:repeat(4,minmax(0,1fr))!important}.dcomp .tile{padding:18px}
+@media (max-width:1000px){.dcomp{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:760px){
+ .timeline{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:-16px;padding-inline:16px}
+ .timeline .st{flex:0 0 78%;scroll-snap-align:start}
+ .grid3{grid-template-columns:1fr}
+ .ba-tabs button{padding:9px 12px;font-size:13px}
+}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.mq-t{animation:none}.rv{opacity:1;transform:none;transition:none}.ba-panel.on{animation:none}}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -649,17 +674,13 @@ section{content-visibility:visible}
   </div>
 </section>
 
+<div class="mq" aria-label="Para quem fazemos"><div class="mq-t"><span>Barbearias e salões</span><span>Escritórios de advocacia</span><span>Produtores rurais</span><span>Clínicas e consultórios</span><span>Profissionais liberais</span><span>Barbearias e salões</span><span>Escritórios de advocacia</span><span>Produtores rurais</span><span>Clínicas e consultórios</span><span>Profissionais liberais</span></div></div>
 <section id="problema">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">O problema</span><h2>Seu cliente procura. Quem aparece é o concorrente.</h2><p class="lead">Sem página própria, a agenda depende de indicação e de mensagens soltas. Sem sistema, o controle fica em planilhas que ninguém atualiza. O resultado é horário vazio e oportunidade perdida.</p></div>
-    <div class="grid3">
-      
-      
-      
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span><h3>Gestão em planilha</h3><p>Clientes, pedidos e ordens de serviço espalhados em planilhas e conversas soltas, sem histórico e sem indicador.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></span><h3>Agenda no improviso</h3><p>Horários marcados por mensagem, sem confirmação nem lembrete. O cliente esquece, falta, e o horário fica vazio.</p></div>
-      <div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M8 11h6"/></svg></span><h3>Invisível na internet</h3><p>Sem página própria, o profissional depende de indicação e de rede social. Quem procura no Google encontra o concorrente.</p></div>
-    </div>
+    <div class="sec-title"><span class="eyebrow">Antes e depois</span><h2>Seu cliente procura. Quem aparece é o concorrente.</h2></div>
+    <div class="ba-tabs" role="tablist" aria-label="Antes e depois"><button role="tab" aria-selected="true" data-t="a">Hoje, sem a ConectaOT</button><button role="tab" aria-selected="false" data-t="d">Com a ConectaOT</button><i aria-hidden="true"></i></div>
+    <div class="ba-panel on" data-p="a"><div class="grid3"><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span><h3>Gestão em planilha</h3><p>Clientes, pedidos e ordens de serviço espalhados em planilhas e conversas soltas, sem histórico e sem indicador.</p></div><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></span><h3>Agenda no improviso</h3><p>Horários marcados por mensagem, sem confirmação nem lembrete. O cliente esquece, falta, e o horário fica vazio.</p></div><div class="tile glass"><span class="ico warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M8 11h6"/></svg></span><h3>Invisível na internet</h3><p>Sem página própria, o profissional depende de indicação e de rede social. Quem procura no Google encontra o concorrente.</p></div></div></div>
+    <div class="ba-panel" data-p="d"><div class="grid3"><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></span><h3>Agenda sem faltas</h3><p>Confirmação e lembrete automáticos reduzem faltas e horários vazios.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Encontrado no Google</h3><p>Página própria, rápida e otimizada, que transforma busca em contato e agendamento.</p></div><div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Um sistema próprio elimina planilha, retrabalho e mensalidade de várias ferramentas soltas.</p></div></div></div>
   </div>
 </section>
 
@@ -687,32 +708,17 @@ section{content-visibility:visible}
   </div>
 </section>
 
-<section id="beneficios">
-  <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Benefícios</span><h2>O que muda na sua operação</h2><p class="lead">Mais clientes chegando, atendimento organizado e tempo livre para o que você faz de melhor.</p></div>
-    <div class="grid3">
-      
-      
-      
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></span><h3>Agenda sem faltas</h3><p>Confirmação e lembrete automáticos reduzem faltas e horários vazios.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Encontrado no Google</h3><p>Página própria, rápida e otimizada, que transforma busca em contato e agendamento.</p></div>
-      <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></span><h3>Economia</h3><p>Um sistema próprio elimina planilha, retrabalho e mensalidade de várias ferramentas soltas.</p></div>
-    </div>
-    <div class="chips apps" aria-label="Onde aplicamos">
-      <b class="chips-lbl">Onde aplicamos</b><span>Barbearias e salões</span><span>Escritórios de advocacia</span><span>Produtores rurais</span><span>Clínicas e consultórios</span><span>Profissionais liberais</span>
-    </div>
-  </div>
-</section>
+
 
 <section id="como-funciona">
   <div class="wrap">
     <div class="sec-title"><span class="eyebrow">Como funciona</span><h2>Da conversa à página no ar</h2><p class="lead">Um processo simples, com você aprovando cada etapa antes de seguir.</p></div>
     <div class="timeline">
-      <div class="st glass"><code>ETAPA 1</code><h3>Conversa</h3><p>Entendemos o seu negócio, o seu público e o que você quer que o cliente faça.</p></div>
-      <div class="st glass"><code>ETAPA 2</code><h3>Proposta</h3><p>Escopo, prazo e valor por escrito, com o que entra e o que fica de fora.</p></div>
-      <div class="st glass"><code>ETAPA 3</code><h3>Layout</h3><p>Você vê a página ou o sistema antes de ficar pronto e pede os ajustes.</p></div>
-      <div class="st glass"><code>ETAPA 4</code><h3>Publicação</h3><p>Domínio, hospedagem, Google e WhatsApp configurados.</p></div>
-      <div class="st glass"><code>ETAPA 5</code><h3>Suporte</h3><p>Ajustes depois da entrega e acompanhamento dos contatos.</p></div>
+      <div class="st glass"><code>01</code><h3>Conversa</h3><p>Entendemos o seu negócio, o seu público e o que você quer que o cliente faça.</p></div>
+      <div class="st glass"><code>02</code><h3>Proposta</h3><p>Escopo, prazo e valor por escrito, com o que entra e o que fica de fora.</p></div>
+      <div class="st glass"><code>03</code><h3>Layout</h3><p>Você vê a página ou o sistema antes de ficar pronto e pede os ajustes.</p></div>
+      <div class="st glass"><code>04</code><h3>Publicação</h3><p>Domínio, hospedagem, Google e WhatsApp configurados.</p></div>
+      <div class="st glass"><code>05</code><h3>Suporte</h3><p>Ajustes depois da entrega e acompanhamento dos contatos.</p></div>
     </div>
   </div>
 </section>
@@ -750,8 +756,8 @@ section{content-visibility:visible}
 </section>
 <section id="diferenciais">
   <div class="wrap">
-    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Software feito por quem também desenvolve produtos próprios, com atendimento direto e local.</p><p class="lead">Nascemos no Programa Nascer, no Centro de Inovação Inova Contestado, em Caçador (SC).</p></div>
-    <div class="diff" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+    <div class="sec-title"><span class="eyebrow">Diferenciais</span><h2>Por que a ConectaOT</h2><p class="lead">Software feito por quem também desenvolve produtos próprios, com atendimento direto e local.</p></div>
+    <div class="diff dcomp">
       <div class="tile glass"><span class="ico "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span><h3>Layout exclusivo</h3><p>Nada de modelo pronto: cada página é desenhada para o seu negócio e o seu público.</p></div>
       
       
@@ -762,19 +768,7 @@ section{content-visibility:visible}
   </div>
 </section>
 
-<section id="oferta">
-  <div class="wrap">
-    <div class="offer">
-      <div>
-        <span class="badge acc">Oferta</span>
-        <h2 style="margin-top:14px">Orçamento gratuito da sua página ou sistema</h2>
-        <p style="margin-top:12px">Em uma conversa de 30 minutos, entendemos o seu negócio e indicamos o caminho: landing page, agendamento online ou sistema web. Sem custo e sem compromisso.</p>
-        <ul><li>Sugestão de páginas, funções e integrações com WhatsApp</li><li>Exemplos de layout para a sua área</li><li>Estimativa de prazo e faixa de investimento</li></ul>
-      </div>
-      <div class="side"><a class="btn btn-accent" href="#contato">Quero meu orçamento gratuito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a><small>Leva menos de 1 minuto · Resposta em até 1 dia útil</small></div>
-    </div>
-  </div>
-</section>
+
 
 <section id="faq">
   <div class="wrap">
@@ -922,5 +916,15 @@ t=setInterval(()=>{if(sl.closest('.hcar-slide')?.classList.contains('on'))set((i
 
 
 
+<script>
+(()=>{const t=document.querySelector('.ba-tabs');if(t){const bs=[...t.querySelectorAll('button')],ind=t.querySelector('i');
+const mv=b=>{ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft-5)+'px)'};
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.ba-panel').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.t));mv(b)}));
+addEventListener('load',()=>mv(bs[0]));addEventListener('resize',()=>mv(bs.find(b=>b.getAttribute('aria-selected')=='true')));mv(bs[0])}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+const els=[...document.querySelectorAll('main section:not(.hero) .sec-title, main section:not(.hero) .tile, main .st, main .proj, main details, main .deliver li, main .c-info, main #leadForm')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+els.forEach(el=>{const sib=[...el.parentElement.children].indexOf(el);el.style.transitionDelay=Math.min(sib,5)*70+'ms';el.classList.add('rv');io.observe(el)})})();
+</script>
 </body>
 </html>
